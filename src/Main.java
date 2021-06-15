@@ -8,6 +8,9 @@ import java.util.Date; // date
 public class Main {
     public static void main(String[] args) {
 
+
+
+        //fgfgfgfgfgfgfgfg
         File myFileBlah = new File("1.txt");
         Scanner scanner;
 

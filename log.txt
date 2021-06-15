@@ -28,3 +28,8 @@ Mon Jun 07 13:14:21 IRDT 2021, ali is dumb
 Mon Jun 07 13:14:21 IRDT 2021, ali is dumbdumb
 Mon Jun 07 13:14:21 IRDT 2021, java.io.FileNotFoundException: q334ovwntn7wtn784yvn9.txt (The system cannot find the file specified)
 Mon Jun 07 13:14:21 IRDT 2021, closing the (FileWriter) logWriter
+Tue Jun 15 17:58:47 IRDT 2021, log.txt created
+Tue Jun 15 17:58:47 IRDT 2021, ali is dumb
+Tue Jun 15 17:58:47 IRDT 2021, ali is dumbdumb
+Tue Jun 15 17:58:47 IRDT 2021, java.io.FileNotFoundException: q334ovwntn7wtn784yvn9.txt (The system cannot find the file specified)
+Tue Jun 15 17:58:47 IRDT 2021, closing the (FileWriter) logWriter
