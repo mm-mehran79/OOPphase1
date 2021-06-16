@@ -10,12 +10,7 @@ public enum ProductTypes {
     BREAD,
     SHIRT,
     ICECREAM,
-    CHICKEN,
-    TURKEY,
-    BUFFALO,
     LION,
     BEAR,
-    TIGER,
-    DOG,
-    CAT
+    TIGER
 }

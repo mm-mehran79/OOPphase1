@@ -1,16 +1,14 @@
+import log.Log;
+
 import java.io.*;  // Import the File class
 import java.io.IOException;  // Import the IOException class to handle errors
 import java.io.FileNotFoundException;  // Import this class to handle errors
 import java.util.Random;
 import java.util.Scanner; // Import the Scanner class to read text files
-import java.util.Date; // date
+
 
 public class Main {
     public static void main(String[] args) {
-
-
-
-        //fgfgfgfgfgfgfgfg
         File myFileBlah = new File("1.txt");
         Scanner scanner;
 
@@ -81,8 +79,8 @@ public class Main {
         }
 
         System.out.println("LOG");
-        Log.log("ali is dumb");
-        Log.log("ali is dumbdumb");
+        Log.log(Log.ERROR,"ali is dumb");
+        Log.log(Log.INFO, "ali is dumbdumb");
 
         File defErrorFile = new File("q334ovwntn7wtn784yvn9.txt");
         try {
