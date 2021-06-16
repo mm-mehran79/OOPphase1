@@ -24,13 +24,14 @@ public class Product{
     public static int PRIMARY_MAX_TURNS = 4;
     public static int SECONDARY_MAX_TURNS = 5;
     public static int TERTIARY_MAX_TURNS = 6;
-    public static int ANIMAl_MAX_TURNS = 5;
+    public static int ANIMAL_MAX_TURNS = 5;
 
     // private properties
     private ProductTypes productType;
     private int price;
     private int storage;
     private int productTurns;
+    private int maxTurns;
 
     public Product(ProductTypes productType) {
         this.productType = productType;
@@ -38,50 +39,62 @@ public class Product{
         if (this.productType == ProductTypes.EGG) {
             price = EGG_PRICE;
             storage = PRIMARY_STORAGE;
+            maxTurns = PRIMARY_MAX_TURNS;
         }
         else if (this.productType == ProductTypes.FEATHER) {
             price = FEATHER_PRICE;
-            storage = 1;
+            storage = PRIMARY_STORAGE;
+            maxTurns = PRIMARY_MAX_TURNS;
         }
         else if (this.productType == ProductTypes.MILK) {
             price = MILK_PRICE;
-            storage = 1;
+            storage = PRIMARY_STORAGE;
+            maxTurns = PRIMARY_MAX_TURNS;
         }
         else if (this.productType == ProductTypes.FLOUR) {
             price = FLOUR_PRICE;
-            storage = 1;
+            storage = SECONDARY_STORAGE;
+            maxTurns = SECONDARY_MAX_TURNS;
         }
         else if (this.productType == ProductTypes.CLOTH) {
             price = CLOTH_PRICE;
-            storage = 1;
+            storage = SECONDARY_STORAGE;
+            maxTurns = SECONDARY_MAX_TURNS;
         }
         else if (this.productType == ProductTypes.PACKETMILK) {
             price = PACKETMILK_PRICE;
-            storage = 1;
+            storage = SECONDARY_STORAGE;
+            maxTurns = SECONDARY_MAX_TURNS;
         }
         else if (this.productType == ProductTypes.BREAD) {
             price = BREAD_PRICE;
-            storage = 1;
+            storage = TERTIARY_STORAGE;
+            maxTurns = TERTIARY_MAX_TURNS;
         }
         else if (this.productType == ProductTypes.SHIRT) {
             price = SHIRT_PRICE;
-            storage = 1;
+            storage = TERTIARY_STORAGE;
+            maxTurns = TERTIARY_MAX_TURNS;
         }
         else if (this.productType == ProductTypes.ICECREAM) {
             price = ICECREAM_PRICE;
-            storage = 1;
+            storage = TERTIARY_STORAGE;
+            maxTurns = TERTIARY_MAX_TURNS;
         }
         else if (this.productType == ProductTypes.LION) {
             price = LION_PRICE;
-            storage = 1;
+            storage = ANIMAL_STORAGE;
+            maxTurns = ANIMAL_MAX_TURNS;
         }
         else if (this.productType == ProductTypes.BEAR) {
             price = BEAR_PRICE;
-            storage = 1;
+            storage = ANIMAL_STORAGE;
+            maxTurns = ANIMAL_MAX_TURNS;
         }
         else if (this.productType == ProductTypes.TIGER) {
             price = TIGER_PRICE;
-            storage = 1;
+            storage = ANIMAL_STORAGE;
+            maxTurns = ANIMAL_MAX_TURNS;
         }
     }
 
@@ -103,6 +116,11 @@ public class Product{
     // ProductTurns getter
     public int getProductTurns() {
         return productTurns;
+    }
+
+    // maxTurns getter
+    public int getMaxTurns() {
+        return maxTurns;
     }
 
 }
