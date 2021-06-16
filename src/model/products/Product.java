@@ -98,6 +98,11 @@ public class Product{
         }
     }
 
+    // ProductTurns setter
+    public void setProductTurns(int productTurns) {
+        this.productTurns = productTurns;
+    }
+
     // ProductType getter
     public ProductTypes getProductType() {
         return productType;
@@ -118,9 +123,8 @@ public class Product{
         return productTurns;
     }
 
-    // maxTurns getter
+    // MaxTurns getter
     public int getMaxTurns() {
         return maxTurns;
     }
-
 }
