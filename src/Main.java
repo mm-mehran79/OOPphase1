@@ -33,13 +33,16 @@ public class Main {
 
             String line1 = scanner.nextLine(); // first line
             Level.setTotalLevels(  Integer.parseInt( line1.split("\\s")[1] )  ); // total levels
+            System.out.println(Level.getTotalLevels());
 
             Level[] levels = new Level[Level.getTotalLevels()]; // creating for levels
             for (int i = 0; i < Level.getTotalLevels(); i++) {
                 scanner.nextLine(); // level no
 
                 int initialCoins = Integer.parseInt( scanner.nextLine().split("\\s")[1] );
+                System.out.println(initialCoins);
                 int coinTask = Integer.parseInt( scanner.nextLine().split("\\s")[1] );
+                System.out.println(coinTask);
 
                 String productString;
                 HashMap <ProductTypes, Integer> productTasks = new HashMap<>();
@@ -70,6 +73,7 @@ public class Main {
                 productString = scanner.nextLine();
                 if ( Integer.parseInt(productString.split("\\s")[1]) != 0 )
                     productTasks.put(ProductTypes.ICECREAM, Integer.parseInt(productString.split("\\s")[1]));
+                System.out.println(productTasks);
 
                 String animalString;
                 HashMap <AnimalTypes, Integer> animalTasks = new HashMap<>();
@@ -82,11 +86,38 @@ public class Main {
                 animalString = scanner.nextLine();
                 if ( Integer.parseInt(animalString.split("\\s")[1]) != 0 )
                     animalTasks.put(AnimalTypes.BUFFALO, Integer.parseInt(animalString.split("\\s")[1]));
+                System.out.println(animalTasks);
 
+                String spawnString;
+                String[] spawnStringSplit;
+                HashMap <Integer, AnimalTypes> spawn = new HashMap<>();
+                spawnString = scanner.nextLine();
+                spawnStringSplit = spawnString.split("\\s");
+                if ( Integer.parseInt(spawnStringSplit[1]) != 0 ) {
+                    for (int j = 0; j < Integer.parseInt(spawnStringSplit[1]); j++)
+                        spawn.put(Integer.parseInt(spawnStringSplit[2+j]), AnimalTypes.LION);
+                }
+                spawnString = scanner.nextLine();
+                spawnStringSplit = spawnString.split("\\s");
+                if ( Integer.parseInt(spawnStringSplit[1]) != 0 ) {
+                    for (int j = 0; j < Integer.parseInt(spawnStringSplit[1]); j++)
+                        spawn.put(Integer.parseInt(spawnStringSplit[2+j]), AnimalTypes.BEAR);
+                }
+                spawnString = scanner.nextLine();
+                spawnStringSplit = spawnString.split("\\s");
+                if ( Integer.parseInt(spawnStringSplit[1]) != 0 ) {
+                    for (int j = 0; j < Integer.parseInt(spawnStringSplit[1]); j++)
+                        spawn.put(Integer.parseInt(spawnStringSplit[2+j]), AnimalTypes.TIGER);
+                }
+                System.out.println(spawn);
 
+                int maxTurn = Integer.parseInt( scanner.nextLine().split("\\s")[1] );
+                System.out.println(maxTurn);
+                int prize = Integer.parseInt( scanner.nextLine().split("\\s")[1] );
+                System.out.println(prize);
             }
 
-        } catch (FileNotFoundException e) {
+        } catch (Exception e) {
             Log.log(Log.EXCEPTION, "exception catch in initializationOfLevels");
             e.printStackTrace();
         }
