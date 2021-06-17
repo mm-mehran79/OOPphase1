@@ -2,10 +2,12 @@ package level;
 
 import model.animals.AnimalTypes;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Level {
     // primary level properties
+    static ArrayList <Level> levelArrayList;
     int initialCoins;
     Task task;
     HashMap <Integer, AnimalTypes> spawn;

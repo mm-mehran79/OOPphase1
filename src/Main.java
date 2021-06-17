@@ -9,6 +9,9 @@ import java.util.Scanner; // Import the Scanner class to read text files
 
 public class Main {
     public static void main(String[] args) {
+        Log.log(Log.INFO, "Game Main Ran");
+
+
         File myFileBlah = new File("1.txt");
         Scanner scanner;
 
@@ -213,5 +216,14 @@ public class Main {
             System.out.println("An error occurred 3.");
             e.printStackTrace();
         }*/
+    }
+
+    void initialization() {
+        initializationOfLevels();
+    }
+
+    void initializationOfLevels() {
+        File levelFile = new File("missions.txt");
+
     }
 }
