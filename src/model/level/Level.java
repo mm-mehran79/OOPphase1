@@ -50,4 +50,32 @@ public class Level {
     public static void setTotalLevels(int totalLevels) {
         Level.totalLevels = totalLevels;
     }
+
+    public int getInitialCoins() {
+        return initialCoins;
+    }
+
+    public HashMap<Integer, AnimalTypes> getSpawn() {
+        return spawn;
+    }
+
+    public int getMaxTime() {
+        return maxTime;
+    }
+
+    public int getReward() {
+        return reward;
+    }
+
+    public int getCoinTask() {
+        return coinTask;
+    }
+
+    public HashMap<ProductTypes, Integer> getProductTasks() {
+        return productTasks;
+    }
+
+    public HashMap<AnimalTypes, Integer> getAnimalTasks() {
+        return animalTasks;
+    }
 }

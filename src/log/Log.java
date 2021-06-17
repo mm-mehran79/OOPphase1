@@ -11,7 +11,7 @@ public class Log {
     public static int ALARM = 1;
     public static int INFO = 2;
     public static int EXCEPTION = 3;
-    public static int LOG = 3;
+    public static int LOG = 4;
 
     // properties
     private static boolean fileBoolean = false;
@@ -36,7 +36,7 @@ public class Log {
             else if ( logType == EXCEPTION)
                 logWriter.write("[Exception], " + logDate.toString() + ", " + logString + "\n");
             else if ( logType == LOG)
-                logWriter.write("[log], " + logDate.toString() + ", " + logString + "\n");
+                logWriter.write("[Log], " + logDate.toString() + ", " + logString + "\n");
             logWriter.flush();
         } catch (IOException e) {
             e.printStackTrace();
