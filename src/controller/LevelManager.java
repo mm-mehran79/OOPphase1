@@ -33,6 +33,12 @@ public class LevelManager {
         return true;
     }
 
+    public void dequeueInstruction() {
+        for (String instructionString : instructionQueue) {
+            
+        }
+    }
+
     public ArrayList<String> getInstructionQueue() {
         return instructionQueue;
     }

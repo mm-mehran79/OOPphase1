@@ -323,6 +323,7 @@ public class LevelInputProcessor {
         }
 
 
+        levelManager.dequeueInstruction();
 
         System.out.println(levelManager.getInstructionQueue());
         return levelFinished;
