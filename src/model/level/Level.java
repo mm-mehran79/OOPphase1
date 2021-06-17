@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Level {
-    // primary model.level properties
+    // primary Level properties
     static ArrayList <Level> levelArrayList;
     int initialCoins;
     Task task;

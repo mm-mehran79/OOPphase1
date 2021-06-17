@@ -1,13 +1,15 @@
-package model.level;
+package view;
+
+import controller.LevelManager;
 
 import java.util.Scanner;
 
-public class LevelInputProccessor {
+public class LevelInputProcessor {
     boolean levelFinished = false;
     LevelManager levelManager;
     Scanner scanner;
 
-    public LevelInputProccessor(LevelManager levelManager, Scanner scanner) {
+    public LevelInputProcessor(LevelManager levelManager, Scanner scanner) {
         this.levelManager = levelManager;
         this.scanner = scanner;
     }
@@ -56,7 +58,7 @@ public class LevelInputProccessor {
 
     }
 
-    private boolean proccessCheckFinished() {
+    private boolean processCheckFinished() {
         return false;
     }
 
@@ -66,7 +68,7 @@ public class LevelInputProccessor {
         String[] inputSplit;
 
         // case handling
-        while ( !(input = scanner.nextLine()).equalsIgnoreCase("exit model.level") && !levelFinished ) {
+        while ( !(input = scanner.nextLine()).equalsIgnoreCase("exit level") && !levelFinished ) {
             String inputToLowerCase = input.toLowerCase();
             if ( inputToLowerCase.startsWith("buy") )
                 processBuy(inputToLowerCase);
@@ -91,7 +93,7 @@ public class LevelInputProccessor {
             else if ( inputToLowerCase.startsWith("inquiry") )
                 processInquiry(inputToLowerCase);
 
-            levelFinished = proccessCheckFinished();
+            levelFinished = processCheckFinished();
         }
 
         return levelFinished;
