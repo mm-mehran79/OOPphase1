@@ -1,4 +1,4 @@
-package level;
+package model.level;
 
 import model.animals.AnimalTypes;
 import model.products.ProductTypes;

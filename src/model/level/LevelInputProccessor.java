@@ -1,4 +1,4 @@
-package level;
+package model.level;
 
 import java.util.Scanner;
 
@@ -66,7 +66,7 @@ public class LevelInputProccessor {
         String[] inputSplit;
 
         // case handling
-        while ( !(input = scanner.nextLine()).equalsIgnoreCase("exit level") && !levelFinished ) {
+        while ( !(input = scanner.nextLine()).equalsIgnoreCase("exit model.level") && !levelFinished ) {
             String inputToLowerCase = input.toLowerCase();
             if ( inputToLowerCase.startsWith("buy") )
                 processBuy(inputToLowerCase);

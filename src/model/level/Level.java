@@ -1,4 +1,4 @@
-package level;
+package model.level;
 
 import model.animals.AnimalTypes;
 
@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Level {
-    // primary level properties
+    // primary model.level properties
     static ArrayList <Level> levelArrayList;
     int initialCoins;
     Task task;

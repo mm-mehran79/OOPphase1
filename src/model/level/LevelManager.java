@@ -1,4 +1,4 @@
-package level;
+package model.level;
 
 import model.animals.domesticated.AbstractDomesticatedAnimal;
 import model.animals.pet.AbstractPetAnimal;
