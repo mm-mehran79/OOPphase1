@@ -1,24 +1,53 @@
 package model.level;
 
 import model.animals.AnimalTypes;
+import model.products.ProductTypes;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Level {
+    static Level[] levels;
+    static int totalLevels;
     // primary Level properties
-    static ArrayList <Level> levelArrayList;
     int initialCoins;
-    Task task;
     HashMap <Integer, AnimalTypes> spawn;
     int maxTime;
     int reward;
+    // tasks
+    int coinTask;
+    HashMap <ProductTypes, Integer> productTasks;
+    HashMap <AnimalTypes, Integer> animalTasks;
 
-    public Level(int initialCoins, Task task, HashMap<Integer, AnimalTypes> spawn, int maxTime, int reward) {
+    public Level(int initialCoins,
+                 HashMap<Integer, AnimalTypes> spawn,
+                 int maxTime,
+                 int reward,
+                 int coinTask,
+                 HashMap<ProductTypes, Integer> productTasks,
+                 HashMap<AnimalTypes, Integer> animalTasks) {
         this.initialCoins = initialCoins;
-        this.task = task;
         this.spawn = spawn;
         this.maxTime = maxTime;
         this.reward = reward;
+        this.coinTask = coinTask;
+        this.productTasks = productTasks;
+        this.animalTasks = animalTasks;
+    }
+
+    public static Level[] getLevels() {
+        return levels;
+    }
+
+    public static void setLevels(Level[] levels) {
+        Level.levels = levels;
+    }
+
+    public static int getTotalLevels() {
+        return totalLevels;
+    }
+
+    public static void setTotalLevels(int totalLevels) {
+        Level.totalLevels = totalLevels;
     }
 }
