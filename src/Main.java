@@ -14,10 +14,23 @@ import java.util.Scanner; // Import the Scanner class to read text files
 
 public class Main {
     public static void main(String[] args) {
-        Log.log(Log.INFO, "Game Main Ran");
-        initialization();
+        //Log.log(Log.INFO, "Game Main Ran");
+        //initialization();
 
-        Log.close();
+
+
+        Scanner scanner = new Scanner(System.in);
+        String string = scanner.nextLine();
+        String[] stringSplit = string.split("\\s");
+        for (int i = 0; i < stringSplit.length; i++) {
+            System.out.println(stringSplit[i]);
+        }
+        if (string.matches("turn \\d+"))
+            System.out.println("meow");
+
+
+
+        //Log.close();
     }
 
     static void initialization() {
@@ -127,6 +140,7 @@ public class Main {
             }
             Level.setLevels(levels);
             Log.log(Log.INFO, "initializationOfLevels successfully");
+            scanner.close();
         } catch (Exception e) {
             Log.log(Log.EXCEPTION, "exception catch in initializationOfLevels");
             e.printStackTrace();
