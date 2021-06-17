@@ -43,3 +43,8 @@ Wed Jun 16 14:25:29 IRDT 2021, closing the (FileWriter) logWriter
 [Info], Wed Jun 16 15:29:11 IRDT 2021, ali is dumbdumb
 [Exception], Wed Jun 16 15:29:11 IRDT 2021, java.io.FileNotFoundException: q334ovwntn7wtn784yvn9.txt (The system cannot find the file specified)
 [Exception], Wed Jun 16 15:29:11 IRDT 2021, closing the (FileWriter) logWriter
+[Log], Thu Jun 17 07:59:10 IRDT 2021, log.txt created or opened
+[Error], Thu Jun 17 07:59:10 IRDT 2021, ali is dumb
+[Info], Thu Jun 17 07:59:10 IRDT 2021, ali is dumbdumb
+[Exception], Thu Jun 17 07:59:10 IRDT 2021, java.io.FileNotFoundException: q334ovwntn7wtn784yvn9.txt (The system cannot find the file specified)
+[Exception], Thu Jun 17 07:59:10 IRDT 2021, closing the (FileWriter) logWriter
