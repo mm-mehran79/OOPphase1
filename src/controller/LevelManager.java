@@ -21,6 +21,7 @@ public class LevelManager {
 
     public LevelManager(Level level) {
         this.level = level;
+        instructionQueue = new ArrayList<>();
     }
 
     public boolean addInstruction(String instruction) {
@@ -28,7 +29,12 @@ public class LevelManager {
         return true;
     }
 
+    public ArrayList<String> getInstructionQueue() {
+        return instructionQueue;
+    }
+
     public boolean inquiry() {
+        System.out.println("Xx inquiry xX");
         return true;
     }
 

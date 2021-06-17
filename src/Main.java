@@ -1,7 +1,9 @@
+import controller.LevelManager;
 import log.Log;
 import model.animals.AnimalTypes;
 import model.level.Level;
 import model.products.ProductTypes;
+import view.LevelInputProcessor;
 
 import java.io.*;  // Import the File class
 import java.io.IOException;  // Import the IOException class to handle errors
@@ -14,19 +16,24 @@ import java.util.Scanner; // Import the Scanner class to read text files
 
 public class Main {
     public static void main(String[] args) {
-        //Log.log(Log.INFO, "Game Main Ran");
-        //initialization();
+        Log.log(Log.INFO, "Game Main Ran");
+        initialization();
 
 
 
-        Scanner scanner = new Scanner(System.in);
+        /*Scanner scanner = new Scanner(System.in);
         String string = scanner.nextLine();
         String[] stringSplit = string.split("\\s");
         for (int i = 0; i < stringSplit.length; i++) {
             System.out.println(stringSplit[i]);
         }
         if (string.matches("turn \\d+"))
-            System.out.println("meow");
+            System.out.println("meow");*/
+
+        Scanner scanner = new Scanner(System.in);
+        LevelManager levelManager = new LevelManager(Level.getLevels()[0]);
+        LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, scanner);
+        System.out.println(levelInputProcessor.run());
 
 
 

@@ -15,23 +15,23 @@ public class LevelInputProcessor {
     }
 
     private void processBuy(String input) {
-        if (input.matches("buy chick")) {
+        if (input.startsWith("buy chick")) {
             levelManager.addInstruction("buy chicken");
             return;
         }
-        else if (input.matches("buy turk")) {
+        else if (input.startsWith("buy turk")) {
             levelManager.addInstruction("buy turkey");
             return;
         }
-        else if (input.matches("buy buf")) {
+        else if (input.startsWith("buy buf")) {
             levelManager.addInstruction("buy buffalo");
             return;
         }
-        else if (input.matches("buy dog")) {
+        else if (input.startsWith("buy dog")) {
             levelManager.addInstruction("buy dog");
             return;
         }
-        else if (input.matches("buy cat")) {
+        else if (input.startsWith("buy cat")) {
             levelManager.addInstruction("buy cat");
             return;
         }
@@ -39,27 +39,27 @@ public class LevelInputProcessor {
     }
 
     private void processBuild(String input) {
-        if (input.matches("build fl")) {
+        if (input.startsWith("build fl")) {
             levelManager.addInstruction("build flour");
             return;
         }
-        else if (input.matches("build cl")) {
+        else if (input.startsWith("build cl")) {
             levelManager.addInstruction("build cloth");
             return;
         }
-        else if (input.matches("build pa")) {
+        else if (input.startsWith("build pa")) {
             levelManager.addInstruction("build packetmilk");
             return;
         }
-        else if (input.matches("build br")) {
+        else if (input.startsWith("build br")) {
             levelManager.addInstruction("build bread");
             return;
         }
-        else if (input.matches("build sh")) {
+        else if (input.startsWith("build sh")) {
             levelManager.addInstruction("build shirt");
             return;
         }
-        else if (input.matches("build ic")) {
+        else if (input.startsWith("build ic")) {
             levelManager.addInstruction("build icecream");
             return;
         }
@@ -111,27 +111,27 @@ public class LevelInputProcessor {
     }
 
     private void processWork(String input) {
-        if (input.matches("work fl")) {
+        if (input.startsWith("work fl")) {
             levelManager.addInstruction("work flour");
             return;
         }
-        else if (input.matches("work cl")) {
+        else if (input.startsWith("work cl")) {
             levelManager.addInstruction("work cloth");
             return;
         }
-        else if (input.matches("work pa")) {
+        else if (input.startsWith("work pa")) {
             levelManager.addInstruction("work packetmilk");
             return;
         }
-        else if (input.matches("work br")) {
+        else if (input.startsWith("work br")) {
             levelManager.addInstruction("work bread");
             return;
         }
-        else if (input.matches("work sh")) {
+        else if (input.startsWith("work sh")) {
             levelManager.addInstruction("work shirt");
             return;
         }
-        else if (input.matches("work ic")) {
+        else if (input.startsWith("work ic")) {
             levelManager.addInstruction("work icecream");
             return;
         }
@@ -169,51 +169,51 @@ public class LevelInputProcessor {
     }
 
     private void processTruckLoad(String input) {
-        if (input.matches("truck load fl")) {
+        if (input.startsWith("truck load fl")) {
             levelManager.addInstruction("truck load flour");
             return;
         }
-        else if (input.matches("truck load cl")) {
+        else if (input.startsWith("truck load cl")) {
             levelManager.addInstruction("truck load cloth");
             return;
         }
-        else if (input.matches("truck load pa")) {
+        else if (input.startsWith("truck load pa")) {
             levelManager.addInstruction("truck load packetmilk");
             return;
         }
-        else if (input.matches("truck load br")) {
+        else if (input.startsWith("truck load br")) {
             levelManager.addInstruction("truck load bread");
             return;
         }
-        else if (input.matches("truck load sh")) {
+        else if (input.startsWith("truck load sh")) {
             levelManager.addInstruction("truck load shirt");
             return;
         }
-        else if (input.matches("truck load ic")) {
+        else if (input.startsWith("truck load ic")) {
             levelManager.addInstruction("truck load icecream");
             return;
         }
-        else if (input.matches("truck load mi")) {
+        else if (input.startsWith("truck load mi")) {
             levelManager.addInstruction("truck load milk");
             return;
         }
-        else if (input.matches("truck load fe")) {
+        else if (input.startsWith("truck load fe")) {
             levelManager.addInstruction("truck load feather");
             return;
         }
-        else if (input.matches("truck load eg")) {
+        else if (input.startsWith("truck load eg")) {
             levelManager.addInstruction("truck load egg");
             return;
         }
-        else if (input.matches("truck load li")) {
+        else if (input.startsWith("truck load li")) {
             levelManager.addInstruction("truck load lion");
             return;
         }
-        else if (input.matches("truck load be")) {
+        else if (input.startsWith("truck load be")) {
             levelManager.addInstruction("truck load bear");
             return;
         }
-        else if (input.matches("truck load ti")) {
+        else if (input.startsWith("truck load ti")) {
             levelManager.addInstruction("truck load tiger");
             return;
         }
@@ -221,51 +221,51 @@ public class LevelInputProcessor {
     }
 
     private void processTruckUnload(String input) {
-        if (input.matches("truck unload fl")) {
+        if (input.startsWith("truck unload fl")) {
             levelManager.addInstruction("truck unload flour");
             return;
         }
-        else if (input.matches("truck unload cl")) {
+        else if (input.startsWith("truck unload cl")) {
             levelManager.addInstruction("truck unload cloth");
             return;
         }
-        else if (input.matches("truck unload pa")) {
+        else if (input.startsWith("truck unload pa")) {
             levelManager.addInstruction("truck unload packetmilk");
             return;
         }
-        else if (input.matches("truck unload br")) {
+        else if (input.startsWith("truck unload br")) {
             levelManager.addInstruction("truck unload bread");
             return;
         }
-        else if (input.matches("truck unload sh")) {
+        else if (input.startsWith("truck unload sh")) {
             levelManager.addInstruction("truck unload shirt");
             return;
         }
-        else if (input.matches("truck unload ic")) {
+        else if (input.startsWith("truck unload ic")) {
             levelManager.addInstruction("truck unload icecream");
             return;
         }
-        else if (input.matches("truck unload mi")) {
+        else if (input.startsWith("truck unload mi")) {
             levelManager.addInstruction("truck unload milk");
             return;
         }
-        else if (input.matches("truck unload fe")) {
+        else if (input.startsWith("truck unload fe")) {
             levelManager.addInstruction("truck unload feather");
             return;
         }
-        else if (input.matches("truck unload eg")) {
+        else if (input.startsWith("truck unload eg")) {
             levelManager.addInstruction("truck unload egg");
             return;
         }
-        else if (input.matches("truck unload li")) {
+        else if (input.startsWith("truck unload li")) {
             levelManager.addInstruction("truck unload lion");
             return;
         }
-        else if (input.matches("truck unload be")) {
+        else if (input.startsWith("truck unload be")) {
             levelManager.addInstruction("truck unload bear");
             return;
         }
-        else if (input.matches("truck unload ti")) {
+        else if (input.startsWith("truck unload ti")) {
             levelManager.addInstruction("truck unload tiger");
             return;
         }
@@ -322,6 +322,7 @@ public class LevelInputProcessor {
             levelFinished = processCheckFinished();
         }
 
+        System.out.println(levelManager.getInstructionQueue());
         return levelFinished;
     }
 
