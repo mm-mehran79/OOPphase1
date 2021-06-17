@@ -56,6 +56,10 @@ public class LevelInputProccessor {
 
     }
 
+    private boolean proccessCheckFinished() {
+        return false;
+    }
+
     public boolean run () {
         // needed vars
         String input;
@@ -86,6 +90,8 @@ public class LevelInputProccessor {
                 processTruckGo(inputToLowerCase);
             else if ( inputToLowerCase.startsWith("inquiry") )
                 processInquiry(inputToLowerCase);
+
+            levelFinished = proccessCheckFinished();
         }
 
         return levelFinished;
