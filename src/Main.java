@@ -38,7 +38,7 @@ public class Main {
 
 
 
-        //Log.close();
+        Log.close();
     }
 
     static void initialization() {

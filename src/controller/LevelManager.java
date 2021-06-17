@@ -18,6 +18,10 @@ public class LevelManager {
     ArrayList <Product> products;
 
     ArrayList <String> instructionQueue;
+    // task booleans
+    boolean coinTaskBoolean = false;
+    boolean productTasksBoolean = false;
+    boolean animalTasksBoolean = false;
 
     public LevelManager(Level level) {
         this.level = level;

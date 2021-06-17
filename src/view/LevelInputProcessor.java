@@ -322,6 +322,8 @@ public class LevelInputProcessor {
             levelFinished = processCheckFinished();
         }
 
+
+
         System.out.println(levelManager.getInstructionQueue());
         return levelFinished;
     }
