@@ -275,6 +275,7 @@ public class LevelManager {
 
 
         }
+        Log.log(Log.INFO, "dequeuing instructions completed");
     }
 
     private void buy(AnimalTypes animalType) {
@@ -607,7 +608,8 @@ public class LevelManager {
     }
 
     public void turnN(int n) {
-        inquiry();
+        Log.log(Log.INFO, "it is levelManager's TurnN with N = " + n);
+        dequeueInstruction();
     }
 
     private void turn() {
@@ -773,5 +775,9 @@ public class LevelManager {
 
     public boolean isPrized() {
         return turn <= maxTime;
+    }
+
+    public int getReward() {
+        return reward;
     }
 }

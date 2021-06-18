@@ -167,7 +167,8 @@ public class LevelInputProcessor {
         System.err.println("Invalid input, Please try again" + " (pickup regex)");
     }
 
-    private void processTurn(String input) {
+    // old
+    /*private void processTurn(String input) {
         if (input.matches("turn \\d+")) {
             String[] inputSplit = input.split(" ");
             int turn = Integer.parseInt(inputSplit[1]);
@@ -179,6 +180,23 @@ public class LevelInputProcessor {
             return;
         }
         System.err.println("Invalid input, Please try again" + " (turn regex)");
+    }*/
+
+    // new
+    private void processTurn(String input) {// processTurn(inputToLowerCase);
+        if (input.matches("turn \\d+")) {
+            String[] inputSplit = input.split(" ");
+            int turn = Integer.parseInt(inputSplit[1]);
+            //levelManager.turnN(turn);
+            levelManager.dequeueInstruction();
+        }
+        else if (input.matches("turn")) {
+            //levelManager.turnN(1);
+            levelManager.dequeueInstruction();
+        }
+        else
+            System.err.println("Invalid input, Please try again" + " (turn regex)");
+
     }
 
     private void processTruckLoad(String input) {
@@ -305,8 +323,8 @@ public class LevelInputProcessor {
         // case handling
         boolean getInput = true;
         while (getInput) {
-
-            while ( !(input = scanner.nextLine()).startsWith("turn") ) {
+            // handling inputs
+            while ( !(input = scanner.nextLine()).startsWith("exit level") ) {
                 String inputToLowerCase = input.toLowerCase();
                 if ( inputToLowerCase.startsWith("buy") )
                     processBuy(inputToLowerCase);
@@ -330,33 +348,43 @@ public class LevelInputProcessor {
                     processTruckGo(inputToLowerCase);
                 else if ( inputToLowerCase.startsWith("inquiry") )
                     processInquiry(inputToLowerCase);
+                else if ( inputToLowerCase.startsWith("turn") ) {
+                    processTurn(input);
+                    break;
+                }
                 else if ( input.equalsIgnoreCase("exit level") ) {
                     getInput = false;
                     break;
                 }
-                else if ( inputToLowerCase.startsWith("turn") ) {
-                    // processTurn(inputToLowerCase);
-                    if (input.matches("turn \\d+")) {
-                        String[] inputSplit = input.split(" ");
-                        int turn = Integer.parseInt(inputSplit[1]);
-                        levelManager.addInstruction("turn " + turn);
-                    }
-                    else if (input.matches("turn")) {
-                        levelManager.addInstruction("turn 1");
-                    }
-                }
                 else
                     System.err.println("Invalid input, Please try again");
 
-                if (getInput) {
-                    System.out.println("doing the turns");
-                }
             }
-
         }
 
-        // case handling
-        while ( !(input = scanner.nextLine()).equalsIgnoreCase("exit level") && !levelFinished ) {
+
+        //System.out.println(levelManager.getInstructionQueue());
+        //levelManager.dequeueInstruction();
+
+        int runReturnInt;
+        if (levelManager.isFinished()) {
+            if (levelManager.isPrized())
+                runReturnInt = levelManager.getReward();
+            else
+                runReturnInt = 0;
+        }
+        else
+            runReturnInt = -1;
+        return runReturnInt;
+    }
+
+    public boolean isLevelFinished() {
+        return levelFinished;
+    }
+
+    public void badRun() {
+        // case handling bad
+        /*while ( !(input = scanner.nextLine()).equalsIgnoreCase("exit level") && !levelFinished ) {
             String inputToLowerCase = input.toLowerCase();
             if ( inputToLowerCase.startsWith("buy") )
                 processBuy(inputToLowerCase);
@@ -386,17 +414,7 @@ public class LevelInputProcessor {
                 System.err.println("Invalid input, Please try again");
 
             levelFinished = processCheckFinished();
-        }
-
-
-        levelManager.dequeueInstruction();
-
-        System.out.println(levelManager.getInstructionQueue());
-        return 1;
-    }
-
-    public boolean isLevelFinished() {
-        return levelFinished;
+        }*/
     }
 
 }

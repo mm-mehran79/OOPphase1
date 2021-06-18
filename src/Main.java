@@ -102,7 +102,7 @@ public class Main {
         boolean meow = true;
         while (meow) {
             string = scanner.nextLine();
-            if (string.matches("turn \\d*"))
+            if (string.matches("turn \\d+"))
                 System.out.println("1");
             else if (string.matches("turn"))
                 System.out.println("2");
