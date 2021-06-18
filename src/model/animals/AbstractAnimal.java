@@ -6,13 +6,14 @@ public abstract class AbstractAnimal {
     public AnimalTypes animalType; // animal type
     public int x, y; // coordination
     public int animalsTurns; // the number of animals turns
-    public static Random animalRandom = new Random(); // random for move
+    public static Random random; // random for move
 
     // constructor
     public AbstractAnimal(AnimalTypes animalType) {
         this.animalType = animalType; // setting the general type
-        x = animalRandom.nextInt(7); // spawning x
-        y = animalRandom.nextInt(7); // spawning x
+        random = new Random();
+        x = random.nextInt(6) + 1; // spawning x
+        y = random.nextInt(6) + 1; // spawning x
         animalsTurns = 0; // number of turns that animal has been in the game
     }
 
@@ -20,8 +21,8 @@ public abstract class AbstractAnimal {
     public void move() {
         boolean moveBoolean = false;
         while ( !moveBoolean ) {
-            int moveInt = animalRandom.nextInt(4);
-            if ( moveInt == 0 && y != 0) {
+            int moveInt = random.nextInt(4);
+            if ( moveInt == 0 && y != 1) {
                 y--;
                 moveBoolean = true;
             }
@@ -29,7 +30,7 @@ public abstract class AbstractAnimal {
                 y++;
                 moveBoolean = true;
             }
-            else if ( moveInt == 2 && x != 0) {
+            else if ( moveInt == 2 && x != 1) {
                 x--;
                 moveBoolean = true;
             }

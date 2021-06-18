@@ -1,5 +1,7 @@
 package model.products;
 
+import java.util.Random;
+
 public class Product{
     // static ints
     // prices
@@ -32,8 +34,12 @@ public class Product{
     private int storage;
     private int productTurns;
     private int maxTurns;
+    private int x, y;
+    private Random random;
 
     public Product(ProductTypes productType) {
+         random = new Random();
+
         this.productType = productType;
         productTurns = 0;
         if (this.productType == ProductTypes.EGG) {

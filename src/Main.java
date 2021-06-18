@@ -17,7 +17,7 @@ import java.util.Scanner; // Import the Scanner class to read text files
 public class Main {
     public static void main(String[] args) {
         Log.log(Log.INFO, "Game Main Ran");
-        initialization();
+        /*initialization();*/
 
 
 
@@ -30,10 +30,11 @@ public class Main {
         if (string.matches("turn \\d+"))
             System.out.println("meow");*/
 
-        Scanner scanner = new Scanner(System.in);
+        /*Scanner scanner = new Scanner(System.in);
         LevelManager levelManager = new LevelManager(Level.getLevels()[0]);
         LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, scanner);
-        System.out.println(levelInputProcessor.run());
+        System.out.println(levelInputProcessor.run());*/
+
 
 
 

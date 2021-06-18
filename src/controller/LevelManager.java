@@ -11,7 +11,9 @@ import java.util.ArrayList;
 public class LevelManager {
     // level manager initialization properties
     Level level;
-    int coins;
+    // level properties
+    int coins; // coins
+    int turn = 0; // number of turns
     ArrayList <AbstractDomesticatedAnimal> domesticatedAnimals;
     ArrayList <AbstractPetAnimal> petAnimals;
     ArrayList <AbstractWildAnimal> wildAnimals;
