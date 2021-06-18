@@ -342,7 +342,7 @@ public class LevelInputProcessor {
                         levelManager.addInstruction("turn " + turn);
                     }
                     else if (input.matches("turn")) {
-                        levelManager.addInstruction("turn ");
+                        levelManager.addInstruction("turn 1");
                     }
                 }
                 else

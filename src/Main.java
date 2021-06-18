@@ -97,7 +97,21 @@ public class Main {
             System.out.println(product.getProductType());
         }*/
 
+        Scanner scanner = new Scanner(System.in);
+        String string;
+        boolean meow = true;
+        while (meow) {
+            string = scanner.nextLine();
+            if (string.matches("turn \\d*"))
+                System.out.println("1");
+            else if (string.matches("turn"))
+                System.out.println("2");
+            else if (string.matches("meow"))
+                meow = false;
+            else
+                System.out.println("meow");
 
+        }
 
 
 

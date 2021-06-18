@@ -70,6 +70,15 @@ public class LevelManager {
     int turkeyTaskProgression = 0;
     int buffaloTaskProgression = 0;
 
+    // workshop things
+    boolean workshopFlour = false;
+    boolean workshopCloth = false;
+    boolean workshopPacketmilk = false;
+    boolean workshopBread = false;
+    boolean workshopShirt = false;
+    boolean workshopIcecream = false;
+
+
     // task booleans
     boolean coinTaskBoolean = false;
     boolean productTasksBoolean = false;
@@ -134,6 +143,14 @@ public class LevelManager {
         turkeyTaskProgression = 0;
         buffaloTaskProgression = 0;
 
+        // workshop things
+        workshopFlour = false;
+        workshopCloth = false;
+        workshopPacketmilk = false;
+        workshopBread = false;
+        workshopShirt = false;
+        workshopIcecream = false;
+
         // task booleans
         coinTaskBoolean = false;
         productTasksBoolean = false;
@@ -167,9 +184,18 @@ public class LevelManager {
                 buy(AnimalTypes.DOG);
             else if (instructionString.equals("buy cat"))
                 buy(AnimalTypes.CAT);
-            else if (instructionString.startsWith("build")) {
-                build();
-            }
+            else if (instructionString.equals("build flour"))
+                build(ProductTypes.FLOUR);
+            else if (instructionString.equals("build cloth"))
+                build(ProductTypes.CLOTH);
+            else if (instructionString.equals("build packetmilk"))
+                build(ProductTypes.PACKETMILK);
+            else if (instructionString.equals("build bread"))
+                build(ProductTypes.BREAD);
+            else if (instructionString.equals("build shirt"))
+                build(ProductTypes.SHIRT);
+            else if (instructionString.equals("build icecream"))
+                build(ProductTypes.ICECREAM);
             else if (instructionString.startsWith("pickup")) {
                 String[] strings = instructionString.split("\\s");
                 int x = Integer.parseInt(strings[1]);
@@ -317,8 +343,115 @@ public class LevelManager {
         }
     }
 
-    private void build() {
-
+    private void build(ProductTypes productType) {
+        if (productType == ProductTypes.FLOUR) {
+            if (workshopFlour) {
+                Log.log(Log.ERROR, "build flour: you own workshopFlour");
+                System.err.println("build flour: you own workshopFlour");
+            }
+            else {
+                if (150 <= coins) {
+                    coins -= 150;
+                    workshopFlour = true;
+                    Log.log(Log.INFO, "build flour: built workshopFlour");
+                    System.out.println("build flour: built workshopFlour");
+                }
+                else {
+                    Log.log(Log.ERROR, "build flour: not enough money for workshopFlour");
+                    System.err.println("build flour: not enough money for workshopFlour");
+                }
+            }
+        }
+        else if (productType == ProductTypes.CLOTH) {
+            if (workshopCloth) {
+                Log.log(Log.ERROR, "build cloth: you own workshopCloth");
+                System.err.println("build cloth: you own workshopCloth");
+            }
+            else {
+                if (250 <= coins) {
+                    coins -= 250;
+                    workshopCloth = true;
+                    Log.log(Log.INFO, "build cloth: built workshopCloth");
+                    System.out.println("build cloth: built workshopCloth");
+                }
+                else {
+                    Log.log(Log.ERROR, "build cloth: not enough money for workshopCloth");
+                    System.err.println("build cloth: not enough money for workshopCloth");
+                }
+            }
+        }
+        else if (productType == ProductTypes.PACKETMILK) {
+            if (workshopPacketmilk) {
+                Log.log(Log.ERROR, "build packetmilk: you own workshopPacketmilk");
+                System.err.println("build packetmilk: you own workshopPacketmilk");
+            }
+            else {
+                if (400 <= coins) {
+                    coins -= 400;
+                    workshopPacketmilk = true;
+                    Log.log(Log.INFO, "build packetmilk: built workshopPacketmilk");
+                    System.out.println("build packetmilk: built workshopPacketmilk");
+                }
+                else {
+                    Log.log(Log.ERROR, "build packetmilk: not enough money for workshopPacketmilk");
+                    System.err.println("build packetmilk: not enough money for workshopPacketmilk");
+                }
+            }
+        }
+        else if (productType == ProductTypes.BREAD) {
+            if (workshopBread) {
+                Log.log(Log.ERROR, "build bread: you own workshopBread");
+                System.err.println("build bread: you own workshopBread");
+            }
+            else {
+                if (250 <= coins) {
+                    coins -= 250;
+                    workshopBread = true;
+                    Log.log(Log.INFO, "build bread: built workshopBread");
+                    System.out.println("build bread: built workshopBread");
+                }
+                else {
+                    Log.log(Log.ERROR, "build bread: not enough money for workshopBread");
+                    System.err.println("build bread: not enough money for workshopBread");
+                }
+            }
+        }
+        else if (productType == ProductTypes.SHIRT) {
+            if (workshopShirt) {
+                Log.log(Log.ERROR, "build shirt: you own workshopShirt");
+                System.err.println("build shirt: you own workshopShirt");
+            }
+            else {
+                if (400 <= coins) {
+                    coins -= 400;
+                    workshopShirt = true;
+                    Log.log(Log.INFO, "build shirt: built workshopShirt");
+                    System.out.println("build shirt: built workshopShirt");
+                }
+                else {
+                    Log.log(Log.ERROR, "build shirt: not enough money for workshopShirt");
+                    System.err.println("build shirt: not enough money for workshopShirt");
+                }
+            }
+        }
+        else if (productType == ProductTypes.ICECREAM) {
+            if (workshopIcecream) {
+                Log.log(Log.ERROR, "build icecream: you own workshopIcecream");
+                System.err.println("build icecream: you own workshopIcecream");
+            }
+            else {
+                if (550 <= coins) {
+                    coins -= 550;
+                    workshopIcecream = true;
+                    Log.log(Log.INFO, "build icecream: built workshopIcecream");
+                    System.out.println("build icecream: built workshopIcecream");
+                }
+                else {
+                    Log.log(Log.ERROR, "build icecream: not enough money for workshopIcecream");
+                    System.err.println("build icecream: not enough money for workshopIcecream");
+                }
+            }
+        }
     }
 
     private void pickup(int x, int y) {
@@ -636,5 +769,9 @@ public class LevelManager {
 
         boolean allTasksBoolean = coinTaskBoolean && productTasksBoolean && animalTasksBoolean;
         return allTasksBoolean;
+    }
+
+    public boolean isPrized() {
+        return turn <= maxTime;
     }
 }
