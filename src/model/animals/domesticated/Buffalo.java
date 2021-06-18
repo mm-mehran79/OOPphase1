@@ -8,7 +8,7 @@ public class Buffalo extends AbstractDomesticatedAnimal {
     static public int PRICE = 400; // Buffalo's price
 
     // constructor
-    Buffalo() {
+    public Buffalo() {
         super(AnimalTypes.BUFFALO); // parent's constructor
     }
 

@@ -6,7 +6,7 @@ public class Cat extends AbstractPetAnimal {
     static public int PRICE = 150; // Cat's price
 
     // constructor
-    public Cat(AnimalTypes animalType) {
+    public Cat() {
         super(AnimalTypes.CAT);
     }
 }

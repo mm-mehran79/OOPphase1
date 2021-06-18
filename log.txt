@@ -28,3 +28,6 @@
 [Log], Fri Jun 18 09:13:26 IRDT 2021, log.txt created or opened
 [Info], Fri Jun 18 09:13:26 IRDT 2021, Game Main Ran
 [Log], Fri Jun 18 09:13:26 IRDT 2021, closing the (FileWriter) logWriter
+[Log], Fri Jun 18 10:55:31 IRDT 2021, log.txt created or opened
+[Info], Fri Jun 18 10:55:31 IRDT 2021, Game Main Ran
+[Log], Fri Jun 18 10:55:31 IRDT 2021, closing the (FileWriter) logWriter

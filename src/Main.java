@@ -42,6 +42,7 @@ public class Main {
         System.out.println(hashMap);
         hashMap.put(ProductTypes.ICECREAM, hashMap.get(ProductTypes.ICECREAM) + 1);
         System.out.println(hashMap);
+        System.out.println(AnimalTypes.CHICKEN);
 
 
 
