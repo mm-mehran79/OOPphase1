@@ -21,10 +21,10 @@ public abstract class AbstractWildAnimal extends AbstractAnimal {
 
     // overridden turnPlus
     @Override
-    public void turnPlus() {
+    public void addTurn() {
         if ( isTrapped && !isCaged && cagesThrown != 0 )
             cagesThrown--; // if the number of cages isn't 0 and other conditions, reduce the number of cagesThrown
-        super.turnPlus();
+        super.addTurn();
     }
 
     // cage method for player

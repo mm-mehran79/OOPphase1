@@ -1,16 +1,168 @@
+import controller.LevelManager;
+import log.Log;
+import model.animals.AnimalTypes;
+import model.level.Level;
+import model.products.ProductTypes;
+import view.LevelInputProcessor;
+
 import java.io.*;  // Import the File class
 import java.io.IOException;  // Import the IOException class to handle errors
 import java.io.FileNotFoundException;  // Import this class to handle errors
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner; // Import the Scanner class to read text files
-import java.util.Date; // date
+
 
 public class Main {
     public static void main(String[] args) {
+        Log.log(Log.INFO, "Game Main Ran");
+        /*initialization();*/
 
 
 
-        //fgfgfgfgfgfgfgfg
+        /*Scanner scanner = new Scanner(System.in);
+        String string = scanner.nextLine();
+        String[] stringSplit = string.split("\\s");
+        for (int i = 0; i < stringSplit.length; i++) {
+            System.out.println(stringSplit[i]);
+        }
+        if (string.matches("turn \\d+"))
+            System.out.println("meow");*/
+
+        /*Scanner scanner = new Scanner(System.in);
+        LevelManager levelManager = new LevelManager(Level.getLevels()[0]);
+        LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, scanner);
+        System.out.println(levelInputProcessor.run());*/
+
+        HashMap<ProductTypes, Integer> hashMap = new HashMap<>();
+        hashMap.put(ProductTypes.ICECREAM, 1);
+        hashMap.put(ProductTypes.SHIRT, 2);
+        hashMap.put(ProductTypes.BREAD, 3);
+        System.out.println(hashMap);
+        hashMap.put(ProductTypes.ICECREAM, hashMap.get(ProductTypes.ICECREAM) + 1);
+        System.out.println(hashMap);
+
+
+
+        Log.close();
+    }
+
+    static void initialization() {
+        Log.log(Log.INFO, "initialization and loading");
+        initializationOfLevels();
+    }
+
+    static void initializationOfLevels() {
+        Log.log(Log.INFO, "initializationOfLevels: loading levels from mission.txt");
+        File levelFile = new File("missions.txt");
+        try {
+            Scanner scanner = new Scanner(levelFile);
+
+            String line1 = scanner.nextLine(); // first line
+            Level.setTotalLevels(  Integer.parseInt( line1.split("\\s")[1] )  ); // total levels
+            //System.out.println(Level.getTotalLevels());
+
+            Level[] levels = new Level[Level.getTotalLevels()]; // creating for levels
+            for (int i = 0; i < Level.getTotalLevels(); i++) {
+                scanner.nextLine(); // level no
+
+                int initialCoins = Integer.parseInt( scanner.nextLine().split("\\s")[1] );
+                //System.out.println(initialCoins);
+                int coinTask = Integer.parseInt( scanner.nextLine().split("\\s")[1] );
+                //System.out.println(coinTask);
+
+                String productString;
+                HashMap <ProductTypes, Integer> productTasks = new HashMap<>();
+                productString = scanner.nextLine();
+                if ( Integer.parseInt(productString.split("\\s")[1]) != 0 )
+                    productTasks.put(ProductTypes.EGG, Integer.parseInt(productString.split("\\s")[1]));
+                productString = scanner.nextLine();
+                if ( Integer.parseInt(productString.split("\\s")[1]) != 0 )
+                    productTasks.put(ProductTypes.FEATHER, Integer.parseInt(productString.split("\\s")[1]));
+                productString = scanner.nextLine();
+                if ( Integer.parseInt(productString.split("\\s")[1]) != 0 )
+                    productTasks.put(ProductTypes.MILK, Integer.parseInt(productString.split("\\s")[1]));
+                productString = scanner.nextLine();
+                if ( Integer.parseInt(productString.split("\\s")[1]) != 0 )
+                    productTasks.put(ProductTypes.FLOUR, Integer.parseInt(productString.split("\\s")[1]));
+                productString = scanner.nextLine();
+                if ( Integer.parseInt(productString.split("\\s")[1]) != 0 )
+                    productTasks.put(ProductTypes.CLOTH, Integer.parseInt(productString.split("\\s")[1]));
+                productString = scanner.nextLine();
+                if ( Integer.parseInt(productString.split("\\s")[1]) != 0 )
+                    productTasks.put(ProductTypes.PACKETMILK, Integer.parseInt(productString.split("\\s")[1]));
+                productString = scanner.nextLine();
+                if ( Integer.parseInt(productString.split("\\s")[1]) != 0 )
+                    productTasks.put(ProductTypes.BREAD, Integer.parseInt(productString.split("\\s")[1]));
+                productString = scanner.nextLine();
+                if ( Integer.parseInt(productString.split("\\s")[1]) != 0 )
+                    productTasks.put(ProductTypes.SHIRT, Integer.parseInt(productString.split("\\s")[1]));
+                productString = scanner.nextLine();
+                if ( Integer.parseInt(productString.split("\\s")[1]) != 0 )
+                    productTasks.put(ProductTypes.ICECREAM, Integer.parseInt(productString.split("\\s")[1]));
+                //System.out.println(productTasks);
+
+                String animalString;
+                HashMap <AnimalTypes, Integer> animalTasks = new HashMap<>();
+                animalString = scanner.nextLine();
+                if ( Integer.parseInt(animalString.split("\\s")[1]) != 0 )
+                    animalTasks.put(AnimalTypes.CHICKEN, Integer.parseInt(animalString.split("\\s")[1]));
+                animalString = scanner.nextLine();
+                if ( Integer.parseInt(animalString.split("\\s")[1]) != 0 )
+                    animalTasks.put(AnimalTypes.TURKEY, Integer.parseInt(animalString.split("\\s")[1]));
+                animalString = scanner.nextLine();
+                if ( Integer.parseInt(animalString.split("\\s")[1]) != 0 )
+                    animalTasks.put(AnimalTypes.BUFFALO, Integer.parseInt(animalString.split("\\s")[1]));
+                //System.out.println(animalTasks);
+
+                String spawnString;
+                String[] spawnStringSplit;
+                HashMap <Integer, AnimalTypes> spawn = new HashMap<>();
+                spawnString = scanner.nextLine();
+                spawnStringSplit = spawnString.split("\\s");
+                if ( Integer.parseInt(spawnStringSplit[1]) != 0 ) {
+                    for (int j = 0; j < Integer.parseInt(spawnStringSplit[1]); j++)
+                        spawn.put(Integer.parseInt(spawnStringSplit[2+j]), AnimalTypes.LION);
+                }
+                spawnString = scanner.nextLine();
+                spawnStringSplit = spawnString.split("\\s");
+                if ( Integer.parseInt(spawnStringSplit[1]) != 0 ) {
+                    for (int j = 0; j < Integer.parseInt(spawnStringSplit[1]); j++)
+                        spawn.put(Integer.parseInt(spawnStringSplit[2+j]), AnimalTypes.BEAR);
+                }
+                spawnString = scanner.nextLine();
+                spawnStringSplit = spawnString.split("\\s");
+                if ( Integer.parseInt(spawnStringSplit[1]) != 0 ) {
+                    for (int j = 0; j < Integer.parseInt(spawnStringSplit[1]); j++)
+                        spawn.put(Integer.parseInt(spawnStringSplit[2+j]), AnimalTypes.TIGER);
+                }
+                //System.out.println(spawn);
+
+                int maxTurn = Integer.parseInt( scanner.nextLine().split("\\s")[1] );
+                //System.out.println(maxTurn);
+                int prize = Integer.parseInt( scanner.nextLine().split("\\s")[1] );
+                //System.out.println(prize);
+
+                Level level = new Level(initialCoins,
+                        spawn,
+                        maxTurn,
+                        prize,
+                        coinTask,
+                        productTasks,
+                        animalTasks);
+                levels[i] = level;
+            }
+            Level.setLevels(levels);
+            Log.log(Log.INFO, "initializationOfLevels successfully");
+            scanner.close();
+        } catch (Exception e) {
+            Log.log(Log.EXCEPTION, "exception catch in initializationOfLevels");
+            e.printStackTrace();
+        }
+    }
+
+    static void late() {
         File myFileBlah = new File("1.txt");
         Scanner scanner;
 
@@ -81,8 +233,8 @@ public class Main {
         }
 
         System.out.println("LOG");
-        Log.log("ali is dumb");
-        Log.log("ali is dumbdumb");
+        Log.log(Log.ERROR,"ali is dumb");
+        Log.log(Log.INFO, "ali is dumbdumb");
 
         File defErrorFile = new File("q334ovwntn7wtn784yvn9.txt");
         try {

@@ -1,23 +1,42 @@
+package log;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Date;
 
 public class Log {
+    // public finals: LogTypes
+    public static int ERROR = 0;
+    public static int ALARM = 1;
+    public static int INFO = 2;
+    public static int EXCEPTION = 3;
+    public static int LOG = 4;
+
+    // properties
     private static boolean fileBoolean = false;
     private static FileWriter logWriter;
     private static File logFile;
     private static Date logDate = new Date();
 
     // static log for String
-    public static void log(String logString) {
+    public static void log(int logType,String logString) {
         // if FileWriter doesn't exist, make it
         if ( !fileBoolean )
             makeLogWriter();
 
         // write in log.txt
         try {
-            logWriter.write(logDate.toString() + ", " + logString + "\n");
+            if ( logType == ERROR)
+                logWriter.write("[Error], " + logDate.toString() + ", " + logString + "\n");
+            else if ( logType == ALARM)
+                logWriter.write("[Alarm], " + logDate.toString() + ", " + logString + "\n");
+            else if ( logType == INFO)
+                logWriter.write("[Info], " + logDate.toString() + ", " + logString + "\n");
+            else if ( logType == EXCEPTION)
+                logWriter.write("[Exception], " + logDate.toString() + ", " + logString + "\n");
+            else if ( logType == LOG)
+                logWriter.write("[Log], " + logDate.toString() + ", " + logString + "\n");
             logWriter.flush();
         } catch (IOException e) {
             e.printStackTrace();
@@ -26,7 +45,7 @@ public class Log {
 
     // static log for Exception
     public static void log(Exception e) {
-        log(e.toString());
+        log(EXCEPTION, e.toString());
     }
 
     // making the new FileWriter
@@ -47,7 +66,7 @@ public class Log {
         // making FileWriter && write the string
         try {
             logWriter = new FileWriter(logFile, true);
-            logWriter.write(logDate.toString() + ", log.txt created\n");
+            logWriter.write("[Log], " + logDate.toString() + ", log.txt created or opened\n");
             logWriter.flush();
             fileBoolean = true;
         } catch (IOException e) {
@@ -58,7 +77,7 @@ public class Log {
     // close the FileWriter
     public static void close() {
         try {
-            log("closing the (FileWriter) logWriter");
+            log(LOG, "closing the (FileWriter) logWriter");
             logWriter.close();
             fileBoolean = false;
         } catch (IOException e) {

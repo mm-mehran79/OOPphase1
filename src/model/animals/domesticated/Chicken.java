@@ -8,7 +8,7 @@ public class Chicken extends AbstractDomesticatedAnimal {
     static public int PRICE = 100; // Chicken's price
 
     // constructor
-    Chicken() {
+    public Chicken() {
         super(AnimalTypes.CHICKEN); // parent's constructor
     }
 
