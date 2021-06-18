@@ -2,6 +2,7 @@ import controller.LevelManager;
 import log.Log;
 import model.animals.AnimalTypes;
 import model.level.Level;
+import model.products.Product;
 import model.products.ProductTypes;
 import view.LevelInputProcessor;
 
@@ -35,14 +36,69 @@ public class Main {
         LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, scanner);
         System.out.println(levelInputProcessor.run());*/
 
-        HashMap<ProductTypes, Integer> hashMap = new HashMap<>();
+        /*HashMap<ProductTypes, Integer> hashMap = new HashMap<>();
         hashMap.put(ProductTypes.ICECREAM, 1);
         hashMap.put(ProductTypes.SHIRT, 2);
         hashMap.put(ProductTypes.BREAD, 3);
         System.out.println(hashMap);
         hashMap.put(ProductTypes.ICECREAM, hashMap.get(ProductTypes.ICECREAM) + 1);
         System.out.println(hashMap);
-        System.out.println(AnimalTypes.CHICKEN);
+        System.out.println(AnimalTypes.CHICKEN);*/
+
+        /*Scanner scanner = new Scanner(System.in);
+        String string;
+        boolean meow = true;
+        while (meow) {
+            while (true) {
+                string = scanner.nextLine();
+                if (string.matches("turn \\d*") || string.matches("turn"))
+                    break;
+                else if (string.matches("meow"))
+                    meow = false;
+                else
+                    System.out.println("meow");
+                System.out.println("meowg");
+            }
+            System.out.println("sike");
+        }*/
+
+        /*ArrayList <Product> arrayList = new ArrayList<>();
+        arrayList.add(new Product(ProductTypes.EGG));
+        arrayList.add(new Product(ProductTypes.EGG));
+        arrayList.add(new Product(ProductTypes.FEATHER));
+        arrayList.add(new Product(ProductTypes.EGG));
+        for (Product product : arrayList) {
+            System.out.println(product.getProductType());
+        }
+        boolean found = false;
+        Product productLoad = null;
+        for (Product product : arrayList) {
+            if (product.getProductType() == ProductTypes.EGG && !found) {
+                found = true;
+                productLoad = product;
+            }
+        }
+        System.out.println(productLoad == null);
+        arrayList.remove(productLoad);
+        for (Product product : arrayList) {
+            System.out.println(product.getProductType());
+        } /////////////////
+        found = false;
+        productLoad = null;
+        for (Product product : arrayList) {
+            if (product.getProductType() == ProductTypes.EGG && !found) {
+                found = true;
+                productLoad = product;
+            }
+        }
+        System.out.println(productLoad == null);
+        arrayList.remove(productLoad);
+        for (Product product : arrayList) {
+            System.out.println(product.getProductType());
+        }*/
+
+
+
 
 
 

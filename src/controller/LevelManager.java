@@ -22,9 +22,11 @@ public class LevelManager {
     Level level; // level that manager is managing
     int levelNo; // level number that manager is managing
     static final int STORAGE_MAX = 30; // max storage
-    static final int WELl_MAX = 5; // max storage
+    static final int TRUCK_MAX = 15; // truck max storage
+    static final int WELl_MAX = 5; // well max
 
     // level properties
+    boolean isComplete = false; // is the game complete
     int coins; // coins
     int turn = 0; // number of turns, initial
     int[][] grassArray; // grass array
@@ -34,6 +36,9 @@ public class LevelManager {
     ArrayList <Product> productOnGround;
     ArrayList <Product> storage;
     int well;
+
+    // turn variant
+    ArrayList <Product> truck;
 
     // tasks
     int coinTask;
@@ -86,6 +91,7 @@ public class LevelManager {
         this.levelNo = levelNo;
 
         // level properties
+        isComplete = false;
         coins = level.getInitialCoins();
         turn = 0;
         grassArray = new int[6][6];
@@ -179,6 +185,69 @@ public class LevelManager {
                 int y = Integer.parseInt(strings[2]);
                 plant(x, y);
             }
+            else if (instructionString.startsWith("work")) {
+                work();
+            }
+            else if (instructionString.startsWith("cage")) {
+                String[] strings = instructionString.split("\\s");
+                int x = Integer.parseInt(strings[1]);
+                int y = Integer.parseInt(strings[2]);
+                cage(x, y);
+            }
+            else if (instructionString.equals("truck load flour"))
+                truckLoad(ProductTypes.FLOUR);
+            else if (instructionString.equals("truck load cloth"))
+                truckLoad(ProductTypes.CLOTH);
+            else if (instructionString.equals("truck load packetmilk"))
+                truckLoad(ProductTypes.PACKETMILK);
+            else if (instructionString.equals("truck load bread"))
+                truckLoad(ProductTypes.BREAD);
+            else if (instructionString.equals("truck load shirt"))
+                truckLoad(ProductTypes.SHIRT);
+            else if (instructionString.equals("truck load icecream"))
+                truckLoad(ProductTypes.ICECREAM);
+            else if (instructionString.equals("truck load milk"))
+                truckLoad(ProductTypes.MILK);
+            else if (instructionString.equals("truck load feather"))
+                truckLoad(ProductTypes.FEATHER);
+            else if (instructionString.equals("truck load egg"))
+                truckLoad(ProductTypes.EGG);
+            else if (instructionString.equals("truck load lion"))
+                truckLoad(ProductTypes.LION);
+            else if (instructionString.equals("truck load bear"))
+                truckLoad(ProductTypes.BEAR);
+            else if (instructionString.equals("truck load tiger"))
+                truckLoad(ProductTypes.TIGER);
+            else if (instructionString.equals("truck unload flour"))
+                truckUnload(ProductTypes.FLOUR);
+            else if (instructionString.equals("truck unload cloth"))
+                truckUnload(ProductTypes.CLOTH);
+            else if (instructionString.equals("truck unload packetmilk"))
+                truckUnload(ProductTypes.PACKETMILK);
+            else if (instructionString.equals("truck unload bread"))
+                truckUnload(ProductTypes.BREAD);
+            else if (instructionString.equals("truck unload shirt"))
+                truckUnload(ProductTypes.SHIRT);
+            else if (instructionString.equals("truck unload icecream"))
+                truckUnload(ProductTypes.ICECREAM);
+            else if (instructionString.equals("truck unload milk"))
+                truckUnload(ProductTypes.MILK);
+            else if (instructionString.equals("truck unload feather"))
+                truckUnload(ProductTypes.FEATHER);
+            else if (instructionString.equals("truck unload egg"))
+                truckUnload(ProductTypes.EGG);
+            else if (instructionString.equals("truck unload lion"))
+                truckUnload(ProductTypes.LION);
+            else if (instructionString.equals("truck unload bear"))
+                truckUnload(ProductTypes.BEAR);
+            else if (instructionString.equals("truck unload tiger"))
+                truckUnload(ProductTypes.TIGER);
+            else if (instructionString.equals("truck go"))
+                truckGo();
+
+
+
+
         }
     }
 
@@ -265,14 +334,14 @@ public class LevelManager {
                     System.out.println("pickup " + x + " " + y + ":" + product.getProductType());
                 }
                 else {
-                    Log.log(Log.ERROR, "x pickup s" + x + " " + y + ":" + product.getProductType());
-                    System.err.println("x pickup s" + x + " " + y + ":" + product.getProductType());
+                    Log.log(Log.ERROR, "pickup no storage" + x + " " + y + ":" + product.getProductType());
+                    System.err.println("pickup no storage" + x + " " + y + ":" + product.getProductType());
                 }
             }
         }
-        if (emptyPickup) {
-            Log.log(Log.ERROR, "x pickup x" + x + " " + y);
-            System.err.println("x pickup x" + x + " " + y);
+        if (!emptyPickup) {
+            Log.log(Log.ERROR, "pickup no product" + x + " " + y);
+            System.err.println("pickup no product" + x + " " + y);
         }
         productOnGround.remove(offGround);
     }
@@ -293,11 +362,106 @@ public class LevelManager {
     private void plant(int x, int y) {
         if (well != 0) {
             grassArray[x][y]++;
-
+            Log.log(Log.INFO, "plant " + x + " " + y);
+            System.out.println("plant " + x + " " + y);
+            well--;
+        }
+        else {
+            Log.log(Log.ERROR, "plant no water" + x + " " + y);
+            System.err.println("plant no water" + x + " " + y);
         }
     }
 
+    private void work() {
 
+    }
+
+    private void cage(int x, int y) {
+        boolean cageThrown = false;
+        for (AbstractWildAnimal abstractWildAnimal : wildAnimalOnGround) {
+            if (abstractWildAnimal.getX() == x && abstractWildAnimal.getY() == y) {
+                cageThrown = true;
+                abstractWildAnimal.cage();
+                Log.log(Log.INFO, "cage @" + x + " " + y + ":" + abstractWildAnimal.getType());
+                System.out.println("cage @" + x + " " + y + ":" + abstractWildAnimal.getType());
+            }
+        }
+        if (!cageThrown) {
+            Log.log(Log.ERROR, " no cage @" + x + " " + y);
+            System.err.println("no cage @" + x + " " + y);
+        }
+    }
+
+    private void truckLoad(ProductTypes productType) {
+        boolean found = false;
+        Product productLoad = null;
+        for (Product product : storage) {
+            if (product.getProductType() == productType && !found) {
+                found = true;
+                productLoad = product;
+            }
+        }
+        if (productLoad == null) {
+            Log.log(Log.ERROR, "truckload no product " + productType);
+            System.err.println("truckload no product " + productType);
+        }
+        else if (productLoad.getStorage() + getTruckStorage() <= TRUCK_MAX) {
+            Log.log(Log.INFO, "truckload product " + productType);
+            System.out.println("truckload product " + productType);
+            truck.add(productLoad);
+            storage.remove(productLoad);
+        }
+        else {
+            Log.log(Log.ERROR, "truckload no space " + productType);
+            System.err.println("truckload no space " + productType);
+        }
+    }
+
+    private int getTruckStorage() {
+        int truckInt = 0;
+        for (Product product : truck) {
+            truckInt += product.getStorage();
+        }
+        Log.log(Log.INFO, "Truck storage = " + truckInt);
+        return truckInt;
+    }
+
+    private void truckUnload(ProductTypes productType) {
+        boolean found = false;
+        Product productUnload = null;
+        for (Product product : truck) {
+            if (product.getProductType() == productType && !found) {
+                found = true;
+                productUnload = product;
+            }
+        }
+        if (productUnload == null) {
+            Log.log(Log.ERROR, "truckUnload no product " + productType);
+            System.err.println("truckUnload no product " + productType);
+        }
+        else if (productUnload.getStorage() + getStorage() <= STORAGE_MAX) {
+            Log.log(Log.INFO, "truckUnload product " + productType);
+            System.out.println("truckUnload product " + productType);
+            storage.add(productUnload);
+            truck.remove(productUnload);
+        }
+        else {
+            Log.log(Log.ERROR, "truckUnload no space in storage " + productType);
+            System.err.println("truckUnload no space in storage " + productType);
+        }
+    }
+
+    private void truckGo() {
+
+    }
+
+    public void turnN(int n) {
+        inquiry();
+    }
+
+    private void turn() {
+
+    }
 
     public ArrayList<String> getInstructionQueue() {
         return instructionQueue;
@@ -305,9 +469,67 @@ public class LevelManager {
 
     public void inquiry() {
         System.out.println("Xx inquiry xX");
+        Log.log(Log.INFO, "Xx   inquiry   xX");
+
+        System.out.println("INQUIRY: number of turn in game = " + turn);
+        //Log.log(Log.INFO, "INQUIRY: number of turn in game = " + turn);
+
+        System.out.println("INQUIRY: number of coins = " + coins);
+        //Log.log(Log.INFO, "INQUIRY: number of coins = " + coins);
+
+        System.out.println("INQUIRY: grass = ");
+        //Log.log(Log.INFO, "INQUIRY: grass");
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 6; j++) {
+                System.out.print(grassArray[i][j] + "\t");
+            }
+            System.out.println();
+        }
+
+        System.out.println("INQUIRY: domesticated = ");
+        //Log.log(Log.INFO, "INQUIRY: domesticated");
+        for (AbstractDomesticatedAnimal domesticatedAnimal : domesticatedAnimalOnGround) {
+            System.out.println(domesticatedAnimal.getType() + " " +
+                    domesticatedAnimal.getHealth() + "% [" +
+                    domesticatedAnimal.getX() + " " +
+                    domesticatedAnimal.getY() + "]" );
+        }
+
+        System.out.println("INQUIRY: wild = ");
+        for (AbstractWildAnimal wildAnimal : wildAnimalOnGround) {
+            System.out.println(wildAnimal.getType() + " " +
+                    wildAnimal.getCagesThrown() + "CT [" +
+                    wildAnimal.getX() + " " +
+                    wildAnimal.getY() + "]" );
+        }
+
+        System.out.println("INQUIRY: pet = ");
+        for (AbstractPetAnimal petAnimal : petAnimalOnGround) {
+            System.out.println(petAnimal.getType() + " [" +
+                    petAnimal.getX() + " " +
+                    petAnimal.getY() + "]" );
+        }
+
+        System.out.println("INQUIRY: productsOnGround = ");
+        for (Product product : productOnGround) {
+            System.out.println(product.getProductType() + " " +
+                    product.getProductTurns() + "NT [" +
+                    product.getX() + " " +
+                    product.getY() + "]" );
+        }
+
+        System.out.println("INQUIRY: productsOnGround = ");
+        for (Product product : productOnGround) {
+            System.out.println(product.getProductType() + " " +
+                    product.getProductTurns() + "NT [" +
+                    product.getX() + " " +
+                    product.getY() + "]" );
+        }
+
+
     }
 
     public boolean isFinished() {
-        return false;
+        return isComplete;
     }
 }

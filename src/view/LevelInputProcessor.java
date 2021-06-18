@@ -168,9 +168,13 @@ public class LevelInputProcessor {
 
     private void processTurn(String input) {
         if (input.matches("turn \\d+")) {
-            String[] inputSplit = input.split("\\s");
+            String[] inputSplit = input.split(" ");
             int turn = Integer.parseInt(inputSplit[1]);
             levelManager.addInstruction("turn " + turn);
+            return;
+        }
+        else if (input.matches("turn")) {
+            levelManager.addInstruction("turn ");
             return;
         }
         System.err.println("Invalid input, Please try again" + " (turn regex)");
@@ -295,8 +299,60 @@ public class LevelInputProcessor {
     public boolean run () {
         // needed vars
         String input;
-        String[] inputSplit;
         Log.log(Log.INFO, "LevelInputProcessor run");
+
+        // case handling
+        boolean getInput = true;
+        while (getInput) {
+
+            while ( !(input = scanner.nextLine()).startsWith("turn") ) {
+                String inputToLowerCase = input.toLowerCase();
+                if ( inputToLowerCase.startsWith("buy") )
+                    processBuy(inputToLowerCase);
+                else if ( inputToLowerCase.startsWith("build") )
+                    processBuild(inputToLowerCase);
+                else if ( inputToLowerCase.startsWith("pick") )
+                    processPickUp(inputToLowerCase);
+                else if ( inputToLowerCase.startsWith("well") )
+                    processWell(inputToLowerCase);
+                else if ( inputToLowerCase.startsWith("plant") )
+                    processPlant(inputToLowerCase);
+                else if ( inputToLowerCase.startsWith("work") )
+                    processWork(inputToLowerCase);
+                else if ( inputToLowerCase.startsWith("cage") )
+                    processCage(inputToLowerCase);
+                else if ( inputToLowerCase.startsWith("truck load") )
+                    processTruckLoad(inputToLowerCase);
+                else if ( inputToLowerCase.startsWith("truck unload") )
+                    processTruckUnload(inputToLowerCase);
+                else if ( inputToLowerCase.startsWith("truck go") )
+                    processTruckGo(inputToLowerCase);
+                else if ( inputToLowerCase.startsWith("inquiry") )
+                    processInquiry(inputToLowerCase);
+                else if ( input.equalsIgnoreCase("exit level") ) {
+                    getInput = false;
+                    break;
+                }
+                else if ( inputToLowerCase.startsWith("turn") ) {
+                    // processTurn(inputToLowerCase);
+                    if (input.matches("turn \\d+")) {
+                        String[] inputSplit = input.split(" ");
+                        int turn = Integer.parseInt(inputSplit[1]);
+                        levelManager.addInstruction("turn " + turn);
+                    }
+                    else if (input.matches("turn")) {
+                        levelManager.addInstruction("turn ");
+                    }
+                }
+                else
+                    System.err.println("Invalid input, Please try again");
+
+                if (getInput) {
+                    System.out.println("doing the turns");
+                }
+            }
+
+        }
 
         // case handling
         while ( !(input = scanner.nextLine()).equalsIgnoreCase("exit level") && !levelFinished ) {
