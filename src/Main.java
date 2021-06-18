@@ -35,7 +35,13 @@ public class Main {
         LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, scanner);
         System.out.println(levelInputProcessor.run());*/
 
-
+        HashMap<ProductTypes, Integer> hashMap = new HashMap<>();
+        hashMap.put(ProductTypes.ICECREAM, 1);
+        hashMap.put(ProductTypes.SHIRT, 2);
+        hashMap.put(ProductTypes.BREAD, 3);
+        System.out.println(hashMap);
+        hashMap.put(ProductTypes.ICECREAM, hashMap.get(ProductTypes.ICECREAM) + 1);
+        System.out.println(hashMap);
 
 
 

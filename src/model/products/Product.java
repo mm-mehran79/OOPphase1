@@ -39,6 +39,8 @@ public class Product{
 
     public Product(ProductTypes productType) {
          random = new Random();
+         x = random.nextInt(6);
+         y = random.nextInt(6);
 
         this.productType = productType;
         productTurns = 0;
@@ -102,6 +104,11 @@ public class Product{
             storage = ANIMAL_STORAGE;
             maxTurns = ANIMAL_MAX_TURNS;
         }
+    }
+
+    // adds to the total turns
+    public void addTurn() {
+        productTurns++;
     }
 
     // ProductTurns setter

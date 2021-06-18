@@ -10,3 +10,21 @@
 [Log], Fri Jun 18 08:43:39 IRDT 2021, log.txt created or opened
 [Info], Fri Jun 18 08:43:39 IRDT 2021, Game Main Ran
 [Log], Fri Jun 18 08:43:39 IRDT 2021, closing the (FileWriter) logWriter
+[Log], Fri Jun 18 09:02:09 IRDT 2021, log.txt created or opened
+[Info], Fri Jun 18 09:02:09 IRDT 2021, Game Main Ran
+[Log], Fri Jun 18 09:02:09 IRDT 2021, closing the (FileWriter) logWriter
+[Log], Fri Jun 18 09:02:19 IRDT 2021, log.txt created or opened
+[Info], Fri Jun 18 09:02:19 IRDT 2021, Game Main Ran
+[Log], Fri Jun 18 09:02:19 IRDT 2021, closing the (FileWriter) logWriter
+[Log], Fri Jun 18 09:03:46 IRDT 2021, log.txt created or opened
+[Info], Fri Jun 18 09:03:46 IRDT 2021, Game Main Ran
+[Log], Fri Jun 18 09:03:46 IRDT 2021, closing the (FileWriter) logWriter
+[Log], Fri Jun 18 09:04:33 IRDT 2021, log.txt created or opened
+[Info], Fri Jun 18 09:04:33 IRDT 2021, Game Main Ran
+[Log], Fri Jun 18 09:04:33 IRDT 2021, closing the (FileWriter) logWriter
+[Log], Fri Jun 18 09:04:49 IRDT 2021, log.txt created or opened
+[Info], Fri Jun 18 09:04:49 IRDT 2021, Game Main Ran
+[Log], Fri Jun 18 09:04:49 IRDT 2021, closing the (FileWriter) logWriter
+[Log], Fri Jun 18 09:13:26 IRDT 2021, log.txt created or opened
+[Info], Fri Jun 18 09:13:26 IRDT 2021, Game Main Ran
+[Log], Fri Jun 18 09:13:26 IRDT 2021, closing the (FileWriter) logWriter

@@ -1,6 +1,7 @@
 package view;
 
 import controller.LevelManager;
+import log.Log;
 
 import java.util.Scanner;
 
@@ -12,30 +13,37 @@ public class LevelInputProcessor {
     public LevelInputProcessor(LevelManager levelManager, Scanner scanner) {
         this.levelManager = levelManager;
         this.scanner = scanner;
+        Log.log(Log.INFO, "LevelInputProcessor constructor");
     }
 
     private void processBuy(String input) {
         if (input.startsWith("buy chick")) {
             levelManager.addInstruction("buy chicken");
+            Log.log(Log.INFO, "instructionQueue buy chicken successfully");
             return;
         }
         else if (input.startsWith("buy turk")) {
             levelManager.addInstruction("buy turkey");
+            Log.log(Log.INFO, "instructionQueue buy turkey successfully");
             return;
         }
         else if (input.startsWith("buy buf")) {
             levelManager.addInstruction("buy buffalo");
+            Log.log(Log.INFO, "instructionQueue buy buffalo successfully");
             return;
         }
         else if (input.startsWith("buy dog")) {
             levelManager.addInstruction("buy dog");
+            Log.log(Log.INFO, "instructionQueue buy dog successfully");
             return;
         }
         else if (input.startsWith("buy cat")) {
             levelManager.addInstruction("buy cat");
+            Log.log(Log.INFO, "instructionQueue buy cat successfully");
             return;
         }
         System.err.println("Invalid input, Please try again" + " (buy regex)");
+        Log.log(Log.INFO, "instructionQueue buy unsuccessfully");
     }
 
     private void processBuild(String input) {
@@ -288,6 +296,7 @@ public class LevelInputProcessor {
         // needed vars
         String input;
         String[] inputSplit;
+        Log.log(Log.INFO, "LevelInputProcessor run");
 
         // case handling
         while ( !(input = scanner.nextLine()).equalsIgnoreCase("exit level") && !levelFinished ) {
