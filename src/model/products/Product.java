@@ -140,4 +140,14 @@ public class Product{
     public int getMaxTurns() {
         return maxTurns;
     }
+
+    // x getter
+    public int getX() {
+        return x;
+    }
+
+    // y getter
+    public int getY() {
+        return y;
+    }
 }

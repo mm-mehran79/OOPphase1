@@ -22,6 +22,7 @@ public class LevelManager {
     Level level; // level that manager is managing
     int levelNo; // level number that manager is managing
     static final int STORAGE_MAX = 30; // max storage
+    static final int WELl_MAX = 5; // max storage
 
     // level properties
     int coins; // coins
@@ -32,6 +33,7 @@ public class LevelManager {
     ArrayList <AbstractWildAnimal> wildAnimalOnGround;
     ArrayList <Product> productOnGround;
     ArrayList <Product> storage;
+    int well;
 
     // tasks
     int coinTask;
@@ -92,6 +94,7 @@ public class LevelManager {
         wildAnimalOnGround = new ArrayList<>();
         productOnGround = new ArrayList<>();
         storage = new ArrayList<>();
+        well = WELl_MAX;
 
         // tasks
         coinTask = level.getCoinTask();
@@ -139,9 +142,8 @@ public class LevelManager {
         instructionQueue = new ArrayList<>();
     }
 
-    public boolean addInstruction(String instruction) {
+    public void addInstruction(String instruction) {
         instructionQueue.add(instruction);
-        return true;
     }
 
     public void dequeueInstruction() {
@@ -160,10 +162,22 @@ public class LevelManager {
             else if (instructionString.equals("buy cat"))
                 buy(AnimalTypes.CAT);
             else if (instructionString.startsWith("build")) {
-
+                build();
             }
             else if (instructionString.startsWith("pickup")) {
-
+                String[] strings = instructionString.split("\\s");
+                int x = Integer.parseInt(strings[1]);
+                int y = Integer.parseInt(strings[2]);
+                pickup(x, y);
+            }
+            else if (instructionString.equals("well")) {
+                well();
+            }
+            else if (instructionString.startsWith("plant")) {
+                String[] strings = instructionString.split("\\s");
+                int x = Integer.parseInt(strings[1]);
+                int y = Integer.parseInt(strings[2]);
+                plant(x, y);
             }
         }
     }
@@ -178,8 +192,8 @@ public class LevelManager {
                 System.out.println("bought chicken");
             }
             else {
-                System.out.println("not enough money for chicken");
-                Log.log(Log.INFO,"not enough money for chicken");
+                System.err.println("not enough money for chicken");
+                Log.log(Log.ERROR,"not enough money for chicken");
             }
         }
         else if (animalType == AnimalTypes.TURKEY) {
@@ -191,8 +205,8 @@ public class LevelManager {
                 System.out.println( "bought turkey");
             }
             else {
-                System.out.println("not enough money for turkey");
-                Log.log(Log.INFO,"not enough money for turkey");
+                System.err.println("not enough money for turkey");
+                Log.log(Log.ERROR,"not enough money for turkey");
             }
         }
         else if (animalType == AnimalTypes.BUFFALO) {
@@ -204,8 +218,8 @@ public class LevelManager {
                 System.out.println("bought buffalo");
             }
             else {
-                System.out.println("not enough money for buffalo");
-                Log.log(Log.INFO,"not enough money for buffalo");
+                System.err.println("not enough money for buffalo");
+                Log.log(Log.ERROR,"not enough money for buffalo");
             }
         }
         else if (animalType == AnimalTypes.DOG) {
@@ -216,8 +230,8 @@ public class LevelManager {
                 System.out.println("bought dog");
             }
             else {
-                System.out.println("not enough money for dog");
-                Log.log(Log.INFO,"not enough money for dog");
+                System.err.println("not enough money for dog");
+                Log.log(Log.ERROR,"not enough money for dog");
             }
         }
         else if (animalType == AnimalTypes.CAT) {
@@ -228,11 +242,62 @@ public class LevelManager {
                 System.out.println("bought cat");
             }
             else {
-                System.out.println("not enough money for cat");
-                Log.log(Log.INFO,"not enough money for cat");
+                System.err.println("not enough money for cat");
+                Log.log(Log.ERROR,"not enough money for cat");
             }
         }
     }
+
+    private void build() {
+
+    }
+
+    private void pickup(int x, int y) {
+        boolean emptyPickup = false;
+        ArrayList <Product> offGround = new ArrayList<>();
+        for (Product product : productOnGround) {
+            if (product.getX() == x && product.getY() == y) {
+                emptyPickup = true;
+                if (getStorage() + product.getStorage() <= STORAGE_MAX) {
+                    storage.add(product);
+                    offGround.add(product);
+                    Log.log(Log.INFO, "pickup " + x + " " + y + ":" + product.getProductType());
+                    System.out.println("pickup " + x + " " + y + ":" + product.getProductType());
+                }
+                else {
+                    Log.log(Log.ERROR, "x pickup s" + x + " " + y + ":" + product.getProductType());
+                    System.err.println("x pickup s" + x + " " + y + ":" + product.getProductType());
+                }
+            }
+        }
+        if (emptyPickup) {
+            Log.log(Log.ERROR, "x pickup x" + x + " " + y);
+            System.err.println("x pickup x" + x + " " + y);
+        }
+        productOnGround.remove(offGround);
+    }
+
+    private int getStorage() {
+        int storageInt = 0;
+        for (Product product : storage) {
+            storageInt += product.getStorage();
+        }
+        Log.log(Log.INFO, "Storage = " + storageInt);
+        return storageInt;
+    }
+
+    private void well() {
+
+    }
+
+    private void plant(int x, int y) {
+        if (well != 0) {
+            grassArray[x][y]++;
+
+        }
+    }
+
+
 
     public ArrayList<String> getInstructionQueue() {
         return instructionQueue;
