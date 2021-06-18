@@ -530,7 +530,7 @@ public class LevelManager {
             System.out.println("//TODO");
             return true;
         }
-        return false;
+        return false; //
     }
 
     private void cage(int x, int y) {
