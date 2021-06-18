@@ -14,6 +14,7 @@ public class LevelInputProcessor {
         this.levelManager = levelManager;
         this.scanner = scanner;
         Log.log(Log.INFO, "LevelInputProcessor constructor");
+        levelFinished = false;
     }
 
     private void processBuy(String input) {
@@ -296,7 +297,7 @@ public class LevelInputProcessor {
         return false;
     }
 
-    public boolean run () {
+    public int run () {
         // needed vars
         String input;
         Log.log(Log.INFO, "LevelInputProcessor run");
@@ -391,7 +392,7 @@ public class LevelInputProcessor {
         levelManager.dequeueInstruction();
 
         System.out.println(levelManager.getInstructionQueue());
-        return levelFinished;
+        return 1;
     }
 
     public boolean isLevelFinished() {

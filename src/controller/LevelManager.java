@@ -84,7 +84,7 @@ public class LevelManager {
     // instruction queue
     ArrayList <String> instructionQueue;
 
-    public LevelManager(int levelNo) {
+    public LevelManager(int levelNo, int cumulativeReward) {
         // level manager initialization properties
         Log.log(Log.INFO, "LevelManager constructor");
         this.level = Level.getLevels()[levelNo - 1];
@@ -92,7 +92,7 @@ public class LevelManager {
 
         // level properties
         isComplete = false;
-        coins = level.getInitialCoins();
+        coins = level.getInitialCoins() + cumulativeReward;
         turn = 0;
         grassArray = new int[6][6];
         domesticatedAnimalOnGround = new ArrayList<>();
@@ -120,7 +120,7 @@ public class LevelManager {
         buffaloTasks = animalTasks.getOrDefault(AnimalTypes.BUFFALO, 0);
 
         // task progression
-        coinTaskProgression = level.getInitialCoins();
+        coinTaskProgression = level.getInitialCoins() + cumulativeReward;
         eggProductTaskProgression = 0;
         featherProductTaskProgression = 0;
         milkProductTaskProgression = 0;
@@ -332,6 +332,24 @@ public class LevelManager {
                     offGround.add(product);
                     Log.log(Log.INFO, "pickup " + x + " " + y + ":" + product.getProductType());
                     System.out.println("pickup " + x + " " + y + ":" + product.getProductType());
+                    if (product.getProductType() == ProductTypes.EGG)
+                        eggProductTaskProgression++;
+                    else if (product.getProductType() == ProductTypes.FEATHER)
+                        featherProductTaskProgression++;
+                    else if (product.getProductType() == ProductTypes.MILK)
+                        milkProductTaskProgression++;
+                    else if (product.getProductType() == ProductTypes.FLOUR)
+                        flourProductTaskProgression++;
+                    else if (product.getProductType() == ProductTypes.CLOTH)
+                        clothProductTaskProgression++;
+                    else if (product.getProductType() == ProductTypes.PACKETMILK)
+                        packetmilkProductTaskProgression++;
+                    else if (product.getProductType() == ProductTypes.BREAD)
+                        breadProductTaskProgression++;
+                    else if (product.getProductType() == ProductTypes.SHIRT)
+                        shirtProductTaskProgression++;
+                    else if (product.getProductType() == ProductTypes.ICECREAM)
+                        icecreamProductTaskProgression++;
                 }
                 else {
                     Log.log(Log.ERROR, "pickup no storage" + x + " " + y + ":" + product.getProductType());
@@ -468,10 +486,12 @@ public class LevelManager {
     }
 
     public void inquiry() {
-        System.out.println("Xx inquiry xX");
-        Log.log(Log.INFO, "Xx   inquiry   xX");
+        System.out.println("Xx\tinquiry\txX");
+        Log.log(Log.INFO, "Xx\tinquiry\txX");
 
         System.out.println("INQUIRY: number of turn in game = " + turn);
+        System.out.println("INQUIRY: maxTime for reward = " + maxTime);
+        System.out.println("INQUIRY: Reward = " + reward);
         //Log.log(Log.INFO, "INQUIRY: number of turn in game = " + turn);
 
         System.out.println("INQUIRY: number of coins = " + coins);
@@ -526,10 +546,95 @@ public class LevelManager {
                     product.getY() + "]" );
         }
 
+        System.out.println("INQUIRY: coinTask = " + coinTaskProgression + "/" + coinTask);
+
+        if (eggProductTask == 0)
+            System.out.println("INQUIRY: no eggProductTask");
+        else
+            System.out.println("INQUIRY: eggProductTask = " + eggProductTaskProgression + "/" + eggProductTask);
+
+        if (featherProductTask == 0)
+            System.out.println("INQUIRY: no featherProductTask");
+        else
+            System.out.println("INQUIRY: featherProductTask = " + featherProductTaskProgression + "/" + featherProductTask);
+
+        if (milkProductTask == 0)
+            System.out.println("INQUIRY: no milkProductTask");
+        else
+            System.out.println("INQUIRY: milkProductTask = " + milkProductTaskProgression + "/" + milkProductTask);
+
+        if (flourProductTask == 0)
+            System.out.println("INQUIRY: no flourProductTask");
+        else
+            System.out.println("INQUIRY: flourProductTask = " + flourProductTaskProgression + "/" + flourProductTask);
+
+        if (clothProductTask == 0)
+            System.out.println("INQUIRY: no clothProductTask");
+        else
+            System.out.println("INQUIRY: clothProductTask = " + clothProductTaskProgression + "/" + clothProductTask);
+
+        if (packetmilkProductTask == 0)
+            System.out.println("INQUIRY: no packetmilkProductTask");
+        else
+            System.out.println("INQUIRY: packetmilkProductTask = " + packetmilkProductTaskProgression + "/" + packetmilkProductTask);
+
+        if (breadProductTask == 0)
+            System.out.println("INQUIRY: no breadProductTask");
+        else
+            System.out.println("INQUIRY: breadProductTask = " + breadProductTaskProgression + "/" + breadProductTask);
+
+        if (shirtProductTask == 0)
+            System.out.println("INQUIRY: no shirtProductTask");
+        else
+            System.out.println("INQUIRY: shirtProductTask = " + shirtProductTaskProgression + "/" + shirtProductTask);
+
+        if (icecreamProductTask == 0)
+            System.out.println("INQUIRY: no icecreamProductTask");
+        else
+            System.out.println("INQUIRY: shirtProductTask = " + icecreamProductTaskProgression + "/" + icecreamProductTask);
+
+        if (chickenTasks == 0)
+            System.out.println("INQUIRY: no chickenTasks");
+        else
+            System.out.println("INQUIRY: chickenTasks = " + chickenTaskProgression + "/" + chickenTasks);
+
+        if (turkeyTasks == 0)
+            System.out.println("INQUIRY: no turkeyTasks");
+        else
+            System.out.println("INQUIRY: turkeyTasks = " + turkeyTaskProgression + "/" + turkeyTasks);
+
+        if (buffaloTasks == 0)
+            System.out.println("INQUIRY: no buffaloTasks");
+        else
+            System.out.println("INQUIRY: buffaloTasks = " + buffaloTaskProgression + "/" + buffaloTasks);
+
 
     }
 
     public boolean isFinished() {
-        return isComplete;
+        coinTaskBoolean = true;
+        productTasksBoolean = true;
+        animalTasksBoolean = true;
+
+        coinTaskBoolean = (coinTaskProgression >= coinTask);
+
+        productTasksBoolean = (eggProductTaskProgression >= eggProductTask) ||
+                (featherProductTaskProgression >= featherProductTask) ||
+                (milkProductTaskProgression >= milkProductTask) ||
+                (flourProductTaskProgression >= flourProductTask) ||
+                (clothProductTaskProgression >= clothProductTask) ||
+                (packetmilkProductTaskProgression >= packetmilkProductTask) ||
+                (breadProductTaskProgression >= breadProductTask) ||
+                (shirtProductTaskProgression >= shirtProductTask) ||
+                (icecreamProductTaskProgression >= icecreamProductTask);
+
+        animalTasksBoolean = (chickenTaskProgression >= chickenTasks) ||
+                (turkeyTaskProgression >= turkeyTasks) ||
+                (buffaloTaskProgression >= buffaloTasks);
+
+
+
+        boolean allTasksBoolean = coinTaskBoolean && productTasksBoolean && animalTasksBoolean;
+        return allTasksBoolean;
     }
 }
