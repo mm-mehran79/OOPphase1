@@ -271,9 +271,6 @@ public class LevelManager {
             else if (instructionString.equals("truck go"))
                 truckGo();
 
-
-
-
         }
         Log.log(Log.INFO, "dequeuing instructions completed");
     }
@@ -528,6 +525,14 @@ public class LevelManager {
 
     }
 
+    public boolean workshopFlour() {
+        if (!workshopFlour) {
+            System.out.println("//TODO");
+            return true;
+        }
+        return false;
+    }
+
     private void cage(int x, int y) {
         boolean cageThrown = false;
         for (AbstractWildAnimal abstractWildAnimal : wildAnimalOnGround) {
@@ -609,11 +614,26 @@ public class LevelManager {
 
     public void turnN(int n) {
         Log.log(Log.INFO, "it is levelManager's TurnN with N = " + n);
+        System.out.println("it is levelManager's TurnN with N = " + n);
         dequeueInstruction();
+
+        turn();
     }
 
     private void turn() {
-
+        turn++;
+        for (AbstractDomesticatedAnimal domesticatedAnimal : domesticatedAnimalOnGround) {
+            domesticatedAnimal.addTurn();
+        }
+        for (AbstractPetAnimal petAnimal : petAnimalOnGround) {
+            petAnimal.addTurn();
+        }
+        for (AbstractWildAnimal wildAnimal : wildAnimalOnGround) {
+            wildAnimal.addTurn();
+        }
+        for (Product product : productOnGround) {
+            product.addTurn();
+        }
     }
 
     public ArrayList<String> getInstructionQueue() {

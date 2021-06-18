@@ -187,16 +187,17 @@ public class LevelInputProcessor {
         if (input.matches("turn \\d+")) {
             String[] inputSplit = input.split(" ");
             int turn = Integer.parseInt(inputSplit[1]);
-            //levelManager.turnN(turn);
-            levelManager.dequeueInstruction();
+            levelManager.turnN(turn);
+            /*System.out.println(levelManager.getInstructionQueue());
+            levelManager.getInstructionQueue().clear();*/
         }
         else if (input.matches("turn")) {
-            //levelManager.turnN(1);
-            levelManager.dequeueInstruction();
+            levelManager.turnN(1);
+            /*System.out.println(levelManager.getInstructionQueue());
+            levelManager.getInstructionQueue().clear();*/
         }
         else
             System.err.println("Invalid input, Please try again" + " (turn regex)");
-
     }
 
     private void processTruckLoad(String input) {
@@ -353,12 +354,25 @@ public class LevelInputProcessor {
                     break;
                 }
                 else if ( input.equalsIgnoreCase("exit level") ) {
+                    System.out.println("sike");
                     getInput = false;
                     break;
                 }
                 else
                     System.err.println("Invalid input, Please try again");
+            }
 
+
+            if ( input.equalsIgnoreCase("exit level") ) {
+                System.err.println("exiting level");
+                Log.log(Log.ALARM, "exiting level");
+                getInput = false;
+                //break;
+            }
+
+
+            if (levelManager.isFinished()) {
+                break;
             }
         }
 
