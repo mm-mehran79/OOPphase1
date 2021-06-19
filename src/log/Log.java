@@ -1,5 +1,7 @@
 package log;
 
+import controller.Manager;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -27,6 +29,8 @@ public class Log {
 
         // write in log.txt
         try {
+            if(Manager.loggedIn())
+                logWriter.write("[user : "+Manager.username()+" ]");
             if ( logType == ERROR)
                 logWriter.write("[Error], " + logDate.toString() + ", " + logString + "\n");
             else if ( logType == ALARM)
@@ -59,7 +63,7 @@ public class Log {
                 System.out.println("log.txt file already exists: " + logFile.getName());
             }
         } catch (IOException e) {
-            System.out.println(e);
+            System.out.println(e.toString());
             e.printStackTrace();
         }
 

@@ -32,6 +32,7 @@ public class GameMenu extends Menu{
                 break;
             } else if (nextMenuNum < submenus.size() + 1 && nextMenuNum > 0) {
                 nextMenu = submenus.get(nextMenuNum);
+                Manager.logout();
                 break;
             } else {
                 System.err.println("Invalid input! \nEnter correct number");
