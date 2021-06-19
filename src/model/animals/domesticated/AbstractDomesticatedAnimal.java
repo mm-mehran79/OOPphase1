@@ -46,4 +46,9 @@ public abstract class AbstractDomesticatedAnimal extends AbstractAnimal {
     public boolean isAlive() {
         return isAlive;
     }
+
+    // health getter
+    public int getHealth() {
+        return health;
+    }
 }

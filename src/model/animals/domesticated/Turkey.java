@@ -8,7 +8,7 @@ public class Turkey extends AbstractDomesticatedAnimal {
     static public int PRICE = 200; // Turkey's price
 
     // constructor
-    Turkey() {
+    public Turkey() {
         super(AnimalTypes.TURKEY); // parent's constructor
     }
 

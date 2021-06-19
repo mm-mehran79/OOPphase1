@@ -21,7 +21,7 @@ public abstract class AbstractAnimal {
     public void move() {
         boolean moveBoolean = false;
         while ( !moveBoolean ) {
-            int moveInt = random.nextInt(4);
+            int moveInt = random.nextInt(5);
             if ( moveInt == 0 && y != 0) {
                 y--;
                 moveBoolean = true;
