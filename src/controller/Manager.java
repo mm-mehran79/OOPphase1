@@ -9,4 +9,7 @@ public class Manager {
         Manager.player = null;
         Manager.player = player;
     }
+    public static int getLevel(){
+        return player.getLastLevel();
+    }
 }

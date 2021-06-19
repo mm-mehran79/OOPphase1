@@ -37,7 +37,10 @@ public abstract class Menu {
     public void execute() {
         Menu nextMenu;
         while (true) {
-            int nextMenuNum = Integer.parseInt(scanner.nextLine());
+            String s = scanner.nextLine();
+            if (InputCommand.Exit.getMatcher(s).matches())
+                System.exit(1);
+            int nextMenuNum = Integer.parseInt(s);
             if (nextMenuNum == submenus.size() + 1) {
                 if (this.parentMenu == null) {
                     System.exit(1);
@@ -49,7 +52,7 @@ public abstract class Menu {
                 nextMenu = submenus.get(nextMenuNum);
                 break;
             } else {
-                System.err.println("Invalid input!");
+                System.err.println("Invalid input!\nEnter correct number:");
             }
         }
         nextMenu.show();

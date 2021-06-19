@@ -19,7 +19,8 @@ public class LoginMenu extends Menu{
             System.out.println("Username is invalid. Enter another username or go \"back\"");
         }
         System.out.println("Ok, now enter password");
-        while ((user = User.loadUser(username,pass = scanner.nextLine())).equals(null)){
+        while ((user = User.loadUser(username,(pass = scanner.nextLine()))) == null){
+            if(pass.equalsIgnoreCase("back")) {parentMenu.show();parentMenu.execute();}
             System.out.println("Password is incorrect. enter correct password:");
         }
     }

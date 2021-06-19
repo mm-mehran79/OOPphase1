@@ -39,6 +39,22 @@ public class User {
         this.lastLevel = lastLevel;
     }
 
+    public int getLastLevel() {
+        return lastLevel;
+    }
+
+    public int getCoins() {
+        return coins;
+    }
+
+    public void setCoins(int coins) {
+        this.coins = coins;
+    }
+
+    public void setLastLevel(int lastLevel) {
+        this.lastLevel = lastLevel;
+    }
+
     public static void saveUser(User user){//save user to users file
         if(available(user.userName)){
             try {
