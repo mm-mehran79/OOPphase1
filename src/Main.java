@@ -1,30 +1,39 @@
-import controller.LevelManager;
+
+import controller.Manager;
 import log.Log;
 import model.animals.AnimalTypes;
 import model.level.Level;
 import model.products.Product;
 import model.products.ProductTypes;
-import view.LevelInputProcessor;
+import view.InitialMenu;
+import view.Menu;
 
-import java.io.*;  // Import the File class
-import java.io.IOException;  // Import the IOException class to handle errors
-import java.io.FileNotFoundException;  // Import this class to handle errors
-import java.util.ArrayList;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Random;
-import java.util.Scanner; // Import the Scanner class to read text files
+import java.util.Scanner;
 
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Log.log(Log.INFO, "Game Main Ran");
+        Manager manager = new Manager();
+        Menu.scanner = new Scanner(System.in);
+        InitialMenu initialMenu =new InitialMenu();
+        initialMenu.show();
+        initialMenu.execute();
         initialization();
+
 
 
         /*Scanner scanner = new Scanner(System.in);
         LevelManager levelManager = new LevelManager(1, 0);
         LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, scanner);
         System.out.println(levelInputProcessor.run());*/
+
 
 
 
