@@ -3,7 +3,6 @@ import controller.Manager;
 import log.Log;
 import model.animals.AnimalTypes;
 import model.level.Level;
-import model.products.Product;
 import model.products.ProductTypes;
 import view.InitialMenu;
 import view.Menu;
@@ -19,7 +18,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
-        Log.log(Log.INFO, "Game Main Ran");
+        Log.log(Log.INFO, "Game Main Run");
         Manager manager = new Manager();
         Menu.scanner = new Scanner(System.in);
         InitialMenu initialMenu =new InitialMenu();
@@ -166,7 +165,7 @@ public class Main {
                 scanner.close();
             } catch (FileNotFoundException e) {
                 System.out.println("meme");
-                System.out.println(e);
+                System.out.println(e.toString());
                 e.printStackTrace();
                 System.out.println("meme");
             }
@@ -185,7 +184,7 @@ public class Main {
                 scanner.close();
             } catch (FileNotFoundException e) {
                 System.out.println("meme");
-                System.out.println(e);
+                System.out.println(e.toString());
                 e.printStackTrace();
                 System.out.println("meme");
             }
