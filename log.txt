@@ -253,3 +253,18 @@
 [Info], Mon Jun 21 18:08:16 IRDT 2021, dequeuing instructions completed
 [Alarm], Mon Jun 21 18:08:16 IRDT 2021, exiting level
 [Log], Mon Jun 21 18:08:16 IRDT 2021, closing the (FileWriter) logWriter
+[Log], Mon Jun 21 23:37:28 IRDT 2021, log.txt created or opened
+[Info], Mon Jun 21 23:37:28 IRDT 2021, Game Main Ran
+[Info], Mon Jun 21 23:37:28 IRDT 2021, initialization and loading
+[Info], Mon Jun 21 23:37:28 IRDT 2021, initializationOfLevels: loading levels from mission.txt
+[Info], Mon Jun 21 23:37:28 IRDT 2021, initializationOfLevels successfully
+[Info], Mon Jun 21 23:37:28 IRDT 2021, LevelManager constructor
+[Info], Mon Jun 21 23:37:28 IRDT 2021, LevelInputProcessor constructor
+[Info], Mon Jun 21 23:37:28 IRDT 2021, LevelInputProcessor run
+[Info], Mon Jun 21 23:37:28 IRDT 2021, it is levelManager's TurnN with N = 1
+[Info], Mon Jun 21 23:37:28 IRDT 2021, dequeuing instructions
+[Info], Mon Jun 21 23:37:28 IRDT 2021, dequeuing build flour
+[Error], Mon Jun 21 23:37:28 IRDT 2021, build flour: not enough money for workshopFlour
+[Info], Mon Jun 21 23:37:28 IRDT 2021, dequeuing instructions completed
+[Alarm], Mon Jun 21 23:37:28 IRDT 2021, exiting level
+[Log], Mon Jun 21 23:37:28 IRDT 2021, closing the (FileWriter) logWriter
