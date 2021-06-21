@@ -22,12 +22,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
         Log.log(Log.INFO, "Game Main Ran");
-        /*Manager manager = new Manager();
+        Manager manager = new Manager();
         Menu.scanner = new Scanner(System.in);
         InitialMenu initialMenu =new InitialMenu();
         initialMenu.show();
         initialMenu.execute();
-        initialization();*/
+        initialization();
 
 
         initialization();
