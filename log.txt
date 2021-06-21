@@ -140,3 +140,9 @@
 [Info], Fri Jun 18 21:25:53 IRDT 2021, LevelInputProcessor constructor
 [Info], Fri Jun 18 21:25:53 IRDT 2021, LevelInputProcessor run
 [Log], Fri Jun 18 21:25:53 IRDT 2021, closing the (FileWriter) logWriter
+[Log], Mon Jun 21 20:20:11 IRDT 2021, log.txt created or opened
+[Info], Mon Jun 21 20:20:11 IRDT 2021, Game Main Run
+[Log], Mon Jun 21 20:24:45 IRDT 2021, log.txt created or opened
+[Info], Mon Jun 21 20:24:45 IRDT 2021, Game Main Run
+[Log], Mon Jun 21 20:29:10 IRDT 2021, log.txt created or opened
+[Info], Mon Jun 21 20:29:10 IRDT 2021, Game Main Run
