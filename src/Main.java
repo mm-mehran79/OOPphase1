@@ -1,4 +1,5 @@
 
+import controller.LevelManager;
 import controller.Manager;
 import log.Log;
 import model.animals.AnimalTypes;
@@ -6,6 +7,7 @@ import model.level.Level;
 import model.products.Product;
 import model.products.ProductTypes;
 import view.InitialMenu;
+import view.LevelInputProcessor;
 import view.Menu;
 
 import java.io.File;
@@ -20,19 +22,19 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
         Log.log(Log.INFO, "Game Main Ran");
-        Manager manager = new Manager();
+        /*Manager manager = new Manager();
         Menu.scanner = new Scanner(System.in);
         InitialMenu initialMenu =new InitialMenu();
         initialMenu.show();
         initialMenu.execute();
+        initialization();*/
+
+
         initialization();
-
-
-
-        /*Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         LevelManager levelManager = new LevelManager(1, 0);
         LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, scanner);
-        System.out.println(levelInputProcessor.run());*/
+        System.out.println(levelInputProcessor.run());
 
 
 

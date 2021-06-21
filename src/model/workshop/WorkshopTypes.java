@@ -1,6 +1,6 @@
-package model.Workshop;
+package model.workshop;
 
-public enum WorkshopTypes {
+public enum WorkshopTypes{
     FLOUR,
     CLOTH,
     PACKETMILK,
