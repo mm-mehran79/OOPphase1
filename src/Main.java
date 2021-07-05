@@ -22,15 +22,14 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
         Log.log(Log.INFO, "Game Main Ran");
-        Manager manager = new Manager();
+        /*Manager manager = new Manager();
         Menu.scanner = new Scanner(System.in);
         InitialMenu initialMenu =new InitialMenu();
         initialMenu.show();
-        initialMenu.execute();
+        initialMenu.execute();*/ // comment blocks Mehran's code
         initialization();
 
 
-        initialization();
         Scanner scanner = new Scanner(System.in);
         LevelManager levelManager = new LevelManager(1, 0);
         LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, scanner);
@@ -43,7 +42,7 @@ public class Main {
     }
 
     static void initialization() {
-        Log.log(Log.INFO, "initialization and loading");
+        Log.log(Log.INFO, "initialization and loading (A-void)");
         initializationOfLevels();
     }
 
