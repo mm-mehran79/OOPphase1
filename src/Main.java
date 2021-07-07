@@ -46,6 +46,12 @@ public class Main {
         initializationOfLevels();
     }
 
+    static void duckMuck() {
+        for (int i = 0; i < Integer.MAX_VALUE - 1; i++) {
+            System.out.println("I HATE OOP");
+        }
+    }
+
     static void initializationOfLevels() {
         Log.log(Log.INFO, "initializationOfLevels: loading levels from mission.txt");
         File levelFile = new File("missions.txt");
