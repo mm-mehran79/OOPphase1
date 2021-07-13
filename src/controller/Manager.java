@@ -1,5 +1,6 @@
 package controller;
 
+import log.Log;
 import model.User;
 
 public class Manager {
@@ -13,7 +14,17 @@ public class Manager {
         return player.getLastLevel();
     }
     public static String username(){
-        return player.userName;
+        try{
+            return player.userName;
+        }
+        catch (NullPointerException e){
+            System.err.println("please login first");
+            Log.log(Log.ERROR,"need username before logging in");
+            return null;
+        }
+    }
+    public static int getCoins(){
+        return player.getCoins();
     }
     public static boolean loggedIn(){
         return player!=null;
