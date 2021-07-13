@@ -13,6 +13,7 @@ import model.animals.wild.AbstractWildAnimal;
 import model.level.Level;
 import model.products.Product;
 import model.products.ProductTypes;
+import model.workshop.Workshop;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -77,6 +78,13 @@ public class LevelManager {
     boolean workshopBread = false;
     boolean workshopShirt = false;
     boolean workshopIcecream = false;
+
+    Workshop flour;
+    Workshop cloth;
+    Workshop packetmilk;
+    Workshop bread;
+    Workshop shirt;
+    Workshop icecream;
 
 
     // task booleans
@@ -151,6 +159,13 @@ public class LevelManager {
         workshopShirt = false;
         workshopIcecream = false;
 
+        flour = new Workshop(ProductTypes.FLOUR);
+        cloth = new Workshop(ProductTypes.CLOTH);
+        packetmilk = new Workshop(ProductTypes.PACKETMILK);
+        bread = new Workshop(ProductTypes.BREAD);
+        shirt = new Workshop(ProductTypes.SHIRT);
+        icecream = new Workshop(ProductTypes.ICECREAM);
+
         // task booleans
         coinTaskBoolean = false;
         productTasksBoolean = false;
@@ -212,7 +227,7 @@ public class LevelManager {
                 plant(x, y);
             }
             else if (instructionString.startsWith("work")) {
-                work();
+                work(instructionString);
             }
             else if (instructionString.startsWith("cage")) {
                 String[] strings = instructionString.split("\\s");
@@ -483,14 +498,14 @@ public class LevelManager {
                         icecreamProductTaskProgression++;
                 }
                 else {
-                    Log.log(Log.ERROR, "pickup no storage" + x + " " + y + ":" + product.getProductType());
-                    System.err.println("pickup no storage" + x + " " + y + ":" + product.getProductType());
+                    Log.log(Log.ERROR, "pickup no storage " + x + " " + y + ":" + product.getProductType());
+                    System.err.println("pickup no storage " + x + " " + y + ":" + product.getProductType());
                 }
             }
         }
         if (!emptyPickup) {
-            Log.log(Log.ERROR, "pickup no product" + x + " " + y);
-            System.err.println("pickup no product" + x + " " + y);
+            Log.log(Log.ERROR, "pickup no product " + x + " " + y);
+            System.err.println("pickup no product " + x + " " + y);
         }
         productOnGround.remove(offGround);
     }
@@ -516,22 +531,43 @@ public class LevelManager {
             well--;
         }
         else {
-            Log.log(Log.ERROR, "plant no water" + x + " " + y);
-            System.err.println("plant no water" + x + " " + y);
+            Log.log(Log.ERROR, "plant no water " + x + " " + y);
+            System.err.println("plant no water " + x + " " + y);
         }
     }
 
-    private void work() {
-
+    private void work(String string) {
+        if (string.equals("work flour"))
+            workshopFlour();
     }
 
-    public boolean workshopFlour() {
+    private void workshopFlour() {
         if (!workshopFlour) {
-            System.out.println("//TODO");
-            return true;
+            if (flour.isAvailable()) {
+                flour.make();
+                Log.log(Log.INFO, "build flour starting to work");
+                System.out.println("build flour starting to work");
+            }
+            else {
+                Log.log(Log.ERROR, "build flour is working");
+                System.err.println("build flour is working");
+            }
         }
-        return false; //
+        else {
+            Log.log(Log.ERROR, "you don't have build flour");
+            System.err.println("you don't have build flour");
+        }
     }
+
+    private boolean hasProduct(ProductTypes type) {
+        for (Product product : storage) {
+            if(product.getProductType() == type)
+                return true;
+        }
+        return false;
+    }
+
+
 
     private void cage(int x, int y) {
         boolean cageThrown = false;
@@ -539,13 +575,13 @@ public class LevelManager {
             if (abstractWildAnimal.getX() == x && abstractWildAnimal.getY() == y) {
                 cageThrown = true;
                 abstractWildAnimal.cage();
-                Log.log(Log.INFO, "cage @" + x + " " + y + ":" + abstractWildAnimal.getType());
-                System.out.println("cage @" + x + " " + y + ":" + abstractWildAnimal.getType());
+                Log.log(Log.INFO, "cage @ " + x + " " + y + ":" + abstractWildAnimal.getType());
+                System.out.println("cage @ " + x + " " + y + ":" + abstractWildAnimal.getType());
             }
         }
         if (!cageThrown) {
-            Log.log(Log.ERROR, " no cage @" + x + " " + y);
-            System.err.println("no cage @" + x + " " + y);
+            Log.log(Log.ERROR, " no cage @ " + x + " " + y);
+            System.err.println("no cage @ " + x + " " + y);
         }
     }
 
