@@ -1,0 +1,8 @@
+[Log], Wed Jul 14 02:00:05 IRDT 2021, log.txt created or opened
+[Info], Wed Jul 14 02:00:05 IRDT 2021, Game Main Run
+[user : Mehran79 ][Log], Wed Jul 14 02:00:05 IRDT 2021, Mehran79 signed in
+[user : Mehran79 ][Info], Wed Jul 14 02:00:05 IRDT 2021, LevelManager constructor
+[Log], Wed Jul 14 02:07:34 IRDT 2021, log.txt created or opened
+[Info], Wed Jul 14 02:07:34 IRDT 2021, Game Main Run
+[user : Mehran79 ][Log], Wed Jul 14 02:07:34 IRDT 2021, Mehran79 signed in
+[user : Mehran79 ][Info], Wed Jul 14 02:07:34 IRDT 2021, LevelManager constructor
