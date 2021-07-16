@@ -15,6 +15,7 @@ public abstract class Menu {
     }
 
     public Menu(String name) {
+        this.submenus = new HashMap<>();
         this.name = name;
     }
 
@@ -40,7 +41,13 @@ public abstract class Menu {
             String s = scanner.nextLine();
             if (InputCommand.Exit.getMatcher(s).matches())
                 System.exit(1);
-            int nextMenuNum = Integer.parseInt(s);
+            int nextMenuNum;
+            try {
+                nextMenuNum = Integer.parseInt(s);
+            }
+            catch (NumberFormatException e){
+                nextMenuNum = submenus.size() + 1;
+            }
             if (nextMenuNum == submenus.size() + 1) {
                 if (this.parentMenu == null) {
                     System.exit(1);

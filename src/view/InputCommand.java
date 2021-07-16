@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public enum InputCommand {
-    Exit("/^\\s*exit/i");
+    Exit("^(?i)\\s*exit");
 
     private final Pattern commandPattern;
     InputCommand(String s) {

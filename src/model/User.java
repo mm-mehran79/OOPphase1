@@ -29,7 +29,7 @@ public class User {
         this.userName = userName;
         this.password = password;
         this.coins = 0;
-        this.lastLevel = 0;
+        this.lastLevel = 1;
     }
 
     public User(String userName, String password, int coins, int lastLevel) {

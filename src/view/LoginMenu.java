@@ -1,5 +1,6 @@
 package view;
 
+import controller.LevelManager;
 import controller.Manager;
 import log.Log;
 import model.User;
@@ -29,6 +30,8 @@ public class LoginMenu extends Menu{
     public void execute(){
         Manager.setPlayer(user);
         Log.log(Log.LOG, user.userName + " signed in");
-        //TODO: JUST SPECIFY TO RUN GAME MENU
+        LevelManager levelManager = new LevelManager(Manager.getLevel(),Manager.getCoins());
+        LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, scanner);
+        System.out.println(levelInputProcessor.run());
     }
 }
