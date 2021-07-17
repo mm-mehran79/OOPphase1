@@ -9,31 +9,37 @@ import java.io.IOException;
 
 public abstract class  GraphicalMenu implements ActionListener {
     JFrame menu;
-    JMenu exit,back;
+    JButton exit,back;
     JMenuBar menuBar;
-    JPanel northPanel;
+    JPanel northPanel,bodyPanel;
     GraphicalMenu parent;
 
 
 
     public GraphicalMenu (String menuName,GraphicalMenu parentMenu) {
         menu = new JFrame(menuName);
+        menu.setLayout(new BorderLayout());
+
         this.northPanel = new JPanel();
+        this.bodyPanel = new JPanel();
         this.parent = parentMenu;
-        exit = new JMenu("exit");
-        exit.addActionListener(this::actionPerformed);
+
         Icon exitIcon = new ImageIcon("./data/exit.png");
-        exit.setIcon(exitIcon);
-        exit.setOpaque(false);// must
-        if (parentMenu != null) {
-            back = new JMenu("back");
-            back.addActionListener(this :: actionPerformed);
+        exit = new JButton(exitIcon);
+        exit.addActionListener(this::actionPerformed);
+        exit.setOpaque(false);// must be checked
+        exit.setSize(70,20);
+        northPanel.add(exit);
+        if (parentMenu == null) {
             Icon backIcon = new ImageIcon("./data/back.png");
-            back.setIcon(backIcon);
+            back = new JButton(backIcon);
+            back.addActionListener(this :: actionPerformed);
+            back.setSize(20,20);
             northPanel.add(back);
         }
 
         menu.add(northPanel,BorderLayout.NORTH);
+        menu.add(bodyPanel,BorderLayout.CENTER);
 
 
         Image loginIco;
@@ -44,4 +50,8 @@ public abstract class  GraphicalMenu implements ActionListener {
             e.printStackTrace();
         }
     }
+
+    public abstract void show();
+    public abstract void hide();
+
 }
