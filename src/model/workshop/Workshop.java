@@ -84,6 +84,14 @@ public class Workshop {
         return isAvailable;
     }
 
+    public int getTurn() {
+        return turn;
+    }
+
+    public int getMaxTurn() {
+        return maxTurn;
+    }
+
     public ProductTypes getProductTypeOutput() {
         return productTypeOutput;
     }

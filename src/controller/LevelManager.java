@@ -26,6 +26,7 @@ public class LevelManager {
     static final int STORAGE_MAX = 30; // max storage
     static final int TRUCK_MAX = 15; // truck max storage
     static final int WELl_MAX = 5; // well max
+    static final int TRUCK_MAX_TURNS = 10; // go and back truck turns
 
     // level properties
     boolean isComplete = false; // is the game complete
@@ -87,6 +88,10 @@ public class LevelManager {
     Workshop shirt;
     Workshop icecream;
 
+    // truck properties
+    int truckTurns;
+    int truckTempMoney;
+    boolean truckIsAvailable;
 
     // task booleans
     boolean coinTaskBoolean = false;
@@ -166,6 +171,11 @@ public class LevelManager {
         bread = new Workshop(ProductTypes.BREAD);
         shirt = new Workshop(ProductTypes.SHIRT);
         icecream = new Workshop(ProductTypes.ICECREAM);
+
+        // truck properties
+        truckTurns = 0;
+        truckTempMoney = 0;
+        truckIsAvailable = true;
 
         // task booleans
         coinTaskBoolean = false;
@@ -685,6 +695,11 @@ public class LevelManager {
     }
 
     private void truckLoad(ProductTypes productType) {
+        if (!truckIsAvailable) {
+            System.err.println("truck is unavailable (being used");
+            Log.log(Log.ERROR, "truck is unavailable (being used");
+            return;
+        }
         boolean found = false;
         Product productLoad = null;
         for (Product product : storage) {
@@ -719,6 +734,11 @@ public class LevelManager {
     }
 
     private void truckUnload(ProductTypes productType) {
+        if (!truckIsAvailable) {
+            System.err.println("truck is unavailable (being used");
+            Log.log(Log.ERROR, "truck is unavailable (being used");
+            return;
+        }
         boolean found = false;
         Product productUnload = null;
         for (Product product : truck) {
@@ -744,7 +764,17 @@ public class LevelManager {
     }
 
     private void truckGo() {
-
+        if (!truckIsAvailable) {
+            System.err.println("truck is unavailable (being used");
+            Log.log(Log.ERROR, "truck is unavailable (being used");
+            return;
+        }
+        truckIsAvailable = false;
+        truckTempMoney = 0;
+        for (Product product : truck) {
+            truckTempMoney += product.getPrice();
+        }
+        truckTurns = 0;
     }
 
     public void turnN(int n) {
@@ -878,6 +908,65 @@ public class LevelManager {
             Log.log(Log.INFO, product.getProductType().toString());
         }
 
+        System.out.println("INQUIRY: truck: ");
+        Log.log(Log.INFO, "INQUIRY: truck: ");
+        System.out.println("truckIsAvailable / !inUse: " + truckIsAvailable);
+        Log.log(Log.INFO, "truckIsAvailable / !inUse: " + truckIsAvailable);
+        System.out.println("truckTurn progress: " + truckTurns + "/" + TRUCK_MAX_TURNS);
+        Log.log(Log.INFO, "truckTurn progress: " + truckTurns + "/" + TRUCK_MAX_TURNS);
+        System.out.println("truckTempMoney" + truckTempMoney);
+
+
+        System.out.println("INQUIRY: in truck = ");
+        Log.log(Log.INFO, "INQUIRY: in truck = ");
+        for (Product product : truck) {
+            System.out.println(product.getProductType());
+            Log.log(Log.INFO, product.getProductType().toString());
+        }
+
+        System.out.println("INQUIRY: workshops: ");
+        Log.log(Log.INFO, "INQUIRY: workshops:");
+
+        System.out.println("flour bought? = " + workshopFlour);
+        System.out.println("flour WS isAvailable =" + flour.isAvailable());
+        System.out.println("flour WS progress = " + flour.getTurn() + "/" + flour.getMaxTurn());
+        Log.log(Log.INFO, "flour bought? = " + workshopFlour);
+        Log.log(Log.INFO, "flour WS isAvailable =" + flour.isAvailable());
+        Log.log(Log.INFO, "flour WS progress = " + flour.getTurn() + "/" + flour.getMaxTurn());
+
+        System.out.println("cloth WS bought? = " + workshopCloth);
+        System.out.println("cloth WS isAvailable =" + cloth.isAvailable());
+        System.out.println("cloth WS progress = " + cloth.getTurn() + "/" + cloth.getMaxTurn());
+        Log.log(Log.INFO, "cloth WS bought? = " + workshopCloth);
+        Log.log(Log.INFO, "cloth WS isAvailable =" + cloth.isAvailable());
+        Log.log(Log.INFO, "cloth WS progress = " + cloth.getTurn() + "/" + cloth.getMaxTurn());
+
+        System.out.println("packetmilk WS bought? = " + workshopPacketmilk);
+        System.out.println("packetmilk WS isAvailable =" + packetmilk.isAvailable());
+        System.out.println("packetmilk WS progress = " + packetmilk.getTurn() + "/" + packetmilk.getMaxTurn());
+        Log.log(Log.INFO, "packetmilk WS bought? = " + workshopPacketmilk);
+        Log.log(Log.INFO, "packetmilk WS isAvailable =" + packetmilk.isAvailable());
+        Log.log(Log.INFO, "packetmilk WS progress = " + packetmilk.getTurn() + "/" + packetmilk.getMaxTurn());
+
+        System.out.println("bread WS bought? = " + workshopBread);
+        System.out.println("bread WS isAvailable =" + bread.isAvailable());
+        System.out.println("bread WS progress = " + bread.getTurn() + "/" + bread.getMaxTurn());
+        Log.log(Log.INFO, "bread WS bought? = " + workshopBread);
+        Log.log(Log.INFO, "bread WS isAvailable =" + bread.isAvailable());
+        Log.log(Log.INFO, "bread WS progress = " + bread.getTurn() + "/" + bread.getMaxTurn());
+
+        System.out.println("shirt WS bought? = " + workshopShirt);
+        System.out.println("shirt WS isAvailable =" + shirt.isAvailable());
+        System.out.println("shirt WS progress = " + shirt.getTurn() + "/" + shirt.getMaxTurn());
+        Log.log(Log.INFO, "shirt WS bought? = " + workshopShirt);
+        Log.log(Log.INFO, "shirt WS isAvailable =" + shirt.isAvailable());
+        Log.log(Log.INFO, "shirt WS progress = " + shirt.getTurn() + "/" + shirt.getMaxTurn());
+
+        System.out.println("icecream WS bought? = " + workshopIcecream);
+        System.out.println("icecream WS isAvailable =" + icecream.isAvailable());
+        System.out.println("icecream WS progress = " + icecream.getTurn() + "/" + icecream.getMaxTurn());
+
+
         System.out.println("INQUIRY: coinTask = " + coinTaskProgression + "/" + coinTask);
         Log.log(Log.INFO, "INQUIRY: coinTask = " + coinTaskProgression + "/" + coinTask);
 
@@ -989,6 +1078,9 @@ public class LevelManager {
             Log.log(Log.INFO, "INQUIRY: buffaloTasks = " + buffaloTaskProgression + "/" + buffaloTasks);
         }
 
+
+        System.out.println("Xx\tinquiry done\txX");
+        Log.log(Log.INFO, "Xx\tinquiry done\txX");
     }
 
     public boolean isFinished() {
