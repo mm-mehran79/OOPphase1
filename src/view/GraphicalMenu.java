@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public abstract class  GraphicalMenu implements ActionListener {
     JFrame menu;
-    JMenu exit,back;
+    JButton exit,back;
     JMenuBar menuBar;
     JPanel northPanel;
     GraphicalMenu parent;
@@ -20,16 +20,14 @@ public abstract class  GraphicalMenu implements ActionListener {
         menu = new JFrame(menuName);
         this.northPanel = new JPanel();
         this.parent = parentMenu;
-        exit = new JMenu("exit");
-        exit.addActionListener(this::actionPerformed);
         Icon exitIcon = new ImageIcon("./data/exit.png");
-        exit.setIcon(exitIcon);
-        exit.setOpaque(false);// must
+        exit = new JButton(exitIcon);
+        exit.addActionListener(this::actionPerformed);
+        exit.setOpaque(false);// must be checked
         if (parentMenu != null) {
-            back = new JMenu("back");
-            back.addActionListener(this :: actionPerformed);
             Icon backIcon = new ImageIcon("./data/back.png");
-            back.setIcon(backIcon);
+            back = new JButton(backIcon);
+            back.addActionListener(this :: actionPerformed);
             northPanel.add(back);
         }
 
@@ -44,4 +42,6 @@ public abstract class  GraphicalMenu implements ActionListener {
             e.printStackTrace();
         }
     }
+    public abstract void show();
+    public abstract void hide();
 }
