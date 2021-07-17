@@ -4,7 +4,6 @@ import log.Log;
 import model.animals.AnimalTypes;
 import model.level.Level;
 import model.products.ProductTypes;
-import view.GraphicalLoginMenu;
 import view.InitialMenu;
 import view.InputCommand;
 import view.Menu;
@@ -30,8 +29,6 @@ public class Main {
             if (InputCommand.Exit.getMatcher(s).matches())
                 System.exit(1);
             else if(InputCommand.Graphical.getMatcher(s).matches()){
-                GraphicalLoginMenu graphicalLoginMenu = new GraphicalLoginMenu(null);
-                graphicalLoginMenu.show();
                 //TOdo graphical login
             }
             else if(InputCommand.textCommand.getMatcher(s).matches()){
@@ -41,8 +38,6 @@ public class Main {
                 initialMenu.execute();
             }
             else if(s.equals("1")){
-                GraphicalLoginMenu graphicalLoginMenu = new GraphicalLoginMenu(null);
-                graphicalLoginMenu.show();
                 //todo graphical login
 
             }
