@@ -546,6 +546,10 @@ public class LevelManager {
             workshopPacketmilk();
         else if (string.equals("work bread"))
             workshopBread();
+        else if (string.equals("work shirt"))
+            workshopShirt();
+        else if (string.equals("work icecream"))
+            workshopIcecream();
     }
 
     private void workshopFlour() {
@@ -617,6 +621,42 @@ public class LevelManager {
         else {
             Log.log(Log.ERROR, "you don't have build bread");
             System.err.println("you don't have build bread");
+        }
+    }
+
+    private void workshopShirt() {
+        if (!workshopShirt) {
+            if (shirt.isAvailable()) {
+                shirt.make();
+                Log.log(Log.INFO, "build shirt starting to work");
+                System.out.println("build shirt starting to work");
+            }
+            else {
+                Log.log(Log.ERROR, "build shirt is working");
+                System.err.println("build shirt is working");
+            }
+        }
+        else {
+            Log.log(Log.ERROR, "you don't have build shirt");
+            System.err.println("you don't have build shirt");
+        }
+    }
+
+    private void workshopIcecream() {
+        if (!workshopIcecream) {
+            if (icecream.isAvailable()) {
+                icecream.make();
+                Log.log(Log.INFO, "build icecream starting to work");
+                System.out.println("build icecream starting to work");
+            }
+            else {
+                Log.log(Log.ERROR, "build icecream is working");
+                System.err.println("build icecream is working");
+            }
+        }
+        else {
+            Log.log(Log.ERROR, "you don't have build icecream");
+            System.err.println("you don't have build icecream");
         }
     }
 
@@ -734,6 +774,13 @@ public class LevelManager {
         for (Product product : productOnGround) {
             product.addTurn();
         }
+        flour.addTurn();
+        cloth.addTurn();
+        packetmilk.addTurn();
+        bread.addTurn();
+        shirt.addTurn();
+        icecream.addTurn();
+
 
 
     }
