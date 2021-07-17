@@ -69,7 +69,15 @@ public class Workshop {
     }
 
     public boolean getProduct() {
-        return !isAvailable && turn >= maxTurn;
+        return !isAvailable && (turn >= maxTurn);
+    }
+
+    public boolean setZero() {
+        if(getProduct()) {
+            turn = 0;
+            return true;
+        }
+        return false;
     }
 
     public boolean isAvailable() {

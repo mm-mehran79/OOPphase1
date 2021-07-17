@@ -657,6 +657,11 @@ public class LevelManager {
     }
 
     private void turn() {
+        Log.log(Log.INFO, "it is levelManager's turn for each TurnN's N");
+        System.out.println("it is levelManager's turn for each TurnN's N");
+
+        Log.log(Log.INFO, "levelManager: addTurn");
+        System.out.println("levelManager: addTurn");
         turn++;
         for (AbstractDomesticatedAnimal domesticatedAnimal : domesticatedAnimalOnGround) {
             domesticatedAnimal.addTurn();
@@ -670,6 +675,8 @@ public class LevelManager {
         for (Product product : productOnGround) {
             product.addTurn();
         }
+
+
     }
 
     public ArrayList<String> getInstructionQueue() {
@@ -681,55 +688,85 @@ public class LevelManager {
         Log.log(Log.INFO, "Xx\tinquiry\txX");
 
         System.out.println("INQUIRY: number of turn in game = " + turn);
+        Log.log(Log.INFO, "INQUIRY: number of turn in game = " + turn);
         System.out.println("INQUIRY: maxTime for reward = " + maxTime);
+        Log.log(Log.INFO, "INQUIRY: maxTime for reward = " + maxTime);
         System.out.println("INQUIRY: Reward = " + reward);
-        //Log.log(Log.INFO, "INQUIRY: number of turn in game = " + turn);
+        Log.log(Log.INFO, "INQUIRY: Reward = " + reward);
 
         System.out.println("INQUIRY: number of coins = " + coins);
-        //Log.log(Log.INFO, "INQUIRY: number of coins = " + coins);
+        Log.log(Log.INFO, "INQUIRY: number of coins = " + coins);
 
         System.out.println("INQUIRY: grass = ");
-        //Log.log(Log.INFO, "INQUIRY: grass");
+        Log.log(Log.INFO, "INQUIRY: grass");
+        String grassStringLog;
         for (int i = 0; i < 6; i++) {
+            System.out.print(i + "r : ");
             for (int j = 0; j < 6; j++) {
-                System.out.print(grassArray[i][j] + "\t");
+                System.out.print(grassArray[i][j] + " _ ");
             }
+            grassStringLog = i + "r : " + grassArray[i][0] + " _ "
+                                        + grassArray[i][1] + " _ "
+                                        + grassArray[i][2] + " _ "
+                                        + grassArray[i][3] + " _ "
+                                        + grassArray[i][4] + " _ "
+                                        + grassArray[i][5] + " _ ";
+            Log.log(Log.INFO, grassStringLog);
             System.out.println();
         }
 
         System.out.println("INQUIRY: domesticated = ");
-        //Log.log(Log.INFO, "INQUIRY: domesticated");
+        Log.log(Log.INFO, "INQUIRY: domesticated = ");
         for (AbstractDomesticatedAnimal domesticatedAnimal : domesticatedAnimalOnGround) {
             System.out.println(domesticatedAnimal.getType() + " " +
                     domesticatedAnimal.getHealth() + "% [" +
                     domesticatedAnimal.getX() + " " +
                     domesticatedAnimal.getY() + "]" );
+            Log.log(Log.INFO, domesticatedAnimal.getType() + " " +
+                                        domesticatedAnimal.getHealth() + "% [" +
+                                        domesticatedAnimal.getX() + " " +
+                                        domesticatedAnimal.getY() + "]" );
         }
 
         System.out.println("INQUIRY: wild = ");
+        Log.log(Log.INFO, "INQUIRY: wild = ");
         for (AbstractWildAnimal wildAnimal : wildAnimalOnGround) {
             System.out.println(wildAnimal.getType() + " " +
                     wildAnimal.getCagesThrown() + "CT [" +
                     wildAnimal.getX() + " " +
                     wildAnimal.getY() + "]" );
+            Log.log(Log.INFO, wildAnimal.getType() + " " +
+                                        wildAnimal.getCagesThrown() + "CT [" +
+                                        wildAnimal.getX() + " " +
+                                        wildAnimal.getY() + "]" );
         }
 
         System.out.println("INQUIRY: pet = ");
+        Log.log(Log.INFO, "INQUIRY: pet = ");
         for (AbstractPetAnimal petAnimal : petAnimalOnGround) {
             System.out.println(petAnimal.getType() + " [" +
                     petAnimal.getX() + " " +
                     petAnimal.getY() + "]" );
+            Log.log(Log.INFO, petAnimal.getType() + " [" +
+                                        petAnimal.getX() + " " +
+                                        petAnimal.getY() + "]" );
         }
 
         System.out.println("INQUIRY: productsOnGround = ");
+        Log.log(Log.INFO, "INQUIRY: productsOnGround = ");
         for (Product product : productOnGround) {
             System.out.println(product.getProductType() + " " +
                     product.getProductTurns() + "NT [" +
                     product.getX() + " " +
                     product.getY() + "]" );
+            Log.log(Log.INFO, product.getProductType() + " " +
+                                        product.getProductTurns() + "NT [" +
+                                        product.getX() + " " +
+                                        product.getY() + "]");
         }
 
-        System.out.println("INQUIRY: productsOnGround = ");
+        System.out.println("INQUIRY: storage = ");
+        Log.log(Log.INFO, "INQUIRY: productsOnGround = ");
         for (Product product : productOnGround) {
             System.out.println(product.getProductType() + " " +
                     product.getProductTurns() + "NT [" +
@@ -803,13 +840,10 @@ public class LevelManager {
     }
 
     public boolean isFinished() {
-        coinTaskBoolean = true;
-        productTasksBoolean = true;
-        animalTasksBoolean = true;
+        coinTaskBoolean =  coinTaskBoolean || (coinTaskProgression >= coinTask);
 
-        coinTaskBoolean = (coinTaskProgression >= coinTask);
-
-        productTasksBoolean = (eggProductTaskProgression >= eggProductTask) ||
+        productTasksBoolean = productTasksBoolean ||
+                (eggProductTaskProgression >= eggProductTask) ||
                 (featherProductTaskProgression >= featherProductTask) ||
                 (milkProductTaskProgression >= milkProductTask) ||
                 (flourProductTaskProgression >= flourProductTask) ||
@@ -819,7 +853,8 @@ public class LevelManager {
                 (shirtProductTaskProgression >= shirtProductTask) ||
                 (icecreamProductTaskProgression >= icecreamProductTask);
 
-        animalTasksBoolean = (chickenTaskProgression >= chickenTasks) ||
+        animalTasksBoolean = animalTasksBoolean ||
+                (chickenTaskProgression >= chickenTasks) ||
                 (turkeyTaskProgression >= turkeyTasks) ||
                 (buffaloTaskProgression >= buffaloTasks);
 
