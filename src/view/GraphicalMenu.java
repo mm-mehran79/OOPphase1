@@ -11,6 +11,7 @@ public abstract class  GraphicalMenu implements ActionListener {
     JFrame menu;
     JMenu exit,back;
     JMenuBar menuBar;
+    JPanel northPanel;
     GraphicalMenu parent;
 
 
@@ -22,7 +23,8 @@ public abstract class  GraphicalMenu implements ActionListener {
         if (parentMenu != null) {
             back = new JMenu("back");
         }
-
+        this.northPanel = new JPanel();
+        menu.add(northPanel,BorderLayout.NORTH);
 
 
         Image loginIco;
