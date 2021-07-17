@@ -27,6 +27,7 @@ public class LevelManager {
     static final int TRUCK_MAX = 15; // truck max storage
     static final int WELl_MAX = 5; // well max
     static final int TRUCK_MAX_TURNS = 10; // go and back truck turns
+    static final int WELL_MAX_TURNS = 3; // go and back well turns
 
     // level properties
     boolean isComplete = false; // is the game complete
@@ -92,6 +93,10 @@ public class LevelManager {
     int truckTurns;
     int truckTempMoney;
     boolean truckIsAvailable;
+
+    // well properties
+    int wellTurns;
+    boolean wellIsAvailable;
 
     // task booleans
     boolean coinTaskBoolean = false;
@@ -176,6 +181,10 @@ public class LevelManager {
         truckTurns = 0;
         truckTempMoney = 0;
         truckIsAvailable = true;
+
+        // well properties
+        wellTurns = 0;
+        wellIsAvailable = true;
 
         // task booleans
         coinTaskBoolean = false;
@@ -531,6 +540,18 @@ public class LevelManager {
     }
 
     private void well() {
+        if (!wellIsAvailable) {
+            System.err.println("well is unavailable (being used)");
+            Log.log(Log.ERROR, "well is unavailable (being used)");
+            return;
+        }
+        else if (well != 0) {
+            System.err.println("well isn't empty (should be empty to refill)");
+            Log.log(Log.ERROR, "well isn't empty (should be empty to refill)");
+            return;
+        }
+        wellIsAvailable = false;
+        wellTurns = 0;
 
     }
 
@@ -765,10 +786,12 @@ public class LevelManager {
 
     private void truckGo() {
         if (!truckIsAvailable) {
-            System.err.println("truck is unavailable (being used");
-            Log.log(Log.ERROR, "truck is unavailable (being used");
+            System.err.println("truck is unavailable (being used)");
+            Log.log(Log.ERROR, "truck is unavailable (being used)");
             return;
         }
+        System.err.println("truck is going now");
+        Log.log(Log.ERROR, "truck is going now");
         truckIsAvailable = false;
         truckTempMoney = 0;
         for (Product product : truck) {
@@ -810,6 +833,9 @@ public class LevelManager {
         bread.addTurn();
         shirt.addTurn();
         icecream.addTurn();
+        truckTurns++;
+        wellTurns++;
+
 
 
 
@@ -850,6 +876,13 @@ public class LevelManager {
             Log.log(Log.INFO, grassStringLog);
             System.out.println();
         }
+
+        System.out.println("INQUIRY: well: ");
+        Log.log(Log.INFO, "INQUIRY: well: ");
+        System.out.println("wellIsAvailable / !inUse = " + wellIsAvailable);
+        Log.log(Log.INFO, "wellIsAvailable / !inUse = " + wellIsAvailable);
+        System.out.println("wellTurn progress = " + wellTurns + "/" + WELL_MAX_TURNS);
+        Log.log(Log.INFO, "wellTurn progress = " + wellTurns + "/" + WELL_MAX_TURNS);
 
         System.out.println("INQUIRY: domesticated = ");
         Log.log(Log.INFO, "INQUIRY: domesticated = ");
@@ -910,11 +943,12 @@ public class LevelManager {
 
         System.out.println("INQUIRY: truck: ");
         Log.log(Log.INFO, "INQUIRY: truck: ");
-        System.out.println("truckIsAvailable / !inUse: " + truckIsAvailable);
-        Log.log(Log.INFO, "truckIsAvailable / !inUse: " + truckIsAvailable);
-        System.out.println("truckTurn progress: " + truckTurns + "/" + TRUCK_MAX_TURNS);
-        Log.log(Log.INFO, "truckTurn progress: " + truckTurns + "/" + TRUCK_MAX_TURNS);
-        System.out.println("truckTempMoney" + truckTempMoney);
+        System.out.println("truckIsAvailable / !inUse = " + truckIsAvailable);
+        Log.log(Log.INFO, "truckIsAvailable / !inUse = " + truckIsAvailable);
+        System.out.println("truckTurn progress = " + truckTurns + "/" + TRUCK_MAX_TURNS);
+        Log.log(Log.INFO, "truckTurn progress = " + truckTurns + "/" + TRUCK_MAX_TURNS);
+        System.out.println("truckTempMoney = " + truckTempMoney);
+        Log.log(Log.INFO, "truckTempMoney = " + truckTempMoney);
 
 
         System.out.println("INQUIRY: in truck = ");
