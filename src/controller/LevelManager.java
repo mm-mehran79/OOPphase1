@@ -14,6 +14,7 @@ import model.level.Level;
 import model.products.Product;
 import model.products.ProductTypes;
 import model.workshop.Workshop;
+import org.omg.PortableInterceptor.INACTIVE;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -539,6 +540,12 @@ public class LevelManager {
     private void work(String string) {
         if (string.equals("work flour"))
             workshopFlour();
+        else if (string.equals("work cloth"))
+            workshopCloth();
+        else if (string.equals("work packetmilk"))
+            workshopPacketmilk();
+        else if (string.equals("work bread"))
+            workshopBread();
     }
 
     private void workshopFlour() {
@@ -559,6 +566,60 @@ public class LevelManager {
         }
     }
 
+    private void workshopCloth() {
+        if (!workshopCloth) {
+            if (cloth.isAvailable()) {
+                cloth.make();
+                Log.log(Log.INFO, "build cloth starting to work");
+                System.out.println("build cloth starting to work");
+            }
+            else {
+                Log.log(Log.ERROR, "build cloth is working");
+                System.err.println("build cloth is working");
+            }
+        }
+        else {
+            Log.log(Log.ERROR, "you don't have build cloth");
+            System.err.println("you don't have build cloth");
+        }
+    }
+
+    private void workshopPacketmilk() {
+        if (!workshopPacketmilk) {
+            if (packetmilk.isAvailable()) {
+                packetmilk.make();
+                Log.log(Log.INFO, "build packetmilk starting to work");
+                System.out.println("build packetmilk starting to work");
+            }
+            else {
+                Log.log(Log.ERROR, "build packetmilk is working");
+                System.err.println("build packetmilk is working");
+            }
+        }
+        else {
+            Log.log(Log.ERROR, "you don't have build packetmilk");
+            System.err.println("you don't have build packetmilk");
+        }
+    }
+
+    private void workshopBread() {
+        if (!workshopBread) {
+            if (bread.isAvailable()) {
+                bread.make();
+                Log.log(Log.INFO, "build bread starting to work");
+                System.out.println("build bread starting to work");
+            }
+            else {
+                Log.log(Log.ERROR, "build bread is working");
+                System.err.println("build bread is working");
+            }
+        }
+        else {
+            Log.log(Log.ERROR, "you don't have build bread");
+            System.err.println("you don't have build bread");
+        }
+    }
+
     private boolean hasProduct(ProductTypes type) {
         for (Product product : storage) {
             if(product.getProductType() == type)
@@ -566,8 +627,6 @@ public class LevelManager {
         }
         return false;
     }
-
-
 
     private void cage(int x, int y) {
         boolean cageThrown = false;
@@ -766,76 +825,122 @@ public class LevelManager {
         }
 
         System.out.println("INQUIRY: storage = ");
-        Log.log(Log.INFO, "INQUIRY: productsOnGround = ");
-        for (Product product : productOnGround) {
-            System.out.println(product.getProductType() + " " +
-                    product.getProductTurns() + "NT [" +
-                    product.getX() + " " +
-                    product.getY() + "]" );
+        Log.log(Log.INFO, "INQUIRY: storage = ");
+        for (Product product : storage) {
+            System.out.println(product.getProductType());
+            Log.log(Log.INFO, product.getProductType().toString());
         }
 
         System.out.println("INQUIRY: coinTask = " + coinTaskProgression + "/" + coinTask);
+        Log.log(Log.INFO, "INQUIRY: coinTask = " + coinTaskProgression + "/" + coinTask);
 
-        if (eggProductTask == 0)
+        if (eggProductTask == 0) {
             System.out.println("INQUIRY: no eggProductTask");
-        else
+            Log.log(Log.INFO,"INQUIRY: no eggProductTask");
+        }
+        else {
             System.out.println("INQUIRY: eggProductTask = " + eggProductTaskProgression + "/" + eggProductTask);
+            Log.log(Log.INFO, "INQUIRY: eggProductTask = " + eggProductTaskProgression + "/" + eggProductTask);
+        }
 
-        if (featherProductTask == 0)
+        if (featherProductTask == 0) {
             System.out.println("INQUIRY: no featherProductTask");
-        else
+            Log.log(Log.INFO, "INQUIRY: no featherProductTask");
+        }
+        else {
             System.out.println("INQUIRY: featherProductTask = " + featherProductTaskProgression + "/" + featherProductTask);
+            Log.log(Log.INFO, "INQUIRY: featherProductTask = " + featherProductTaskProgression + "/" + featherProductTask);
+        }
 
-        if (milkProductTask == 0)
+        if (milkProductTask == 0) {
             System.out.println("INQUIRY: no milkProductTask");
-        else
+            Log.log(Log.INFO, "INQUIRY: no milkProductTask");
+        }
+        else {
             System.out.println("INQUIRY: milkProductTask = " + milkProductTaskProgression + "/" + milkProductTask);
+            Log.log(Log.INFO, "INQUIRY: milkProductTask = " + milkProductTaskProgression + "/" + milkProductTask);
+        }
 
-        if (flourProductTask == 0)
+        if (flourProductTask == 0) {
             System.out.println("INQUIRY: no flourProductTask");
-        else
+            Log.log(Log.INFO, "INQUIRY: no flourProductTask");
+        }
+        else {
             System.out.println("INQUIRY: flourProductTask = " + flourProductTaskProgression + "/" + flourProductTask);
+            Log.log(Log.INFO, "INQUIRY: flourProductTask = " + flourProductTaskProgression + "/" + flourProductTask);
+        }
 
-        if (clothProductTask == 0)
+        if (clothProductTask == 0) {
             System.out.println("INQUIRY: no clothProductTask");
-        else
+            Log.log(Log.INFO, "INQUIRY: no clothProductTask");
+        }
+        else {
             System.out.println("INQUIRY: clothProductTask = " + clothProductTaskProgression + "/" + clothProductTask);
+            Log.log(Log.INFO, "INQUIRY: clothProductTask = " + clothProductTaskProgression + "/" + clothProductTask);
+        }
 
-        if (packetmilkProductTask == 0)
+        if (packetmilkProductTask == 0) {
             System.out.println("INQUIRY: no packetmilkProductTask");
-        else
+            Log.log(Log.INFO, "INQUIRY: no packetmilkProductTask");
+        }
+        else {
             System.out.println("INQUIRY: packetmilkProductTask = " + packetmilkProductTaskProgression + "/" + packetmilkProductTask);
+            Log.log(Log.INFO, "INQUIRY: packetmilkProductTask = " + packetmilkProductTaskProgression + "/" + packetmilkProductTask);
+        }
 
-        if (breadProductTask == 0)
+        if (breadProductTask == 0) {
             System.out.println("INQUIRY: no breadProductTask");
-        else
+            Log.log(Log.INFO, "INQUIRY: no breadProductTask");
+        }
+        else {
             System.out.println("INQUIRY: breadProductTask = " + breadProductTaskProgression + "/" + breadProductTask);
+            Log.log(Log.INFO, "INQUIRY: breadProductTask = " + breadProductTaskProgression + "/" + breadProductTask);
+        }
 
-        if (shirtProductTask == 0)
+        if (shirtProductTask == 0) {
             System.out.println("INQUIRY: no shirtProductTask");
-        else
+            Log.log(Log.INFO, "INQUIRY: no shirtProductTask");
+        }
+        else {
             System.out.println("INQUIRY: shirtProductTask = " + shirtProductTaskProgression + "/" + shirtProductTask);
+            Log.log(Log.INFO, "INQUIRY: shirtProductTask = " + shirtProductTaskProgression + "/" + shirtProductTask);
+        }
 
-        if (icecreamProductTask == 0)
+        if (icecreamProductTask == 0) {
             System.out.println("INQUIRY: no icecreamProductTask");
-        else
+            Log.log(Log.INFO, "INQUIRY: no icecreamProductTask");
+        }
+        else {
             System.out.println("INQUIRY: shirtProductTask = " + icecreamProductTaskProgression + "/" + icecreamProductTask);
+            Log.log(Log.INFO, "INQUIRY: shirtProductTask = " + icecreamProductTaskProgression + "/" + icecreamProductTask);
+        }
 
-        if (chickenTasks == 0)
+        if (chickenTasks == 0) {
             System.out.println("INQUIRY: no chickenTasks");
-        else
+            Log.log(Log.INFO, "INQUIRY: no chickenTasks");
+        }
+        else {
             System.out.println("INQUIRY: chickenTasks = " + chickenTaskProgression + "/" + chickenTasks);
+            Log.log(Log.INFO, "INQUIRY: chickenTasks = " + chickenTaskProgression + "/" + chickenTasks);
+        }
 
-        if (turkeyTasks == 0)
+        if (turkeyTasks == 0) {
             System.out.println("INQUIRY: no turkeyTasks");
-        else
+            Log.log(Log.INFO, "INQUIRY: no turkeyTasks");
+        }
+        else {
             System.out.println("INQUIRY: turkeyTasks = " + turkeyTaskProgression + "/" + turkeyTasks);
+            Log.log(Log.INFO, "INQUIRY: turkeyTasks = " + turkeyTaskProgression + "/" + turkeyTasks);
+        }
 
-        if (buffaloTasks == 0)
+        if (buffaloTasks == 0) {
             System.out.println("INQUIRY: no buffaloTasks");
-        else
+            Log.log(Log.INFO, "INQUIRY: no buffaloTasks");
+        }
+        else {
             System.out.println("INQUIRY: buffaloTasks = " + buffaloTaskProgression + "/" + buffaloTasks);
-
+            Log.log(Log.INFO, "INQUIRY: buffaloTasks = " + buffaloTaskProgression + "/" + buffaloTasks);
+        }
 
     }
 
@@ -864,11 +969,7 @@ public class LevelManager {
         return allTasksBoolean;
     }
 
-    public boolean isPrized() {
-        return turn <= maxTime;
-    }
+    public boolean isPrized() { return turn <= maxTime; }
 
-    public int getReward() {
-        return reward;
-    }
+    public int getReward() { return reward; }
 }

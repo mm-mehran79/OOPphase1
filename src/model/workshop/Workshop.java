@@ -83,4 +83,8 @@ public class Workshop {
     public boolean isAvailable() {
         return isAvailable;
     }
+
+    public ProductTypes getProductTypeOutput() {
+        return productTypeOutput;
+    }
 }
