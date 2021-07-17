@@ -1,5 +1,7 @@
 package view;
 
+import log.Log;
+
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -39,8 +41,10 @@ public abstract class Menu {
         Menu nextMenu;
         while (true) {
             String s = scanner.nextLine();
-            if (InputCommand.Exit.getMatcher(s).matches())
+            if (InputCommand.Exit.getMatcher(s).matches()){
+                Log.close();
                 System.exit(1);
+            }
             int nextMenuNum;
             try {
                 nextMenuNum = Integer.parseInt(s);
@@ -50,8 +54,10 @@ public abstract class Menu {
             }
             if (nextMenuNum == submenus.size() + 1) {
                 if (this.parentMenu == null) {
+                    Log.close();
                     System.exit(1);
-                } else {
+                }
+                else {
                     nextMenu = parentMenu;
                     break;
                 }

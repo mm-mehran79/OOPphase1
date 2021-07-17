@@ -5,6 +5,7 @@ import model.animals.AnimalTypes;
 import model.level.Level;
 import model.products.ProductTypes;
 import view.InitialMenu;
+import view.InputCommand;
 import view.Menu;
 
 import java.io.File;
@@ -20,11 +21,40 @@ public class Main {
     public static void main(String[] args){
         Log.log(Log.INFO, "Game Main Run");
         Manager manager = new Manager();
-        Menu.scanner = new Scanner(System.in);
-        InitialMenu initialMenu =new InitialMenu();
-        initialMenu.show();
-        initialMenu.execute();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Choose User Interface....\n1. Graphical UI\n2. Text Command UI\n3. Exit");
         initialization();
+        while (true){
+            String s = sc.nextLine();
+            if (InputCommand.Exit.getMatcher(s).matches())
+                System.exit(1);
+            else if(InputCommand.Graphical.getMatcher(s).matches()){
+                //TOdo graphical login
+            }
+            else if(InputCommand.textCommand.getMatcher(s).matches()){
+                Menu.scanner = sc;
+                InitialMenu initialMenu =new InitialMenu();
+                initialMenu.show();
+                initialMenu.execute();
+            }
+            else if(s.equals("1")){
+                //todo graphical login
+
+            }
+            else if(s.equals("2")){
+                Menu.scanner = sc;
+                InitialMenu initialMenu =new InitialMenu();
+                initialMenu.show();
+                initialMenu.execute();
+            }
+            else if (s.equals("3")){
+                Log.close();
+                System.exit(0);
+            }
+        }
+
+
+
 
 
 
@@ -36,7 +66,6 @@ public class Main {
 
 
 
-        Log.close();
     }
 
     static void initialization() {
