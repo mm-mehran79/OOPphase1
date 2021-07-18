@@ -14,6 +14,7 @@ import java.util.Scanner;
 public class anotherMain {
     public static void main(String args[]) {
         Log.log(Log.INFO, "Game Main Run");
+        initialization();
 
         Scanner scanner = new Scanner(System.in);
         LevelManager levelManager = new LevelManager(1, 0);
@@ -135,7 +136,7 @@ public class anotherMain {
         }
     }
 
-    static void anotherlate() {
+    static void anotherLate() {
         ArrayList <Blah> blahList = new ArrayList<>();
         Blah n1 = new Blah(2, "funf");
         Blah n2 = new Blah(1, "not");

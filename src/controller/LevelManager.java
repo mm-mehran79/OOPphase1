@@ -134,6 +134,9 @@ public class LevelManager {
         storage = new ArrayList<>();
         well = WELl_MAX;
 
+        // turn variant
+        truck = new ArrayList<>();
+
         // tasks
         coinTask = level.getCoinTask();
         HashMap <ProductTypes, Integer> productTasks = level.getProductTasks();
