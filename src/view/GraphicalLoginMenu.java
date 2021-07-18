@@ -105,11 +105,11 @@ public class GraphicalLoginMenu extends GraphicalMenu{
             password = new String(fieldPassword.getPassword());
             if (User.available(username)){
                 if((user = User.loadUser(username,password)) == null){
-                    JOptionPane.showMessageDialog(new JFrame(),"login failed. Incorrect Password","Incorrect Password",JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(new JFrame(),"login failed. Incorrect Password","Incorrect Password",JOptionPane.ERROR_MESSAGE,DialogIcons.ERROR_ICON);
                     fieldPassword.setText("");
                 }
                 else{
-                    JOptionPane.showMessageDialog(new JFrame(),"Welcome"+ username +"\nYour initial coin : "+user.getCoins()+"\nGo to play level "+user.getLastLevel(),"welcome!!",JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(new JFrame(),"Welcome"+ username +"\nYour initial coin : "+user.getCoins()+"\nGo to play level "+user.getLastLevel(),"welcome!!",JOptionPane.INFORMATION_MESSAGE,DialogIcons.INFORMATION);
                     Manager.setPlayer(user);
                     Log.log(Log.LOG, user.userName + " signed in");
                     LevelManager levelManager = new LevelManager(Manager.getLevel(),Manager.getCoins());
@@ -125,7 +125,7 @@ public class GraphicalLoginMenu extends GraphicalMenu{
                 }
             }
             else {
-                JOptionPane.showMessageDialog(new JFrame(),"login failed. Incorrect username","user doesn't exist",JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(new JFrame(),"login failed. Incorrect username","user doesn't exist",JOptionPane.ERROR_MESSAGE,DialogIcons.ERROR_ICON);
                 textUsername.setText("");fieldPassword.setText("");
             }
         }
@@ -136,12 +136,12 @@ public class GraphicalLoginMenu extends GraphicalMenu{
             password = new String(fieldPassword.getPassword());
 
             if (User.available(username)){
-                JOptionPane.showMessageDialog(new JFrame(),"This username is already taken, please enter another username","Username error",JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(new JFrame(),"This username is already taken, please enter another username","Username error",JOptionPane.ERROR_MESSAGE,DialogIcons.ERROR_ICON);
                 textUsername.setText("");fieldPassword.setText("");
             }
             else {
                 user = new User(username,password);
-                JOptionPane.showMessageDialog(new JFrame(),"wellcome "+username+"\nPlay 1st level...","wellcome!!",JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(new JFrame(),"wellcome "+username+"\nPlay 1st level...","wellcome!!",JOptionPane.INFORMATION_MESSAGE,buttonLogin.getIcon());
                 textUsername.setText("");fieldPassword.setText("");
                 Manager.setPlayer(user);
                 Log.log(Log.LOG, user.userName + " signed in");
