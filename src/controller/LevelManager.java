@@ -321,7 +321,7 @@ public class LevelManager {
 
     private void buy(AnimalTypes animalType) {
         if (animalType == AnimalTypes.CHICKEN) {
-            if (coins > Chicken.PRICE) {
+            if (coins >= Chicken.PRICE) {
                 domesticatedAnimalOnGround.add(new Chicken());
                 coins -= Chicken.PRICE;
                 chickenTaskProgression++;
@@ -334,7 +334,7 @@ public class LevelManager {
             }
         }
         else if (animalType == AnimalTypes.TURKEY) {
-            if (coins > Turkey.PRICE) {
+            if (coins >= Turkey.PRICE) {
                 domesticatedAnimalOnGround.add(new Turkey());
                 coins -= Turkey.PRICE;
                 turkeyTaskProgression++;
@@ -347,7 +347,7 @@ public class LevelManager {
             }
         }
         else if (animalType == AnimalTypes.BUFFALO) {
-            if (coins > Buffalo.PRICE) {
+            if (coins >= Buffalo.PRICE) {
                 domesticatedAnimalOnGround.add(new Buffalo());
                 coins -= Buffalo.PRICE;
                 buffaloTaskProgression++;
@@ -360,7 +360,7 @@ public class LevelManager {
             }
         }
         else if (animalType == AnimalTypes.DOG) {
-            if (coins > Dog.PRICE) {
+            if (coins >= Dog.PRICE) {
                 petAnimalOnGround.add(new Dog());
                 coins -= Dog.PRICE;
                 Log.log(Log.INFO, "bought dog");
@@ -372,7 +372,7 @@ public class LevelManager {
             }
         }
         else if (animalType == AnimalTypes.CAT) {
-            if (coins > Cat.PRICE) {
+            if (coins >= Cat.PRICE) {
                 petAnimalOnGround.add(new Cat());
                 coins -= Cat.PRICE;
                 Log.log(Log.INFO, "bought cat");
