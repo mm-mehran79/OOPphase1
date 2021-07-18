@@ -14,7 +14,7 @@ public class Tiger extends AbstractWildAnimal {
     public boolean cage() {
         if ( isTrapped && !isCaged && cagesThrown < 4 )
             cagesThrown += 2;
-        if ( cagesThrown == 4 )
+        if ( cagesThrown >= 4 )
             isCaged = true;
         return isCaged;
     }

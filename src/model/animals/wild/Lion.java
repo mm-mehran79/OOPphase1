@@ -14,7 +14,7 @@ public class Lion extends AbstractWildAnimal {
     public boolean cage() {
         if ( isTrapped && !isCaged && cagesThrown < 3 )
             cagesThrown += 2;
-        if ( cagesThrown == 3 )
+        if ( cagesThrown >= 3 )
             isCaged = true;
         return isCaged;
     }

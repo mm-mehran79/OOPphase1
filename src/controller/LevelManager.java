@@ -15,6 +15,7 @@ import model.products.Product;
 import model.products.ProductTypes;
 import model.workshop.Workshop;
 import org.omg.PortableInterceptor.INACTIVE;
+import java.util.Collections;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -969,12 +970,88 @@ public class LevelManager {
             Product product = domesticatedAnimal.giveProduct();
             if (product != null) {
                 productOnGround.add(product);
-                System.out.println(domesticatedAnimal.getType().toString() + " got product on ground @ [" +
+                System.out.println("levelManager: " + domesticatedAnimal.getType().toString() + " got product on ground @ [" +
                         product.getX() + " " + product.getY() + "]");
-                Log.log(Log.INFO, domesticatedAnimal.getType().toString() + " got product on ground @ [" +
+                Log.log(Log.INFO, "levelManager: " + domesticatedAnimal.getType().toString() + " got product on ground @ [" +
                         product.getX() + " " + product.getY() + "]");
             }
         }
+
+        // now moving
+
+        Log.log(Log.INFO, "levelManager: moving & eating & dying domestic animals");
+        System.out.println("levelManager: moving & eating & dying domestic animals");
+        for (AbstractDomesticatedAnimal domesticatedAnimal : domesticatedAnimalOnGround) {
+            domesticatedAnimal.move();
+        }
+
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 6; j++) {
+                ArrayList<AbstractDomesticatedAnimal> domesticatedAnimalCoordination = new ArrayList<>();
+                for (AbstractDomesticatedAnimal domesticatedAnimal : domesticatedAnimalOnGround) {
+                    if (domesticatedAnimal.getX() == i && domesticatedAnimal.getY() == j)
+                        domesticatedAnimalCoordination.add(domesticatedAnimal);
+                }
+                Collections.sort(domesticatedAnimalCoordination);
+                for (AbstractDomesticatedAnimal domesticatedAnimal : domesticatedAnimalCoordination) {
+                    domesticatedAnimal.eat(grassArray);
+                }
+            }
+        }
+
+        ArrayList<AbstractDomesticatedAnimal> deadDomesticatedAnimal = new ArrayList<>();
+        for (AbstractDomesticatedAnimal domesticatedAnimal : domesticatedAnimalOnGround) {
+            if (!domesticatedAnimal.hunger()) {
+                deadDomesticatedAnimal.add(domesticatedAnimal);
+                System.err.println(domesticatedAnimal.getType().toString() + " @ [" + domesticatedAnimal.getX() + " " +
+                                    domesticatedAnimal.getY() + "] died from hunger");
+                Log.log(Log.ERROR, domesticatedAnimal.getType().toString() + " @ [" + domesticatedAnimal.getX() + " " +
+                        domesticatedAnimal.getY() + "] died from hunger");
+            }
+        }
+        domesticatedAnimalOnGround.remove(deadDomesticatedAnimal);
+
+        Log.log(Log.INFO, "levelManager: moving & doing domestic animals");
+        System.out.println("levelManager: moving & doing domestic animals");
+
+        ArrayList<AbstractPetAnimal> deadDogAnimal = new ArrayList<>();
+        for (AbstractPetAnimal petAnimal : petAnimalOnGround) {
+            petAnimal.move();
+
+            if (petAnimal.getType() == AnimalTypes.CAT) {
+                Log.log(Log.INFO, "levelManager: cat picking up:");
+                System.out.println("levelManager: cat picking up:");
+
+                pickup(petAnimal.getX(), petAnimal.getY());
+            }
+
+            if (petAnimal.getType() == AnimalTypes.DOG) {
+                for (AbstractWildAnimal wildAnimal : wildAnimalOnGround) {
+                    if (wildAnimal.getX() == petAnimal.getX() && wildAnimal.getX() == petAnimal.getX()) {
+                        deadDogAnimal.add(petAnimal);
+                        System.out.println("dog and wild animal died @ [" + petAnimal.getX() + " " +
+                                            petAnimal.getY() + "]");
+                        Log.log(Log.ERROR, "dog and wild animal died @ [" + petAnimal.getX() + " " +
+                                                    petAnimal.getY() + "]");
+                        wildAnimalOnGround.remove(wildAnimal);
+                        if (wildAnimal.getType() == AnimalTypes.BEAR)
+                            productOnGround.add(new Product(ProductTypes.BEAR));
+                        else if (wildAnimal.getType() == AnimalTypes.LION)
+                            productOnGround.add(new Product(ProductTypes.LION));
+                        else if (wildAnimal.getType() == AnimalTypes.TIGER)
+                            productOnGround.add(new Product(ProductTypes.TIGER));
+
+                        break;
+                    }
+                }
+            }
+        }
+        petAnimalOnGround.remove(deadDogAnimal);
+
+        for (AbstractWildAnimal wildAnimal : wildAnimalOnGround) {
+
+        }
+
 
 
     }

@@ -1,10 +1,11 @@
 package model.animals.domesticated;
 
+import log.Log;
 import model.products.Product;
 import model.animals.AbstractAnimal;
 import model.animals.AnimalTypes;
 
-public abstract class AbstractDomesticatedAnimal extends AbstractAnimal {
+public abstract class AbstractDomesticatedAnimal extends AbstractAnimal implements Comparable<AbstractDomesticatedAnimal>{
     static final int MAX_HEALTH = 100; // max domesticated health
     int health; // health
     boolean isAlive; // is it alive
@@ -29,7 +30,12 @@ public abstract class AbstractDomesticatedAnimal extends AbstractAnimal {
         if ( grass[x][y] > 0 && health <= 50) {
             grass[x][y]--;
             health = MAX_HEALTH;
+            System.out.println("levelManager: " + animalType.toString() + " @ [" + getX() + " " + getY() + "] ate grass");
+            Log.log(Log.INFO, animalType.toString() + " @ [" + getX() + " " + getY() + "] ate grass");
+            return;
         }
+        System.err.println("levelManager: " + animalType.toString() + " @ [" + getX() + " " + getY() + "] didn't get grass");
+        Log.log(Log.ERROR, animalType.toString() + " @ [" + getX() + " " + getY() + "] didn't get grass");
     }
 
     // getting product from the domesticated animal;
@@ -50,5 +56,14 @@ public abstract class AbstractDomesticatedAnimal extends AbstractAnimal {
     // health getter
     public int getHealth() {
         return health;
+    }
+
+    @Override
+    public int compareTo(AbstractDomesticatedAnimal o) {
+        if (o.getHealth() > health)
+            return -1;
+        else if (o.getHealth() < health)
+            return 1;
+        return 0;
     }
 }
