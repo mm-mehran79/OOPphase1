@@ -213,6 +213,7 @@ public class LevelManager {
 
     public void dequeueInstruction() {
         Log.log(Log.INFO, "dequeuing instructions");
+        System.out.println("dequeuing instructions");
         for (String instructionString : instructionQueue) {
             Log.log(Log.INFO, "dequeuing " + instructionString);
 
@@ -316,6 +317,8 @@ public class LevelManager {
         }
         Log.log(Log.INFO, "dequeuing instructions completed");
         Log.log(Log.INFO, "dequeuing instructions completed, CLEARING instructionQueue LIST");
+        System.out.println("dequeuing instructions COMPLETED");
+        System.out.println("dequeuing instructions completed, CLEARING instructionQueue LIST");
         instructionQueue.clear();
     }
 
@@ -877,7 +880,7 @@ public class LevelManager {
         }
 
         Log.log(Log.INFO, "DONE, levelManager's TurnN with N = " + n);
-        System.out.println("DONE, it is levelManager's TurnN with N = " + n);
+        System.out.println("DONE, levelManager's TurnN with N = " + n);
     }
 
     private void turn() {
