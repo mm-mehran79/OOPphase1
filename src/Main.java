@@ -4,9 +4,7 @@ import log.Log;
 import model.animals.AnimalTypes;
 import model.level.Level;
 import model.products.ProductTypes;
-import view.InitialMenu;
-import view.InputCommand;
-import view.Menu;
+import view.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -38,7 +36,8 @@ public class Main {
                 initialMenu.execute();
             }
             else if(s.equals("1")){
-                //todo graphical login
+                GraphicalLoginMenu graphicalLoginMenu = new GraphicalLoginMenu(null);
+                graphicalLoginMenu.show();
 
             }
             else if(s.equals("2")){
