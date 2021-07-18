@@ -18,15 +18,20 @@ public abstract class  GraphicalMenu implements ActionListener {
 
     public GraphicalMenu (String menuName,GraphicalMenu parentMenu) {
         menu = new JFrame(menuName);
+        menu.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.northPanel = new JPanel();
+        northPanel.setAlignmentX(JPanel.LEFT_ALIGNMENT);
         this.parent = parentMenu;
         Icon exitIcon = new ImageIcon("./data/exit.png");
         exit = new JButton(exitIcon);
+        exit.setSize(30,30);
         exit.addActionListener(this::actionPerformed);
-        exit.setOpaque(false);// must be checked
+//        exit.setOpaque(false);// must be checked
+        northPanel.add(exit);
         if (parentMenu != null) {
             Icon backIcon = new ImageIcon("./data/back.png");
             back = new JButton(backIcon);
+            back.setSize(30,30);
             back.addActionListener(this :: actionPerformed);
             northPanel.add(back);
         }
