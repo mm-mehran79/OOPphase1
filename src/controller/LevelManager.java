@@ -762,8 +762,8 @@ public class LevelManager {
 
     private void truckLoad(ProductTypes productType) {
         if (!truckIsAvailable) {
-            System.err.println("truck is unavailable (being used");
-            Log.log(Log.ERROR, "truck is unavailable (being used");
+            System.err.println("truck is unavailable (being used)");
+            Log.log(Log.ERROR, "truck is unavailable (being used)");
             return;
         }
         boolean found = false;
@@ -779,8 +779,8 @@ public class LevelManager {
             System.err.println("truckload no product " + productType);
         }
         else if (productLoad.getStorage() + getTruckStorage() <= TRUCK_MAX) {
-            Log.log(Log.INFO, "truckload product " + productType);
-            System.out.println("truckload product " + productType);
+            Log.log(Log.INFO, "truckload product " + productType + "coins on truck = " + getTruckStorageMoney());
+            System.out.println("truckload product " + productType + "coins on truck = " + getTruckStorageMoney());
             truck.add(productLoad);
             storage.remove(productLoad);
         }
@@ -799,10 +799,18 @@ public class LevelManager {
         return truckInt;
     }
 
+    private int getTruckStorageMoney() {
+        int truckStorageMoney = 0;
+        for (Product product : truck) {
+            truckStorageMoney += product.getPrice();
+        }
+        return truckStorageMoney;
+    }
+
     private void truckUnload(ProductTypes productType) {
         if (!truckIsAvailable) {
-            System.err.println("truck is unavailable (being used");
-            Log.log(Log.ERROR, "truck is unavailable (being used");
+            System.err.println("truck is unavailable (being used)");
+            Log.log(Log.ERROR, "truck is unavailable (being used)");
             return;
         }
         boolean found = false;
@@ -818,8 +826,8 @@ public class LevelManager {
             System.err.println("truckUnload no product " + productType);
         }
         else if (productUnload.getStorage() + getStorage() <= STORAGE_MAX) {
-            Log.log(Log.INFO, "truckUnload product " + productType);
-            System.out.println("truckUnload product " + productType);
+            Log.log(Log.INFO, "truckUnload product " + productType + "coins on truck = " + getTruckStorageMoney());
+            System.out.println("truckUnload product " + productType + "coins on truck = " + getTruckStorageMoney());
             storage.add(productUnload);
             truck.remove(productUnload);
         }
@@ -835,14 +843,14 @@ public class LevelManager {
             Log.log(Log.ERROR, "truck is unavailable (being used)");
             return;
         }
-        System.err.println("truck is going now");
-        Log.log(Log.ERROR, "truck is going now");
         truckIsAvailable = false;
         truckTempMoney = 0;
         for (Product product : truck) {
             truckTempMoney += product.getPrice();
         }
         truckTurns = 0;
+        System.err.println("truck is going now with coins going to += " + truckTempMoney);
+        Log.log(Log.ERROR, "truck is going now with coins going to += " + truckTempMoney);
     }
 
     public void turnN(int n) {
@@ -919,6 +927,28 @@ public class LevelManager {
             Log.log(Log.INFO, "levelManager: icecream WS done, icecream product added to ground");
             System.out.println("levelManager: icecream WS done, icecream product added to ground");
         }
+
+        if (!wellIsAvailable && (wellTurns >= WELL_MAX_TURNS)) {
+            wellIsAvailable = true;
+            wellTurns = 0;
+            well = WELl_MAX;
+            Log.log(Log.INFO, "levelManager: well is full and available");
+            System.out.println("levelManager: well is full and available");
+        }
+
+        if (!truckIsAvailable && (truckTurns >= TRUCK_MAX_TURNS)) {
+            Log.log(Log.INFO, "levelManager: truck came back and is available with coins += " + truckTempMoney);
+            System.out.println("levelManager: truck came back and is available with coins += " + truckTempMoney);
+            truckIsAvailable = true;
+            truckTurns = 0;
+            coins += truckTempMoney;
+            coinTaskProgression += truckTempMoney;
+            truckTempMoney = 0;
+            truck.clear();
+        }
+
+
+
 
 
 
