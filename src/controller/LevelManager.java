@@ -1169,6 +1169,8 @@ public class LevelManager {
 
         System.out.println("INQUIRY: well: ");
         Log.log(Log.INFO, "INQUIRY: well: ");
+        System.out.println("well water level = " + well + "/" + WELl_MAX);
+        Log.log(Log.INFO, "well water level = " + well + "/" + WELl_MAX);
         System.out.println("wellIsAvailable / !inUse = " + wellIsAvailable);
         Log.log(Log.INFO, "wellIsAvailable / !inUse = " + wellIsAvailable);
         System.out.println("wellTurn progress = " + wellTurns + "/" + WELL_MAX_TURNS);
