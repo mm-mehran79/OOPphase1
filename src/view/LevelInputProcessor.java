@@ -81,8 +81,8 @@ public class LevelInputProcessor {
             int x = Integer.parseInt(inputSplit[1]);
             int y = Integer.parseInt(inputSplit[2]);
             if (0 <= x && x < 7 && 0 <= y && y < 7) {
-                x--;
-                y--;
+                //x--;
+                //y--;
                 String instruction = "pickup " + x + " " + y;
                 levelManager.addInstruction(instruction);
                 return;
@@ -105,8 +105,8 @@ public class LevelInputProcessor {
             int x = Integer.parseInt(inputSplit[1]);
             int y = Integer.parseInt(inputSplit[2]);
             if (0 <= x && x < 7 && 0 <= y && y < 7) {
-                x--;
-                y--;
+                //x--;
+                //y--;
                 String instruction = "plant " + x + " " + y;
                 levelManager.addInstruction(instruction);
                 return;
@@ -153,8 +153,8 @@ public class LevelInputProcessor {
             int x = Integer.parseInt(inputSplit[1]);
             int y = Integer.parseInt(inputSplit[2]);
             if (0 <= x && x < 7 && 0 <= y && y < 7) {
-                x--;
-                y--;
+                //x--;
+                //y--;
                 String instruction = "cage " + x + " " + y;
                 levelManager.addInstruction(instruction);
                 return;
