@@ -74,6 +74,29 @@ public class GraphicalLoginMenu extends GraphicalMenu{
         menu.pack();
         menu.setLocationRelativeTo(null);
     }
+    public static void showLevelInformation(){
+        String s;
+        switch (Manager.getLevel()){
+            case 1:
+                s = "you must collect:\n1 chicken egg\n";
+            break;
+            case 2:
+                s = "you must do ";
+                break;
+            case 3:
+                s = "";
+                break;
+            case 4:
+                s = "";//todo
+                break;
+            case 5:
+                s = "";
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + Manager.getLevel());
+        }
+        JOptionPane.showMessageDialog(new JFrame(),s,"level Task",JOptionPane.INFORMATION_MESSAGE,DialogIcons.INFORMATION);
+    }
 
     @Override
     public void show() {
@@ -146,6 +169,7 @@ public class GraphicalLoginMenu extends GraphicalMenu{
                 Manager.setPlayer(user);
                 Log.log(Log.LOG, user.userName + " signed in");
                 hide();
+                // TODO for joptionpane based on last levet
                 LevelManager levelManager = new LevelManager(Manager.getLevel(),Manager.getCoins());
                 LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, new Scanner(System.in));
                 int k = levelInputProcessor.run();
