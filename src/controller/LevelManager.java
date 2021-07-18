@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class LevelManager {
-    // level manager initialization properties
+    /// level manager initialization properties
     Level level; // level that manager is managing
     int levelNo; // level number that manager is managing
     static final int STORAGE_MAX = 30; // max storage
