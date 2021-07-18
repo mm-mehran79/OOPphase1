@@ -9,7 +9,6 @@ public class GraphicalLoginMenu extends GraphicalMenu{
 
     public GraphicalLoginMenu(GraphicalMenu parentMenu) {
         super("Login Menu", parentMenu);
-
     }
 
     @Override
@@ -17,6 +16,10 @@ public class GraphicalLoginMenu extends GraphicalMenu{
         menu.setSize(400,600);
         menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         menu.setVisible(true);
+        mainPanel = new JPanel();
+        menu.add(mainPanel,BorderLayout.CENTER);
+        mainPanel.setBounds(25,100,370,500);
+        mainPanel.setVisible(true);
     }
 
     @Override

@@ -12,6 +12,7 @@ public abstract class  GraphicalMenu implements ActionListener {
     JFrame menu;
     JButton exit,back;
     JPanel northPanel;
+    JPanel mainPanel;
     GraphicalMenu parent;
 
 
