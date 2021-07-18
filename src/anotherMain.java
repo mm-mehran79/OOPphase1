@@ -11,20 +11,18 @@ public class anotherMain {
         blahList.add(n3);
         blahList.add(n2);
         Collections.sort(blahList);
-        /*for (Blah blah : blahList) {
-            if (blah.getA() == 0)
-                break;
+        for (Blah blah : blahList) {
             System.out.println(blah.getA() + " " + blah.getB());
-        }*/
-        for (int i = 0; i < 4; i++) {
-            System.out.println(i);
-            for (Blah blah : blahList) {
-                if (blah.getA() == i)
-                    break;
-                System.out.println(blah.getA() + " " + blah.getB());
-            }
-            System.out.println("mlem");
         }
+        ArrayList <Blah> blahList2 = new ArrayList<>();
+        //blahList2.add(n1);
+        //blahList2.add(n3);
+        //blahList2.add(n2);
+        blahList.removeAll(null);
+        for (Blah blah : blahList) {
+            System.out.println(blah.getA() + " " + blah.getB());
+        }
+        System.out.println(blahList.isEmpty());
     }
 }
 

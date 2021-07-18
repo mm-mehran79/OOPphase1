@@ -10,6 +10,9 @@ import model.animals.pet.AbstractPetAnimal;
 import model.animals.pet.Cat;
 import model.animals.pet.Dog;
 import model.animals.wild.AbstractWildAnimal;
+import model.animals.wild.Bear;
+import model.animals.wild.Lion;
+import model.animals.wild.Tiger;
 import model.level.Level;
 import model.products.Product;
 import model.products.ProductTypes;
@@ -528,7 +531,7 @@ public class LevelManager {
             Log.log(Log.ERROR, "pickup no product " + x + " " + y);
             System.err.println("pickup no product " + x + " " + y);
         }
-        productOnGround.remove(offGround);
+        productOnGround.removeAll(offGround);
     }
 
     private int getStorage() {
@@ -1009,7 +1012,7 @@ public class LevelManager {
                         domesticatedAnimal.getY() + "] died from hunger");
             }
         }
-        domesticatedAnimalOnGround.remove(deadDomesticatedAnimal);
+        domesticatedAnimalOnGround.removeAll(deadDomesticatedAnimal);
 
         Log.log(Log.INFO, "levelManager: moving & doing domestic animals");
         System.out.println("levelManager: moving & doing domestic animals");
@@ -1031,7 +1034,7 @@ public class LevelManager {
                         deadDogAnimal.add(petAnimal);
                         System.out.println("dog and wild animal died @ [" + petAnimal.getX() + " " +
                                             petAnimal.getY() + "]");
-                        Log.log(Log.ERROR, "dog and wild animal died @ [" + petAnimal.getX() + " " +
+                        Log.log(Log.INFO, "dog and wild animal died @ [" + petAnimal.getX() + " " +
                                                     petAnimal.getY() + "]");
                         wildAnimalOnGround.remove(wildAnimal);
                         if (wildAnimal.getType() == AnimalTypes.BEAR)
@@ -1046,14 +1049,76 @@ public class LevelManager {
                 }
             }
         }
-        petAnimalOnGround.remove(deadDogAnimal);
+        petAnimalOnGround.removeAll(deadDogAnimal);
 
+        ArrayList <AbstractWildAnimal> wildAnimalCaged = new ArrayList<>();
         for (AbstractWildAnimal wildAnimal : wildAnimalOnGround) {
+            if (wildAnimal.isCaged) {
+                wildAnimalCaged.add(wildAnimal);
+                System.out.println("wild animal @ [" + wildAnimal.getX() + " " + wildAnimal.getY() + "] caged to product");
+                Log.log(Log.INFO,
+                        "wild animal @ [" + wildAnimal.getX() + " " + wildAnimal.getY() + "] caged to product");
+                continue;
+            }
+
+            wildAnimal.move();
+
+            AbstractDomesticatedAnimal wildAnimalPreyObject = wildAnimalPrey(wildAnimal.getX(), wildAnimal.getY());
+            if (wildAnimalPreyObject != null) {
+                domesticatedAnimalOnGround.remove(wildAnimalPreyObject);
+                System.out.println("DomesticatedAnimal died @ [" + wildAnimalPreyObject.getX() + " " +
+                        wildAnimalPreyObject.getY() + "]");
+                Log.log(Log.INFO, "DomesticatedAnimal died @ [" + wildAnimalPreyObject.getX() + " " +
+                        wildAnimalPreyObject.getY() + "]");
+            }
 
         }
+        wildAnimalOnGround.removeAll(wildAnimalCaged);
 
 
 
+        AnimalTypes spawnAnimalTypes = spawn.getOrDefault(turn, null);
+        if (spawnAnimalTypes != null) {
+            AbstractWildAnimal wildAnimal;
+            if (spawnAnimalTypes == AnimalTypes.LION)
+                wildAnimal = new Lion(turn);
+            else if (spawnAnimalTypes == AnimalTypes.TIGER)
+                wildAnimal = new Tiger(turn);
+            else
+                wildAnimal = new Bear(turn);
+
+            wildAnimalOnGround.add(wildAnimal);
+            Log.log(Log.INFO, wildAnimal.getType() + " spawned @ [" + wildAnimal.getX() + " " +
+                        wildAnimal.getY() + "]");
+            System.out.println(wildAnimal.getType() + " spawned @ [" + wildAnimal.getX() + " " +
+                                wildAnimal.getY() + "]");
+        }
+
+        Log.log(Log.INFO, "levelManager: removing productOnGround:");
+        System.out.println("levelManager: removing productOnGround:");
+        ArrayList <Product> removeTimeProductOnGround = new ArrayList<>();
+        for (Product product : productOnGround) {
+            if (product.getProductTurns() > product.getMaxTurns()) {
+                removeTimeProductOnGround.add(product);
+                System.err.println(product.getProductType() + " productOnGround removed max time from @ [" +
+                                    product.getX() + " " + product.getY() + "]");
+                Log.log(Log.ERROR, product.getProductType() + " productOnGround removed max time from @ [" +
+                                            product.getX() + " " + product.getY() + "]");
+            }
+        }
+        productOnGround.removeAll(removeTimeProductOnGround);
+
+        Log.log(Log.INFO, "done levelManager's turn for each TurnN's N done");
+        System.out.println("done levelManager's turn for each TurnN's N done");
+    }
+
+    private AbstractDomesticatedAnimal wildAnimalPrey(int x, int y) {
+        AbstractDomesticatedAnimal domesticatedAnimal = null;
+        for (AbstractDomesticatedAnimal animal : domesticatedAnimalOnGround) {
+            if (animal.getX() == x && animal.getY() == y)
+                return animal;
+        }
+        return null;
     }
 
     public ArrayList<String> getInstructionQueue() {

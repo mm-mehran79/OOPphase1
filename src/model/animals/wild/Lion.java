@@ -12,7 +12,7 @@ public class Lion extends AbstractWildAnimal {
     // cage implementation for player
     @Override
     public boolean cage() {
-        if ( isTrapped && !isCaged && cagesThrown < 3 )
+        if ( /*isTrapped &&*/ !isCaged && cagesThrown < 3 )
             cagesThrown += 2;
         if ( cagesThrown >= 3 )
             isCaged = true;

@@ -12,7 +12,7 @@ public class Bear extends AbstractWildAnimal {
     // cage implementation for player
     @Override
     public boolean cage() {
-        if ( isTrapped && !isCaged && cagesThrown < 4 )
+        if ( /*isTrapped &&*/ !isCaged && cagesThrown < 4 )
             cagesThrown += 2;
         if ( cagesThrown >= 4 )
             isCaged = true;
