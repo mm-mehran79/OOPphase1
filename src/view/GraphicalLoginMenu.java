@@ -102,7 +102,7 @@ public class GraphicalLoginMenu extends GraphicalMenu{
             String username,password;
             User user;
             username = textUsername.getText();
-            password = fieldPassword.getPassword().toString();
+            password = new String(fieldPassword.getPassword());
             if (User.available(username)){
                 if((user = User.loadUser(username,password)) == null){
                     JOptionPane.showMessageDialog(new JFrame(),"login failed. Incorrect Password","Incorrect Password",JOptionPane.ERROR_MESSAGE);
@@ -133,7 +133,8 @@ public class GraphicalLoginMenu extends GraphicalMenu{
             String username,password;
             User user;
             username = textUsername.getText();
-            password = fieldPassword.getPassword().toString();
+            password = new String(fieldPassword.getPassword());
+
             if (User.available(username)){
                 JOptionPane.showMessageDialog(new JFrame(),"This username is already taken, please enter another username","Username error",JOptionPane.ERROR_MESSAGE);
                 textUsername.setText("");fieldPassword.setText("");

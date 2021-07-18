@@ -341,3 +341,40 @@
 [Info], Sun Jul 18 13:12:15 IRDT 2021, initialization and loading
 [Info], Sun Jul 18 13:12:15 IRDT 2021, initializationOfLevels: loading levels from mission.txt
 [Info], Sun Jul 18 13:12:15 IRDT 2021, initializationOfLevels successfully
+[Log], Sun Jul 18 14:37:52 IRDT 2021, log.txt created or opened
+[Info], Sun Jul 18 14:37:52 IRDT 2021, Game Main Run
+[Info], Sun Jul 18 14:37:52 IRDT 2021, initialization and loading
+[Info], Sun Jul 18 14:37:52 IRDT 2021, initializationOfLevels: loading levels from mission.txt
+[Info], Sun Jul 18 14:37:52 IRDT 2021, initializationOfLevels successfully
+[Log], Sun Jul 18 14:50:19 IRDT 2021, log.txt created or opened
+[Info], Sun Jul 18 14:50:19 IRDT 2021, Game Main Run
+[Info], Sun Jul 18 14:50:19 IRDT 2021, initialization and loading
+[Info], Sun Jul 18 14:50:19 IRDT 2021, initializationOfLevels: loading levels from mission.txt
+[Info], Sun Jul 18 14:50:19 IRDT 2021, initializationOfLevels successfully
+[Log], Sun Jul 18 14:50:19 IRDT 2021, closing the (FileWriter) logWriter
+[Log], Sun Jul 18 16:09:28 IRDT 2021, log.txt created or opened
+[Info], Sun Jul 18 16:09:28 IRDT 2021, Game Main Run
+[Info], Sun Jul 18 16:09:28 IRDT 2021, initialization and loading
+[Info], Sun Jul 18 16:09:28 IRDT 2021, initializationOfLevels: loading levels from mission.txt
+[Info], Sun Jul 18 16:09:28 IRDT 2021, initializationOfLevels successfully
+[Log], Sun Jul 18 16:09:28 IRDT 2021, closing the (FileWriter) logWriter
+[Log], Sun Jul 18 16:52:14 IRDT 2021, log.txt created or opened
+[Info], Sun Jul 18 16:52:14 IRDT 2021, Game Main Run
+[Info], Sun Jul 18 16:52:14 IRDT 2021, initialization and loading
+[Info], Sun Jul 18 16:52:14 IRDT 2021, initializationOfLevels: loading levels from mission.txt
+[Info], Sun Jul 18 16:52:14 IRDT 2021, initializationOfLevels successfully
+[Log], Sun Jul 18 17:03:10 IRDT 2021, log.txt created or opened
+[Info], Sun Jul 18 17:03:10 IRDT 2021, Game Main Run
+[Info], Sun Jul 18 17:03:10 IRDT 2021, initialization and loading
+[Info], Sun Jul 18 17:03:10 IRDT 2021, initializationOfLevels: loading levels from mission.txt
+[Info], Sun Jul 18 17:03:10 IRDT 2021, initializationOfLevels successfully
+[Log], Sun Jul 18 17:14:17 IRDT 2021, log.txt created or opened
+[Info], Sun Jul 18 17:14:17 IRDT 2021, Game Main Run
+[Info], Sun Jul 18 17:14:17 IRDT 2021, initialization and loading
+[Info], Sun Jul 18 17:14:17 IRDT 2021, initializationOfLevels: loading levels from mission.txt
+[Info], Sun Jul 18 17:14:17 IRDT 2021, initializationOfLevels successfully
+[user : mehran ][Log], Sun Jul 18 17:14:17 IRDT 2021, mehran signed in
+[user : mehran ][Info], Sun Jul 18 17:14:17 IRDT 2021, LevelManager constructor
+[user : mehran ][Info], Sun Jul 18 17:14:17 IRDT 2021, LevelInputProcessor constructor
+[user : mehran ][Info], Sun Jul 18 17:14:17 IRDT 2021, LevelInputProcessor run
+[user : mehran ][Log], Sun Jul 18 17:14:17 IRDT 2021, closing the (FileWriter) logWriter
