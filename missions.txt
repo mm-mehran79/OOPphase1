@@ -18,7 +18,7 @@ LION_SPAWN: 0 1
 BEAR_SPAWN: 0 2 3
 TIGER_SPAWN: 0 4 5 6
 MAX_TURN: 20
-PRIZE: 10
+PRIZE: 50
 Level 2:
 initialCoins: 450
 coinTask: 0

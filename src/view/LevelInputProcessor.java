@@ -391,6 +391,10 @@ public class LevelInputProcessor {
         }
         else
             runReturnInt = -1;
+
+        System.err.println("GOING BACK TO MENU CODE = " + runReturnInt);
+        Log.log(Log.ALARM, "GOING BACK TO MENU CODE = " + runReturnInt);
+
         return runReturnInt;
     } /// i. think it's done
 
