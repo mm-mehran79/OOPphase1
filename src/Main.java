@@ -27,7 +27,8 @@ public class Main {
             if (InputCommand.Exit.getMatcher(s).matches())
                 System.exit(1);
             else if(InputCommand.Graphical.getMatcher(s).matches()){
-                //TOdo graphical login
+                GraphicalLoginMenu graphicalLoginMenu = new GraphicalLoginMenu(null);
+                graphicalLoginMenu.show();
             }
             else if(InputCommand.textCommand.getMatcher(s).matches()){
                 Menu.scanner = sc;
