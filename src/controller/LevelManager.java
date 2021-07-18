@@ -788,10 +788,10 @@ public class LevelManager {
             System.err.println("truckload no product " + productType);
         }
         else if (productLoad.getStorage() + getTruckStorage() <= TRUCK_MAX) {
-            Log.log(Log.INFO, "truckload product " + productType + "coins on truck = " + getTruckStorageMoney());
-            System.out.println("truckload product " + productType + "coins on truck = " + getTruckStorageMoney());
             truck.add(productLoad);
             storage.remove(productLoad);
+            Log.log(Log.INFO, "truckload product " + productType + "coins on truck = " + getTruckStorageMoney());
+            System.out.println("truckload product " + productType + "coins on truck = " + getTruckStorageMoney());
         }
         else {
             Log.log(Log.ERROR, "truckload no space " + productType);
@@ -835,10 +835,10 @@ public class LevelManager {
             System.err.println("truckUnload no product " + productType);
         }
         else if (productUnload.getStorage() + getStorage() <= STORAGE_MAX) {
-            Log.log(Log.INFO, "truckUnload product " + productType + "coins on truck = " + getTruckStorageMoney());
-            System.out.println("truckUnload product " + productType + "coins on truck = " + getTruckStorageMoney());
             storage.add(productUnload);
             truck.remove(productUnload);
+            Log.log(Log.INFO, "truckUnload product " + productType + "coins on truck = " + getTruckStorageMoney());
+            System.out.println("truckUnload product " + productType + "coins on truck = " + getTruckStorageMoney());
         }
         else {
             Log.log(Log.ERROR, "truckUnload no space in storage " + productType);
@@ -875,6 +875,9 @@ public class LevelManager {
             Log.log(Log.INFO, "levelManager's Turn inquiry, with turn no = " + i);
             inquiry();
         }
+
+        Log.log(Log.INFO, "DONE, levelManager's TurnN with N = " + n);
+        System.out.println("DONE, it is levelManager's TurnN with N = " + n);
     }
 
     private void turn() {
@@ -910,6 +913,7 @@ public class LevelManager {
 
         if (flour.setZero()) {
             Product product = new Product(ProductTypes.FLOUR);
+            flourProductTaskProgression++;
             productOnGround.add(product);
             Log.log(Log.INFO, "levelManager: flour WS done, flour product added to ground @ [" +
                     product.getX() + " " + product.getY() + "]");
@@ -919,6 +923,7 @@ public class LevelManager {
 
         if (cloth.setZero()) {
             Product product = new Product(ProductTypes.CLOTH);
+            clothProductTaskProgression++;
             productOnGround.add(product);
             Log.log(Log.INFO, "levelManager: cloth WS done, cloth product added to ground @ [" +
                     product.getX() + " " + product.getY() + "]");
@@ -928,6 +933,7 @@ public class LevelManager {
 
         if (packetmilk.setZero()) {
             Product product =new Product(ProductTypes.PACKETMILK);
+            packetmilkProductTaskProgression++;
             productOnGround.add(product);
             Log.log(Log.INFO, "levelManager: packetmilk WS done, packetmilk product added to ground @ [" +
                     product.getX() + " " + product.getY() + "]");
@@ -937,6 +943,7 @@ public class LevelManager {
 
         if (bread.setZero()) {
             Product product = new Product(ProductTypes.BREAD);
+            breadProductTaskProgression++;
             productOnGround.add(product);
             Log.log(Log.INFO, "levelManager: bread WS done, bread product added to ground @ [" +
                     product.getX() + " " + product.getY() + "]");
@@ -946,6 +953,7 @@ public class LevelManager {
 
         if (shirt.setZero()) {
             Product product = new Product(ProductTypes.SHIRT);
+            shirtProductTaskProgression++;
             productOnGround.add(product);
             Log.log(Log.INFO, "levelManager: shirt WS done, shirt product added to ground @ [" +
                     product.getX() + " " + product.getY() + "]");
@@ -955,6 +963,7 @@ public class LevelManager {
 
         if (icecream.setZero()) {
             Product product = new Product(ProductTypes.ICECREAM);
+            icecreamProductTaskProgression++;
             productOnGround.add(product);
             Log.log(Log.INFO, "levelManager: icecream WS done, icecream product added to ground @ [" +
                     product.getX() + " " + product.getY() + "]");
@@ -1226,15 +1235,26 @@ public class LevelManager {
                                         product.getY() + "]");
         }
 
-        System.out.println("INQUIRY: storage = ");
-        Log.log(Log.INFO, "INQUIRY: storage = ");
+        System.out.println("INQUIRY: storage info :");
+        Log.log(Log.INFO, "INQUIRY: storage info :");
+
+        System.out.println("INQUIRY: storage int = " + getStorage() + "/" + STORAGE_MAX);
+        Log.log(Log.INFO, "INQUIRY: storage int = " + getStorage() + "/" + STORAGE_MAX);
+
+        System.out.println("INQUIRY: in storage =");
+        Log.log(Log.INFO, "INQUIRY: in storage =");
         for (Product product : storage) {
             System.out.println(product.getProductType());
             Log.log(Log.INFO, product.getProductType().toString());
         }
 
-        System.out.println("INQUIRY: truck: ");
-        Log.log(Log.INFO, "INQUIRY: truck: ");
+
+        System.out.println("INQUIRY: truck info: ");
+        Log.log(Log.INFO, "INQUIRY: truck info: ");
+
+        System.out.println("INQUIRY: truck int = " + getTruckStorage() + "/" + TRUCK_MAX);
+        Log.log(Log.INFO, "INQUIRY: truck int = " + getTruckStorage() + "/" + TRUCK_MAX);
+
         System.out.println("truckIsAvailable / !inUse = " + truckIsAvailable);
         Log.log(Log.INFO, "truckIsAvailable / !inUse = " + truckIsAvailable);
         System.out.println("truckTurn progress = " + truckTurns + "/" + TRUCK_MAX_TURNS);
