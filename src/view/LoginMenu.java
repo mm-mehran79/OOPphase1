@@ -32,6 +32,10 @@ public class LoginMenu extends Menu{
         Log.log(Log.LOG, user.userName + " signed in");
         LevelManager levelManager = new LevelManager(Manager.getLevel(),Manager.getCoins());
         LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, scanner);
-        System.out.println(levelInputProcessor.run());
+        int k = levelInputProcessor.run();
+        if (k >= 0){
+            user.giveReward(k);
+            User.saveUser(user);
+        }
     }
 }
