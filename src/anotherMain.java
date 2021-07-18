@@ -20,6 +20,10 @@ public class anotherMain {
         LevelManager levelManager = new LevelManager(1, 0);
         LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, scanner);
         System.out.println(levelInputProcessor.run());
+
+        /*Level[] levels = Level.getLevels();
+        Level level = levels[0];
+        System.out.println(level.getAnimalTasks().getOrDefault(AnimalTypes.CHICKEN, 999));*/
     }
 
     static void initialization() {

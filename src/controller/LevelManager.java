@@ -1433,27 +1433,34 @@ public class LevelManager {
     }
 
     public boolean isFinished() {
-        coinTaskBoolean =  coinTaskBoolean || (coinTaskProgression >= coinTask);
+        coinTaskBoolean =  coinTaskBoolean || ((coinTaskProgression >= coinTask));
 
         productTasksBoolean = productTasksBoolean ||
-                (eggProductTaskProgression >= eggProductTask) ||
-                (featherProductTaskProgression >= featherProductTask) ||
-                (milkProductTaskProgression >= milkProductTask) ||
-                (flourProductTaskProgression >= flourProductTask) ||
-                (clothProductTaskProgression >= clothProductTask) ||
-                (packetmilkProductTaskProgression >= packetmilkProductTask) ||
-                (breadProductTaskProgression >= breadProductTask) ||
-                (shirtProductTaskProgression >= shirtProductTask) ||
-                (icecreamProductTaskProgression >= icecreamProductTask);
+                                        ((eggProductTaskProgression >= eggProductTask) &&
+                                        (featherProductTaskProgression >= featherProductTask) &&
+                                        (milkProductTaskProgression >= milkProductTask) &&
+                                        (flourProductTaskProgression >= flourProductTask) &&
+                                        (clothProductTaskProgression >= clothProductTask) &&
+                                        (packetmilkProductTaskProgression >= packetmilkProductTask) &&
+                                        (breadProductTaskProgression >= breadProductTask) &&
+                                        (shirtProductTaskProgression >= shirtProductTask) &&
+                                        (icecreamProductTaskProgression >= icecreamProductTask));
 
         animalTasksBoolean = animalTasksBoolean ||
-                (chickenTaskProgression >= chickenTasks) ||
-                (turkeyTaskProgression >= turkeyTasks) ||
-                (buffaloTaskProgression >= buffaloTasks);
+                ((chickenTaskProgression >= chickenTasks) &&
+                (turkeyTaskProgression >= turkeyTasks) &&
+                (buffaloTaskProgression >= buffaloTasks));
 
 
 
         boolean allTasksBoolean = coinTaskBoolean && productTasksBoolean && animalTasksBoolean;
+
+        System.out.println("coinTaskBoolean = " + coinTaskBoolean);
+        System.out.println("productTasksBoolean = " + productTasksBoolean);
+        System.out.println("animalTasksBoolean = " + animalTasksBoolean);
+        System.out.println("allTasksBoolean = " + allTasksBoolean);
+
+
         return allTasksBoolean;
     }
 
