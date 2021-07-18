@@ -17,7 +17,7 @@ public class anotherMain {
         initialization();
 
         Scanner scanner = new Scanner(System.in);
-        LevelManager levelManager = new LevelManager(2, 0);
+        LevelManager levelManager = new LevelManager(3, 0);
         LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, scanner);
         System.out.println(levelInputProcessor.run());
 

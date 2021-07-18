@@ -1078,10 +1078,23 @@ public class LevelManager {
         ArrayList <AbstractWildAnimal> wildAnimalCaged = new ArrayList<>();
         for (AbstractWildAnimal wildAnimal : wildAnimalOnGround) {
             if (wildAnimal.isCaged) {
+                Product product;
+                ProductTypes productTypes;
+                if (wildAnimal.getType() == AnimalTypes.LION)
+                    productTypes = ProductTypes.LION;
+                else if (wildAnimal.getType() == AnimalTypes.TIGER)
+                    productTypes = ProductTypes.TIGER;
+                else
+                    productTypes = ProductTypes.BEAR;
+
                 wildAnimalCaged.add(wildAnimal);
-                System.out.println("wild animal @ [" + wildAnimal.getX() + " " + wildAnimal.getY() + "] caged to product");
+                product = new Product(productTypes);
+                System.out.println("wild animal @ [" + wildAnimal.getX() + " " + wildAnimal.getY() + "] caged to product (added) " +
+                        product.getProductType() + " @ [" + product.getX() + " " + product.getY() + "]");
                 Log.log(Log.INFO,
-                        "wild animal @ [" + wildAnimal.getX() + " " + wildAnimal.getY() + "] caged to product");
+                        "wild animal @ [" + wildAnimal.getX() + " " + wildAnimal.getY() + "] caged to product (added) " +
+                                product.getProductType() + " @ [" + product.getX() + " " + product.getY() + "]");
+                productOnGround.add(product);
                 continue;
             }
 
