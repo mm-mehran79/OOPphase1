@@ -595,7 +595,7 @@ public class LevelManager {
     }
 
     private void workshopFlour() {
-        if (!workshopFlour) {
+        if (workshopFlour) {
             if (flour.isAvailable()) {
                 if (getProductTypeAndRemove(ProductTypes.EGG)) {
                     flour.make();
@@ -619,7 +619,7 @@ public class LevelManager {
     }
 
     private void workshopCloth() {
-        if (!workshopCloth) {
+        if (workshopCloth) {
             if (cloth.isAvailable()) {
                 if (getProductTypeAndRemove(ProductTypes.FEATHER)) {
                     cloth.make();
@@ -643,7 +643,7 @@ public class LevelManager {
     }
 
     private void workshopPacketmilk() {
-        if (!workshopPacketmilk) {
+        if (workshopPacketmilk) {
             if (packetmilk.isAvailable()) {
                 if (getProductTypeAndRemove(ProductTypes.MILK)) {
                     packetmilk.make();
@@ -667,7 +667,7 @@ public class LevelManager {
     }
 
     private void workshopBread() {
-        if (!workshopBread) {
+        if (workshopBread) {
             if (bread.isAvailable()) {
                 if (getProductTypeAndRemove(ProductTypes.FLOUR)) {
                     bread.make();
@@ -691,7 +691,7 @@ public class LevelManager {
     }
 
     private void workshopShirt() {
-        if (!workshopShirt) {
+        if (workshopShirt) {
             if (shirt.isAvailable()) {
                 if (getProductTypeAndRemove(ProductTypes.CLOTH)) {
                     shirt.make();
@@ -715,7 +715,7 @@ public class LevelManager {
     }
 
     private void workshopIcecream() {
-        if (!workshopIcecream) {
+        if (workshopIcecream) {
             if (icecream.isAvailable()) {
                 if (getProductTypeAndRemove(ProductTypes.PACKETMILK)) {
                     icecream.make();
