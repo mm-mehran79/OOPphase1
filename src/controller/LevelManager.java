@@ -893,39 +893,57 @@ public class LevelManager {
         System.out.println("levelManager: getting product from WS, well &  animals");
 
         if (flour.setZero()) {
-            productOnGround.add(new Product(ProductTypes.FLOUR));
-            Log.log(Log.INFO, "levelManager: flour WS done, flour product added to ground");
-            System.out.println("levelManager: flour WS done, flour product added to ground");
+            Product product = new Product(ProductTypes.FLOUR);
+            productOnGround.add(product);
+            Log.log(Log.INFO, "levelManager: flour WS done, flour product added to ground @ [" +
+                    product.getX() + " " + product.getY() + "]");
+            System.out.println("levelManager: flour WS done, flour product added to ground @ [" +
+                    product.getX() + " " + product.getY() + "]");
         }
 
         if (cloth.setZero()) {
-            productOnGround.add(new Product(ProductTypes.CLOTH));
-            Log.log(Log.INFO, "levelManager: cloth WS done, cloth product added to ground");
-            System.out.println("levelManager: cloth WS done, cloth product added to ground");
+            Product product = new Product(ProductTypes.CLOTH);
+            productOnGround.add(product);
+            Log.log(Log.INFO, "levelManager: cloth WS done, cloth product added to ground @ [" +
+                    product.getX() + " " + product.getY() + "]");
+            System.out.println("levelManager: cloth WS done, cloth product added to ground @ [" +
+                    product.getX() + " " + product.getY() + "]");
         }
 
         if (packetmilk.setZero()) {
-            productOnGround.add(new Product(ProductTypes.PACKETMILK));
-            Log.log(Log.INFO, "levelManager: packetmilk WS done, packetmilk product added to ground");
-            System.out.println("levelManager: packetmilk WS done, packetmilk product added to ground");
+            Product product =new Product(ProductTypes.PACKETMILK);
+            productOnGround.add(product);
+            Log.log(Log.INFO, "levelManager: packetmilk WS done, packetmilk product added to ground @ [" +
+                    product.getX() + " " + product.getY() + "]");
+            System.out.println("levelManager: packetmilk WS done, packetmilk product added to ground @ [" +
+                    product.getX() + " " + product.getY() + "]");
         }
 
         if (bread.setZero()) {
-            productOnGround.add(new Product(ProductTypes.BREAD));
-            Log.log(Log.INFO, "levelManager: bread WS done, bread product added to ground");
-            System.out.println("levelManager: bread WS done, bread product added to ground");
+            Product product = new Product(ProductTypes.BREAD);
+            productOnGround.add(product);
+            Log.log(Log.INFO, "levelManager: bread WS done, bread product added to ground @ [" +
+                    product.getX() + " " + product.getY() + "]");
+            System.out.println("levelManager: bread WS done, bread product added to ground @ [" +
+                    product.getX() + " " + product.getY() + "]");
         }
 
         if (shirt.setZero()) {
-            productOnGround.add(new Product(ProductTypes.SHIRT));
-            Log.log(Log.INFO, "levelManager: shirt WS done, shirt product added to ground");
-            System.out.println("levelManager: shirt WS done, shirt product added to ground");
+            Product product = new Product(ProductTypes.SHIRT);
+            productOnGround.add(product);
+            Log.log(Log.INFO, "levelManager: shirt WS done, shirt product added to ground @ [" +
+                    product.getX() + " " + product.getY() + "]");
+            System.out.println("levelManager: shirt WS done, shirt product added to ground @ [" +
+                    product.getX() + " " + product.getY() + "]");
         }
 
         if (icecream.setZero()) {
-            productOnGround.add(new Product(ProductTypes.ICECREAM));
-            Log.log(Log.INFO, "levelManager: icecream WS done, icecream product added to ground");
-            System.out.println("levelManager: icecream WS done, icecream product added to ground");
+            Product product = new Product(ProductTypes.ICECREAM);
+            productOnGround.add(product);
+            Log.log(Log.INFO, "levelManager: icecream WS done, icecream product added to ground @ [" +
+                    product.getX() + " " + product.getY() + "]");
+            System.out.println("levelManager: icecream WS done, icecream product added to ground @ [" +
+                    product.getX() + " " + product.getY() + "]");
         }
 
         if (!wellIsAvailable && (wellTurns >= WELL_MAX_TURNS)) {
@@ -947,9 +965,16 @@ public class LevelManager {
             truck.clear();
         }
 
-
-
-
+        for (AbstractDomesticatedAnimal domesticatedAnimal : domesticatedAnimalOnGround) {
+            Product product = domesticatedAnimal.giveProduct();
+            if (product != null) {
+                productOnGround.add(product);
+                System.out.println(domesticatedAnimal.getType().toString() + " got product on ground @ [" +
+                        product.getX() + " " + product.getY() + "]");
+                Log.log(Log.INFO, domesticatedAnimal.getType().toString() + " got product on ground @ [" +
+                        product.getX() + " " + product.getY() + "]");
+            }
+        }
 
 
     }
