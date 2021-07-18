@@ -835,7 +835,7 @@ public class LevelManager {
         truckTurns++;
         wellTurns++;
 
-
+        //
 
     }
 
