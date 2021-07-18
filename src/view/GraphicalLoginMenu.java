@@ -1,12 +1,15 @@
 package view;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 
 public class GraphicalLoginMenu extends GraphicalMenu{
+    private TextField usernameTextField , passTextField;
 
     public GraphicalLoginMenu(GraphicalMenu parentMenu) {
         super("Login Menu", parentMenu);
+
     }
 
     @Override
@@ -23,7 +26,7 @@ public class GraphicalLoginMenu extends GraphicalMenu{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource().equals(e)){
+        if(e.getSource().equals(exit)){
             System.exit(0);
         }
 
