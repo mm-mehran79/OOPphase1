@@ -1047,7 +1047,7 @@ public class LevelManager {
 
             if (petAnimal.getType() == AnimalTypes.CAT) {
                 Log.log(Log.INFO, "levelManager: cat picking up:");
-                System.out.println("levelManager: cat picking up:");
+                System.err.println("levelManager: cat picking up:");
 
                 pickup(petAnimal.getX(), petAnimal.getY());
             }
@@ -1409,8 +1409,8 @@ public class LevelManager {
             Log.log(Log.INFO, "INQUIRY: no icecreamProductTask");
         }
         else {
-            System.out.println("INQUIRY: shirtProductTask = " + icecreamProductTaskProgression + "/" + icecreamProductTask);
-            Log.log(Log.INFO, "INQUIRY: shirtProductTask = " + icecreamProductTaskProgression + "/" + icecreamProductTask);
+            System.out.println("INQUIRY: icecreamProductTask = " + icecreamProductTaskProgression + "/" + icecreamProductTask);
+            Log.log(Log.INFO, "INQUIRY: icecreamProductTask = " + icecreamProductTaskProgression + "/" + icecreamProductTask);
         }
 
         if (chickenTasks == 0) {

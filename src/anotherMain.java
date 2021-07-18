@@ -17,7 +17,7 @@ public class anotherMain {
         initialization();
 
         Scanner scanner = new Scanner(System.in);
-        LevelManager levelManager = new LevelManager(4, 0);
+        LevelManager levelManager = new LevelManager(5, 0);
         LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, scanner);
         System.out.println(levelInputProcessor.run());
 
@@ -165,6 +165,24 @@ public class anotherMain {
             System.out.println(i);
         }
     }
+
+    /*
+build packetmilk
+build icecream
+buy cat
+buy buff
+buy cat
+buy buff
+buy cat
+buy buff
+buy cat
+buy buff
+buy cat
+buy buff
+buy cat
+buy buff
+turn
+     */
 }
 
 class Blah implements Comparable<Blah>{
