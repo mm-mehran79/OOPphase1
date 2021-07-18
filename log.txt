@@ -474,3 +474,1090 @@
 [Info], Sun Jul 18 18:04:09 IRDT 2021, INQUIRY: no turkeyTasks
 [Info], Sun Jul 18 18:04:09 IRDT 2021, INQUIRY: no buffaloTasks
 [Info], Sun Jul 18 18:04:09 IRDT 2021, Xx	inquiry done	xX
+[Log], Sun Jul 18 18:06:13 IRDT 2021, log.txt created or opened
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Game Main Run
+[Info], Sun Jul 18 18:06:13 IRDT 2021, initialization and loading
+[Info], Sun Jul 18 18:06:13 IRDT 2021, initializationOfLevels: loading levels from mission.txt
+[Info], Sun Jul 18 18:06:13 IRDT 2021, initializationOfLevels successfully
+[Info], Sun Jul 18 18:06:13 IRDT 2021, LevelManager constructor
+[Info], Sun Jul 18 18:06:13 IRDT 2021, LevelInputProcessor constructor
+[Info], Sun Jul 18 18:06:13 IRDT 2021, LevelInputProcessor run
+[Info], Sun Jul 18 18:06:13 IRDT 2021, instructionQueue buy chicken successfully
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's TurnN with N = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing buy chicken
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bought chicken
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed, CLEARING instructionQueue LIST
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's turn for each TurnN's N
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: addTurn
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: getting product from WS, well &  animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & eating & dying domestic animals
+[Error], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN @ [0 2] didn't get grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & doing domestic animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: removing productOnGround:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, done levelManager's turn for each TurnN's N done
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn inquiry, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of turn in game = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: maxTime for reward = 20
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: Reward = 50
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of coins = 0
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 0r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 1r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 2r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 3r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 4r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 5r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: well: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, well water level = 5/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellIsAvailable / !inUse = true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellTurn progress = 1/3
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: domesticated = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN 90% [0 2]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: wild = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: pet = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: productsOnGround = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: storage = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: truck: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckIsAvailable / !inUse = true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTurn progress = 1/10
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTempMoney = 0
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: in truck = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: workshops:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS progress = 1/4
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS progress = 1/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS progress = 1/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS progress = 1/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS progress = 1/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: coinTask = 100/115
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no eggProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no featherProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no milkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no flourProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no clothProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no packetmilkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no breadProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no shirtProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no icecreamProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: chickenTasks = 1/1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no turkeyTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no buffaloTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry done	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's TurnN with N = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing plant 1 2
+[Info], Sun Jul 18 18:06:13 IRDT 2021, plant 1 2
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing plant 0 3
+[Info], Sun Jul 18 18:06:13 IRDT 2021, plant 0 3
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing plant 0 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, plant 0 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing plant 0 2
+[Info], Sun Jul 18 18:06:13 IRDT 2021, plant 0 2
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing plant 0 3
+[Info], Sun Jul 18 18:06:13 IRDT 2021, plant 0 3
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing plant 0 3
+[Error], Sun Jul 18 18:06:13 IRDT 2021, plant no water 0 3
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed, CLEARING instructionQueue LIST
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's turn for each TurnN's N
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: addTurn
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: getting product from WS, well &  animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: CHICKEN got product on ground @ [5 1]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & eating & dying domestic animals
+[Error], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN @ [1 2] didn't get grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & doing domestic animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: removing productOnGround:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, done levelManager's turn for each TurnN's N done
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn inquiry, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of turn in game = 2
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: maxTime for reward = 20
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: Reward = 50
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of coins = 0
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 0r : 0 _ 1 _ 1 _ 2 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 1r : 0 _ 0 _ 1 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 2r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 3r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 4r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 5r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: well: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, well water level = 0/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellIsAvailable / !inUse = true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellTurn progress = 2/3
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: domesticated = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN 80% [1 2]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: wild = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: pet = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: productsOnGround = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 0NT [5 1]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: storage = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: truck: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckIsAvailable / !inUse = true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTurn progress = 2/10
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTempMoney = 0
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: in truck = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: workshops:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS progress = 2/4
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS progress = 2/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS progress = 2/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS progress = 2/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS progress = 2/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: coinTask = 100/115
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no eggProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no featherProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no milkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no flourProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no clothProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no packetmilkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no breadProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no shirtProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no icecreamProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: chickenTasks = 1/1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no turkeyTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no buffaloTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry done	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's TurnN with N = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing well
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing pickup 5 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Storage = 0
+[Info], Sun Jul 18 18:06:13 IRDT 2021, pickup 5 1:EGG
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed, CLEARING instructionQueue LIST
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's turn for each TurnN's N
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: addTurn
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: getting product from WS, well &  animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & eating & dying domestic animals
+[Error], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN @ [2 2] didn't get grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & doing domestic animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: removing productOnGround:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, done levelManager's turn for each TurnN's N done
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn inquiry, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of turn in game = 3
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: maxTime for reward = 20
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: Reward = 50
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of coins = 0
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 0r : 0 _ 1 _ 1 _ 2 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 1r : 0 _ 0 _ 1 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 2r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 3r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 4r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 5r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: well: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, well water level = 0/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellIsAvailable / !inUse = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellTurn progress = 1/3
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: domesticated = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN 70% [2 2]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: wild = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: pet = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: productsOnGround = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: storage = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: truck: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckIsAvailable / !inUse = true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTurn progress = 3/10
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTempMoney = 0
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: in truck = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: workshops:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS progress = 3/4
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS progress = 3/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS progress = 3/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS progress = 3/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS progress = 3/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: coinTask = 100/115
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no eggProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no featherProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no milkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no flourProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no clothProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no packetmilkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no breadProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no shirtProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no icecreamProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: chickenTasks = 1/1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no turkeyTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no buffaloTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry done	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's TurnN with N = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed, CLEARING instructionQueue LIST
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's turn for each TurnN's N
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: addTurn
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: getting product from WS, well &  animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: CHICKEN got product on ground @ [0 5]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & eating & dying domestic animals
+[Error], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN @ [1 2] didn't get grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & doing domestic animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: removing productOnGround:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, done levelManager's turn for each TurnN's N done
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn inquiry, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of turn in game = 4
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: maxTime for reward = 20
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: Reward = 50
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of coins = 0
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 0r : 0 _ 1 _ 1 _ 2 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 1r : 0 _ 0 _ 1 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 2r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 3r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 4r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 5r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: well: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, well water level = 0/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellIsAvailable / !inUse = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellTurn progress = 2/3
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: domesticated = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN 60% [1 2]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: wild = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: pet = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: productsOnGround = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 0NT [0 5]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: storage = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: truck: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckIsAvailable / !inUse = true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTurn progress = 4/10
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTempMoney = 0
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: in truck = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: workshops:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS progress = 4/4
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS progress = 4/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS progress = 4/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS progress = 4/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS progress = 4/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: coinTask = 100/115
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no eggProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no featherProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no milkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no flourProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no clothProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no packetmilkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no breadProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no shirtProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no icecreamProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: chickenTasks = 1/1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no turkeyTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no buffaloTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry done	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's TurnN with N = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing truck load egg
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Truck storage = 0
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckload product EGGcoins on truck = 0
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing truck go
+[Error], Sun Jul 18 18:06:13 IRDT 2021, truck is going now with coins going to += 15
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing well
+[Error], Sun Jul 18 18:06:13 IRDT 2021, well is unavailable (being used)
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed, CLEARING instructionQueue LIST
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's turn for each TurnN's N
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: addTurn
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: getting product from WS, well &  animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: well is full and available
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & eating & dying domestic animals
+[Error], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN @ [0 2] didn't get grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & doing domestic animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: removing productOnGround:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, done levelManager's turn for each TurnN's N done
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn inquiry, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of turn in game = 5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: maxTime for reward = 20
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: Reward = 50
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of coins = 0
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 0r : 0 _ 1 _ 1 _ 2 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 1r : 0 _ 0 _ 1 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 2r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 3r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 4r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 5r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: well: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, well water level = 5/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellIsAvailable / !inUse = true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellTurn progress = 0/3
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: domesticated = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN 50% [0 2]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: wild = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: pet = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: productsOnGround = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 1NT [0 5]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: storage = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: truck: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckIsAvailable / !inUse = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTurn progress = 1/10
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTempMoney = 15
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: in truck = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: workshops:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS progress = 5/4
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS progress = 5/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS progress = 5/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS progress = 5/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS progress = 5/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: coinTask = 100/115
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no eggProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no featherProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no milkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no flourProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no clothProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no packetmilkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no breadProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no shirtProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no icecreamProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: chickenTasks = 1/1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no turkeyTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no buffaloTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry done	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's TurnN with N = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing plant 1 2
+[Info], Sun Jul 18 18:06:13 IRDT 2021, plant 1 2
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing plant 0 3
+[Info], Sun Jul 18 18:06:13 IRDT 2021, plant 0 3
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing plant 0 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, plant 0 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing plant 0 2
+[Info], Sun Jul 18 18:06:13 IRDT 2021, plant 0 2
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing plant 0 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, plant 0 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed, CLEARING instructionQueue LIST
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's turn for each TurnN's N
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: addTurn
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: getting product from WS, well &  animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: CHICKEN got product on ground @ [3 3]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & eating & dying domestic animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN @ [0 1] ate grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & doing domestic animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: removing productOnGround:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, done levelManager's turn for each TurnN's N done
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn inquiry, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of turn in game = 6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: maxTime for reward = 20
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: Reward = 50
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of coins = 0
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 0r : 0 _ 2 _ 2 _ 3 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 1r : 0 _ 0 _ 2 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 2r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 3r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 4r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 5r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: well: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, well water level = 0/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellIsAvailable / !inUse = true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellTurn progress = 1/3
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: domesticated = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN 90% [0 1]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: wild = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: pet = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: productsOnGround = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 2NT [0 5]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 0NT [3 3]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: storage = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: truck: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckIsAvailable / !inUse = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTurn progress = 2/10
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTempMoney = 15
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: in truck = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: workshops:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS progress = 6/4
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS progress = 6/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS progress = 6/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS progress = 6/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS progress = 6/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: coinTask = 100/115
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no eggProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no featherProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no milkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no flourProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no clothProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no packetmilkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no breadProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no shirtProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no icecreamProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: chickenTasks = 1/1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no turkeyTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no buffaloTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry done	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's TurnN with N = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed, CLEARING instructionQueue LIST
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's turn for each TurnN's N
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: addTurn
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: getting product from WS, well &  animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & eating & dying domestic animals
+[Error], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN @ [1 1] didn't get grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & doing domestic animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: removing productOnGround:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, done levelManager's turn for each TurnN's N done
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn inquiry, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of turn in game = 7
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: maxTime for reward = 20
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: Reward = 50
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of coins = 0
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 0r : 0 _ 2 _ 2 _ 3 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 1r : 0 _ 0 _ 2 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 2r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 3r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 4r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 5r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: well: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, well water level = 0/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellIsAvailable / !inUse = true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellTurn progress = 2/3
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: domesticated = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN 80% [1 1]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: wild = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: pet = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: productsOnGround = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 3NT [0 5]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 1NT [3 3]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: storage = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: truck: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckIsAvailable / !inUse = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTurn progress = 3/10
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTempMoney = 15
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: in truck = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: workshops:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS progress = 7/4
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS progress = 7/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS progress = 7/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS progress = 7/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS progress = 7/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: coinTask = 100/115
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no eggProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no featherProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no milkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no flourProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no clothProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no packetmilkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no breadProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no shirtProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no icecreamProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: chickenTasks = 1/1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no turkeyTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no buffaloTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry done	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's TurnN with N = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed, CLEARING instructionQueue LIST
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's turn for each TurnN's N
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: addTurn
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: getting product from WS, well &  animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: CHICKEN got product on ground @ [1 2]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & eating & dying domestic animals
+[Error], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN @ [1 2] didn't get grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & doing domestic animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: removing productOnGround:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, done levelManager's turn for each TurnN's N done
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn inquiry, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of turn in game = 8
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: maxTime for reward = 20
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: Reward = 50
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of coins = 0
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 0r : 0 _ 2 _ 2 _ 3 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 1r : 0 _ 0 _ 2 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 2r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 3r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 4r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 5r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: well: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, well water level = 0/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellIsAvailable / !inUse = true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellTurn progress = 3/3
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: domesticated = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN 70% [1 2]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: wild = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: pet = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: productsOnGround = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 4NT [0 5]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 2NT [3 3]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 0NT [1 2]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: storage = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: truck: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckIsAvailable / !inUse = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTurn progress = 4/10
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTempMoney = 15
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: in truck = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: workshops:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS progress = 8/4
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS progress = 8/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS progress = 8/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS progress = 8/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS progress = 8/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: coinTask = 100/115
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no eggProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no featherProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no milkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no flourProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no clothProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no packetmilkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no breadProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no shirtProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no icecreamProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: chickenTasks = 1/1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no turkeyTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no buffaloTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry done	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's TurnN with N = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed, CLEARING instructionQueue LIST
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's turn for each TurnN's N
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: addTurn
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: getting product from WS, well &  animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & eating & dying domestic animals
+[Error], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN @ [1 3] didn't get grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & doing domestic animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: removing productOnGround:
+[Error], Sun Jul 18 18:06:13 IRDT 2021, EGG productOnGround removed max time from @ [0 5]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, done levelManager's turn for each TurnN's N done
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn inquiry, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of turn in game = 9
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: maxTime for reward = 20
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: Reward = 50
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of coins = 0
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 0r : 0 _ 2 _ 2 _ 3 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 1r : 0 _ 0 _ 2 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 2r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 3r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 4r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 5r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: well: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, well water level = 0/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellIsAvailable / !inUse = true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellTurn progress = 4/3
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: domesticated = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN 60% [1 3]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: wild = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: pet = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: productsOnGround = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 3NT [3 3]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 1NT [1 2]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: storage = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: truck: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckIsAvailable / !inUse = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTurn progress = 5/10
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTempMoney = 15
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: in truck = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: workshops:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS progress = 9/4
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS progress = 9/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS progress = 9/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS progress = 9/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS progress = 9/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: coinTask = 100/115
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no eggProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no featherProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no milkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no flourProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no clothProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no packetmilkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no breadProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no shirtProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no icecreamProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: chickenTasks = 1/1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no turkeyTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no buffaloTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry done	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's TurnN with N = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed, CLEARING instructionQueue LIST
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's turn for each TurnN's N
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: addTurn
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: getting product from WS, well &  animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: CHICKEN got product on ground @ [5 0]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & eating & dying domestic animals
+[Error], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN @ [1 4] didn't get grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & doing domestic animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: removing productOnGround:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, done levelManager's turn for each TurnN's N done
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn inquiry, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of turn in game = 10
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: maxTime for reward = 20
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: Reward = 50
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of coins = 0
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 0r : 0 _ 2 _ 2 _ 3 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 1r : 0 _ 0 _ 2 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 2r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 3r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 4r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 5r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: well: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, well water level = 0/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellIsAvailable / !inUse = true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellTurn progress = 5/3
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: domesticated = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN 50% [1 4]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: wild = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: pet = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: productsOnGround = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 4NT [3 3]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 2NT [1 2]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 0NT [5 0]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: storage = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: truck: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckIsAvailable / !inUse = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTurn progress = 6/10
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTempMoney = 15
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: in truck = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: workshops:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS progress = 10/4
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS progress = 10/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS progress = 10/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS progress = 10/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS progress = 10/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: coinTask = 100/115
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no eggProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no featherProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no milkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no flourProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no clothProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no packetmilkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no breadProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no shirtProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no icecreamProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: chickenTasks = 1/1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no turkeyTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no buffaloTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry done	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's TurnN with N = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed, CLEARING instructionQueue LIST
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's turn for each TurnN's N
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: addTurn
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: getting product from WS, well &  animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & eating & dying domestic animals
+[Error], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN @ [0 4] didn't get grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & doing domestic animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: removing productOnGround:
+[Error], Sun Jul 18 18:06:13 IRDT 2021, EGG productOnGround removed max time from @ [3 3]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, done levelManager's turn for each TurnN's N done
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn inquiry, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of turn in game = 11
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: maxTime for reward = 20
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: Reward = 50
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of coins = 0
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 0r : 0 _ 2 _ 2 _ 3 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 1r : 0 _ 0 _ 2 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 2r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 3r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 4r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 5r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: well: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, well water level = 0/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellIsAvailable / !inUse = true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellTurn progress = 6/3
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: domesticated = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN 40% [0 4]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: wild = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: pet = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: productsOnGround = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 3NT [1 2]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 1NT [5 0]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: storage = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: truck: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckIsAvailable / !inUse = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTurn progress = 7/10
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTempMoney = 15
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: in truck = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: workshops:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS progress = 11/4
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS progress = 11/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS progress = 11/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS progress = 11/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS progress = 11/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: coinTask = 100/115
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no eggProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no featherProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no milkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no flourProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no clothProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no packetmilkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no breadProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no shirtProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no icecreamProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: chickenTasks = 1/1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no turkeyTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no buffaloTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry done	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's TurnN with N = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed, CLEARING instructionQueue LIST
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's turn for each TurnN's N
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: addTurn
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: getting product from WS, well &  animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: CHICKEN got product on ground @ [2 1]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & eating & dying domestic animals
+[Error], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN @ [0 5] didn't get grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & doing domestic animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: removing productOnGround:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, done levelManager's turn for each TurnN's N done
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn inquiry, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of turn in game = 12
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: maxTime for reward = 20
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: Reward = 50
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of coins = 0
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 0r : 0 _ 2 _ 2 _ 3 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 1r : 0 _ 0 _ 2 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 2r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 3r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 4r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 5r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: well: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, well water level = 0/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellIsAvailable / !inUse = true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellTurn progress = 7/3
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: domesticated = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN 30% [0 5]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: wild = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: pet = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: productsOnGround = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 4NT [1 2]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 2NT [5 0]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 0NT [2 1]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: storage = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: truck: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckIsAvailable / !inUse = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTurn progress = 8/10
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTempMoney = 15
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: in truck = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: workshops:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS progress = 12/4
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS progress = 12/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS progress = 12/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS progress = 12/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS progress = 12/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: coinTask = 100/115
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no eggProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no featherProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no milkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no flourProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no clothProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no packetmilkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no breadProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no shirtProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no icecreamProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: chickenTasks = 1/1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no turkeyTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no buffaloTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry done	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's TurnN with N = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed, CLEARING instructionQueue LIST
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's turn for each TurnN's N
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: addTurn
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: getting product from WS, well &  animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & eating & dying domestic animals
+[Error], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN @ [1 5] didn't get grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & doing domestic animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: removing productOnGround:
+[Error], Sun Jul 18 18:06:13 IRDT 2021, EGG productOnGround removed max time from @ [1 2]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, done levelManager's turn for each TurnN's N done
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn inquiry, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of turn in game = 13
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: maxTime for reward = 20
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: Reward = 50
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of coins = 0
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 0r : 0 _ 2 _ 2 _ 3 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 1r : 0 _ 0 _ 2 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 2r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 3r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 4r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 5r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: well: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, well water level = 0/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellIsAvailable / !inUse = true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellTurn progress = 8/3
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: domesticated = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN 20% [1 5]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: wild = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: pet = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: productsOnGround = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 3NT [5 0]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 1NT [2 1]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: storage = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: truck: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckIsAvailable / !inUse = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTurn progress = 9/10
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTempMoney = 15
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: in truck = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: workshops:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS progress = 13/4
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS progress = 13/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS progress = 13/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS progress = 13/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS progress = 13/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: coinTask = 100/115
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no eggProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no featherProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no milkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no flourProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no clothProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no packetmilkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no breadProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no shirtProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no icecreamProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: chickenTasks = 1/1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no turkeyTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no buffaloTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry done	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's TurnN with N = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed
+[Info], Sun Jul 18 18:06:13 IRDT 2021, dequeuing instructions completed, CLEARING instructionQueue LIST
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, it is levelManager's turn for each TurnN's N
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: addTurn
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: getting product from WS, well &  animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: truck came back and is available with coins += 15
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: CHICKEN got product on ground @ [3 4]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & eating & dying domestic animals
+[Error], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN @ [0 5] didn't get grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: moving & doing domestic animals
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager: removing productOnGround:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, done levelManager's turn for each TurnN's N done
+[Info], Sun Jul 18 18:06:13 IRDT 2021, levelManager's Turn inquiry, with turn no = 1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry	xX
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of turn in game = 14
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: maxTime for reward = 20
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: Reward = 50
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: number of coins = 15
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: grass
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 0r : 0 _ 2 _ 2 _ 3 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 1r : 0 _ 0 _ 2 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 2r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 3r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 4r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, 5r : 0 _ 0 _ 0 _ 0 _ 0 _ 0 _ 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: well: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, well water level = 0/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellIsAvailable / !inUse = true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, wellTurn progress = 9/3
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: domesticated = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, CHICKEN 10% [0 5]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: wild = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: pet = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: productsOnGround = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 4NT [5 0]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 2NT [2 1]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, EGG 0NT [3 4]
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: storage = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: truck: 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckIsAvailable / !inUse = true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTurn progress = 0/10
+[Info], Sun Jul 18 18:06:13 IRDT 2021, truckTempMoney = 0
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: in truck = 
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: workshops:
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, flour WS progress = 14/4
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, cloth WS progress = 14/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, packetmilk WS progress = 14/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, bread WS progress = 14/5
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS bought? = false
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS isAvailable =true
+[Info], Sun Jul 18 18:06:13 IRDT 2021, shirt WS progress = 14/6
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: coinTask = 115/115
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no eggProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no featherProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no milkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no flourProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no clothProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no packetmilkProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no breadProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no shirtProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no icecreamProductTask
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: chickenTasks = 1/1
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no turkeyTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, INQUIRY: no buffaloTasks
+[Info], Sun Jul 18 18:06:13 IRDT 2021, Xx	inquiry done	xX
+[Alarm], Sun Jul 18 18:06:13 IRDT 2021, GOING BACK TO MENU BECAUCE EXIT LEVEL OR FINISHED LEVEL

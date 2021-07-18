@@ -30,12 +30,16 @@ public abstract class AbstractDomesticatedAnimal extends AbstractAnimal implemen
         if ( grass[x][y] > 0 && health <= 50) {
             grass[x][y]--;
             health = MAX_HEALTH;
-            System.out.println("levelManager: " + animalType.toString() + " @ [" + getX() + " " + getY() + "] ate grass");
-            Log.log(Log.INFO, animalType.toString() + " @ [" + getX() + " " + getY() + "] ate grass");
+            System.out.println("levelManager: " + animalType.toString() + " @ [" + getX() + " " + getY() + "] ate grass"
+                                + " HP = " + health);
+            Log.log(Log.INFO, animalType.toString() + " @ [" + getX() + " " + getY() + "] ate grass"
+                    + " HP = " + health);
             return;
         }
-        System.err.println("levelManager: " + animalType.toString() + " @ [" + getX() + " " + getY() + "] didn't get grass");
-        Log.log(Log.ERROR, animalType.toString() + " @ [" + getX() + " " + getY() + "] didn't get grass");
+        System.err.println("levelManager: " + animalType.toString() + " @ [" + getX() + " " + getY() + "] didn't get grass"
+                            + " HP = " + health);
+        Log.log(Log.ERROR, animalType.toString() + " @ [" + getX() + " " + getY() + "] didn't get grass"
+                    + " HP = " + health);
     }
 
     // getting product from the domesticated animal;
