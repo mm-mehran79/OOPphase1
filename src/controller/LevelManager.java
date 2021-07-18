@@ -312,6 +312,8 @@ public class LevelManager {
 
         }
         Log.log(Log.INFO, "dequeuing instructions completed");
+        Log.log(Log.INFO, "dequeuing instructions completed, CLEARING instructionQueue LIST");
+        instructionQueue.clear();
     }
 
     private void buy(AnimalTypes animalType) {
@@ -862,7 +864,14 @@ public class LevelManager {
         System.out.println("it is levelManager's TurnN with N = " + n);
         dequeueInstruction();
 
-        turn();
+        for (int i = 1; i <= n; i++) {
+            System.out.println("levelManager's Turn, with turn no = " + i);
+            Log.log(Log.INFO, "levelManager's Turn, with turn no = " + i);
+            turn();
+            System.out.println("levelManager's Turn inquiry, with turn no = " + i);
+            Log.log(Log.INFO, "levelManager's Turn inquiry, with turn no = " + i);
+            inquiry();
+        }
     }
 
     private void turn() {
@@ -1121,9 +1130,7 @@ public class LevelManager {
         return null;
     }
 
-    public ArrayList<String> getInstructionQueue() {
-        return instructionQueue;
-    }
+    public ArrayList<String> getInstructionQueue() { return instructionQueue; }
 
     public void inquiry() {
         System.out.println("Xx\tinquiry\txX");

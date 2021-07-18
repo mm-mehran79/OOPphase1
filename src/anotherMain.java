@@ -18,11 +18,14 @@ public class anotherMain {
         //blahList2.add(n1);
         //blahList2.add(n3);
         //blahList2.add(n2);
-        blahList.removeAll(null);
+        blahList.removeAll(blahList2);
         for (Blah blah : blahList) {
             System.out.println(blah.getA() + " " + blah.getB());
         }
         System.out.println(blahList.isEmpty());
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(i);
+        }
     }
 }
 

@@ -354,7 +354,7 @@ public class LevelInputProcessor {
                     break;
                 }
                 else if ( input.equalsIgnoreCase("exit level") ) {
-                    System.out.println("sike");
+                    System.out.println("you want to exit level !(2nd confirmation)");
                     getInput = false;
                     break;
                 }
@@ -365,9 +365,9 @@ public class LevelInputProcessor {
 
             if ( input.equalsIgnoreCase("exit level") ) {
                 System.err.println("exiting level");
-                Log.log(Log.ALARM, "exiting level");
+                Log.log(Log.ERROR, "exiting level");
                 getInput = false;
-                //break;
+                break;
             }
 
 
@@ -376,6 +376,8 @@ public class LevelInputProcessor {
             }
         }
 
+        System.err.println("GOING BACK TO MENU BECAUCE EXIT LEVEL OR FINISHED LEVEL");
+        Log.log(Log.ALARM, "GOING BACK TO MENU BECAUCE EXIT LEVEL OR FINISHED LEVEL");
 
         //System.out.println(levelManager.getInstructionQueue());
         //levelManager.dequeueInstruction();
