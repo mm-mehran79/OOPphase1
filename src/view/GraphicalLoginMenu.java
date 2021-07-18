@@ -1,8 +1,14 @@
 package view;
 
+import controller.LevelManager;
+import controller.Manager;
+import log.Log;
+import model.User;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.util.Scanner;
 
 public class GraphicalLoginMenu extends GraphicalMenu{
     private JLabel labelUsername;
@@ -93,9 +99,60 @@ public class GraphicalLoginMenu extends GraphicalMenu{
             System.exit(0);
         }
         else if(e.getSource().equals(buttonLogin)){
-            //todo
+            String username,password;
+            User user;
+            username = textUsername.getText();
+            password = fieldPassword.getPassword().toString();
+            if (User.available(username)){
+                if((user = User.loadUser(username,password)) == null){
+                    JOptionPane.showMessageDialog(new JFrame(),"login failed. Incorrect Password","Incorrect Password",JOptionPane.ERROR_MESSAGE);
+                    fieldPassword.setText("");
+                }
+                else{
+                    JOptionPane.showMessageDialog(new JFrame(),"Welcome"+ username +"\nYour initial coin : "+user.getCoins()+"\nGo to play level "+user.getLastLevel(),"welcome!!",JOptionPane.INFORMATION_MESSAGE);
+                    Manager.setPlayer(user);
+                    Log.log(Log.LOG, user.userName + " signed in");
+                    LevelManager levelManager = new LevelManager(Manager.getLevel(),Manager.getCoins());
+                    hide();
+                    // input command
+                    LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, new Scanner(System.in));
+                    int k = levelInputProcessor.run();
+                    if (k >= 0){
+                        user.giveReward(k);
+                        User.saveUser(user);
+                    }
+                    //todo run next menu
+                }
+            }
+            else {
+                JOptionPane.showMessageDialog(new JFrame(),"login failed. Incorrect username","user doesn't exist",JOptionPane.ERROR_MESSAGE);
+                textUsername.setText("");fieldPassword.setText("");
+            }
         }
         else if(e.getSource().equals(buttonSignUp)){
+            String username,password;
+            User user;
+            username = textUsername.getText();
+            password = fieldPassword.getPassword().toString();
+            if (User.available(username)){
+                JOptionPane.showMessageDialog(new JFrame(),"This username is already taken, please enter another username","Username error",JOptionPane.ERROR_MESSAGE);
+                textUsername.setText("");fieldPassword.setText("");
+            }
+            else {
+                user = new User(username,password);
+                JOptionPane.showMessageDialog(new JFrame(),"wellcome "+username+"\nPlay 1st level...","wellcome!!",JOptionPane.INFORMATION_MESSAGE);
+                textUsername.setText("");fieldPassword.setText("");
+                Manager.setPlayer(user);
+                Log.log(Log.LOG, user.userName + " signed in");
+                hide();
+                LevelManager levelManager = new LevelManager(Manager.getLevel(),Manager.getCoins());
+                LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, new Scanner(System.in));
+                int k = levelInputProcessor.run();
+                if (k >= 0){
+                    user.giveReward(k);
+                    User.saveUser(user);
+                }
+            }
             //todo
         }
     }
