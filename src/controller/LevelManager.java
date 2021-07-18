@@ -585,9 +585,15 @@ public class LevelManager {
     private void workshopFlour() {
         if (!workshopFlour) {
             if (flour.isAvailable()) {
-                flour.make();
-                Log.log(Log.INFO, "build flour starting to work");
-                System.out.println("build flour starting to work");
+                if (getProductTypeAndRemove(ProductTypes.EGG)) {
+                    flour.make();
+                    Log.log(Log.INFO, "egg removed from storage, build flour starting to work");
+                    System.out.println("egg removed from storage, build flour starting to work");
+                }
+                else {
+                    Log.log(Log.ERROR, "no egg for build flour to starting working");
+                    System.err.println("no egg for build flour to starting working");
+                }
             }
             else {
                 Log.log(Log.ERROR, "build flour is working");
@@ -603,9 +609,15 @@ public class LevelManager {
     private void workshopCloth() {
         if (!workshopCloth) {
             if (cloth.isAvailable()) {
-                cloth.make();
-                Log.log(Log.INFO, "build cloth starting to work");
-                System.out.println("build cloth starting to work");
+                if (getProductTypeAndRemove(ProductTypes.FEATHER)) {
+                    cloth.make();
+                    Log.log(Log.INFO, "feather removed from storage, build cloth starting to work");
+                    System.out.println("feather removed from storage, build cloth starting to work");
+                }
+                else {
+                    Log.log(Log.ERROR, "no feather for build cloth to starting working");
+                    System.err.println("no feather for build cloth to starting working");
+                }
             }
             else {
                 Log.log(Log.ERROR, "build cloth is working");
@@ -621,9 +633,15 @@ public class LevelManager {
     private void workshopPacketmilk() {
         if (!workshopPacketmilk) {
             if (packetmilk.isAvailable()) {
-                packetmilk.make();
-                Log.log(Log.INFO, "build packetmilk starting to work");
-                System.out.println("build packetmilk starting to work");
+                if (getProductTypeAndRemove(ProductTypes.MILK)) {
+                    packetmilk.make();
+                    Log.log(Log.INFO, "milk removed from storage, build packetmilk starting to work");
+                    System.out.println("milk removed from storage, build packetmilk starting to work");
+                }
+                else {
+                    Log.log(Log.ERROR, "no milk for build packetmilk to starting working");
+                    System.err.println("no milk for build packetmilk to starting working");
+                }
             }
             else {
                 Log.log(Log.ERROR, "build packetmilk is working");
@@ -639,9 +657,15 @@ public class LevelManager {
     private void workshopBread() {
         if (!workshopBread) {
             if (bread.isAvailable()) {
-                bread.make();
-                Log.log(Log.INFO, "build bread starting to work");
-                System.out.println("build bread starting to work");
+                if (getProductTypeAndRemove(ProductTypes.FLOUR)) {
+                    bread.make();
+                    Log.log(Log.INFO, "flour removed from storage, build bread starting to work");
+                    System.out.println("flour removed from storage, build bread starting to work");
+                }
+                else {
+                    Log.log(Log.ERROR, "no flour for build bread to starting working");
+                    System.err.println("no flour for build bread to starting working");
+                }
             }
             else {
                 Log.log(Log.ERROR, "build bread is working");
@@ -657,9 +681,15 @@ public class LevelManager {
     private void workshopShirt() {
         if (!workshopShirt) {
             if (shirt.isAvailable()) {
-                shirt.make();
-                Log.log(Log.INFO, "build shirt starting to work");
-                System.out.println("build shirt starting to work");
+                if (getProductTypeAndRemove(ProductTypes.CLOTH)) {
+                    shirt.make();
+                    Log.log(Log.INFO, "cloth removed from storage, build shirt starting to work");
+                    System.out.println("cloth removed from storage, build shirt starting to work");
+                }
+                else {
+                    Log.log(Log.ERROR, "no cloth for build shirt to starting working");
+                    System.err.println("no cloth for build shirt to starting working");
+                }
             }
             else {
                 Log.log(Log.ERROR, "build shirt is working");
@@ -675,9 +705,15 @@ public class LevelManager {
     private void workshopIcecream() {
         if (!workshopIcecream) {
             if (icecream.isAvailable()) {
-                icecream.make();
-                Log.log(Log.INFO, "build icecream starting to work");
-                System.out.println("build icecream starting to work");
+                if (getProductTypeAndRemove(ProductTypes.PACKETMILK)) {
+                    icecream.make();
+                    Log.log(Log.INFO, "packetmilk removed from storage, build icecream starting to work");
+                    System.out.println("packetmilk removed from storage, build icecream starting to work");
+                }
+                else {
+                    Log.log(Log.ERROR, "no packetmilk for build icecream to starting working");
+                    System.err.println("no packetmilk for build icecream to starting working");
+                }
             }
             else {
                 Log.log(Log.ERROR, "build icecream is working");
@@ -688,6 +724,16 @@ public class LevelManager {
             Log.log(Log.ERROR, "you don't have build icecream");
             System.err.println("you don't have build icecream");
         }
+    }
+
+    private boolean getProductTypeAndRemove(ProductTypes type) {
+        for (Product product : storage) {
+            if(product.getProductType() == type) {
+                storage.remove(product);
+                return true;
+            }
+        }
+        return false;
     }
 
     private boolean hasProduct(ProductTypes type) {
@@ -835,7 +881,46 @@ public class LevelManager {
         truckTurns++;
         wellTurns++;
 
-        //
+        Log.log(Log.INFO, "levelManager: getting product from WS, well &  animals");
+        System.out.println("levelManager: getting product from WS, well &  animals");
+
+        if (flour.setZero()) {
+            productOnGround.add(new Product(ProductTypes.FLOUR));
+            Log.log(Log.INFO, "levelManager: flour WS done, flour product added to ground");
+            System.out.println("levelManager: flour WS done, flour product added to ground");
+        }
+
+        if (cloth.setZero()) {
+            productOnGround.add(new Product(ProductTypes.CLOTH));
+            Log.log(Log.INFO, "levelManager: cloth WS done, cloth product added to ground");
+            System.out.println("levelManager: cloth WS done, cloth product added to ground");
+        }
+
+        if (packetmilk.setZero()) {
+            productOnGround.add(new Product(ProductTypes.PACKETMILK));
+            Log.log(Log.INFO, "levelManager: packetmilk WS done, packetmilk product added to ground");
+            System.out.println("levelManager: packetmilk WS done, packetmilk product added to ground");
+        }
+
+        if (bread.setZero()) {
+            productOnGround.add(new Product(ProductTypes.BREAD));
+            Log.log(Log.INFO, "levelManager: bread WS done, bread product added to ground");
+            System.out.println("levelManager: bread WS done, bread product added to ground");
+        }
+
+        if (shirt.setZero()) {
+            productOnGround.add(new Product(ProductTypes.SHIRT));
+            Log.log(Log.INFO, "levelManager: shirt WS done, shirt product added to ground");
+            System.out.println("levelManager: shirt WS done, shirt product added to ground");
+        }
+
+        if (icecream.setZero()) {
+            productOnGround.add(new Product(ProductTypes.ICECREAM));
+            Log.log(Log.INFO, "levelManager: icecream WS done, icecream product added to ground");
+            System.out.println("levelManager: icecream WS done, icecream product added to ground");
+        }
+
+
 
     }
 

@@ -74,6 +74,7 @@ public class Workshop {
 
     public boolean setZero() {
         if(getProduct()) {
+            isAvailable = true;
             turn = 0;
             return true;
         }
