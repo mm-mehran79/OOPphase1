@@ -37,6 +37,36 @@ public class SignUp extends Menu{
         if (k >= 0){
             user.giveReward(k);
             User.saveUser(user);
+            System.out.println("congratulation!!! You passed 1st level ");
+        }
+        System.out.println("do you want to continue?...\n1. Yes\n2. No");
+        if(Integer.parseInt(scanner.nextLine())  != 1)
+            parentMenu.show();
+        {
+            while (true){
+                int n;
+                while (true){
+                    System.out.println("please enter valid level. Max = "+Manager.getLevel());
+                    n = Integer.parseInt(scanner.nextLine());
+                    if(n<=Manager.getLevel() && n > 0){
+                        levelManager = new LevelManager(n,Manager.getCoins());
+                        levelInputProcessor = new LevelInputProcessor(levelManager, scanner);
+                        k = levelInputProcessor.run();
+                        if (k >= 0){
+                            if( n != user.getLastLevel())
+                                user.setLastLevel(user.getLastLevel() - 1);
+                            user.giveReward(k);
+                            User.saveUser(user);
+                            System.out.println("congratulation!!! You passed the level ");
+                        }
+                        break;
+                    }
+                }
+                System.out.println("do you want to continue?...\n1. Yes\n2. No");
+                n = Integer.parseInt(scanner.nextLine());
+                if(n!=1)
+                    parentMenu.show();
+            }
         }
     }
 }

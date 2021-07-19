@@ -17,7 +17,7 @@ public class GraphicalGameMenu extends GraphicalMenu{
         ground_panel = new JPanel();
         gameMap = new JTable(6,6);
         gameMap.setRowHeight(50);
-        gameMap.setPreferredSize(new Dimension(50,50));
+//        gameMap.setPreferredSize(new Dimension(50,50));
         gameMap.setCellSelectionEnabled(true);
         ListSelectionModel select= gameMap.getSelectionModel();
         select.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -27,20 +27,32 @@ public class GraphicalGameMenu extends GraphicalMenu{
                 selectedCol = gameMap.getSelectedColumn();
             }
         });
+        ground_panel.add(gameMap,BorderLayout.CENTER);
+        menu.add(ground_panel,BorderLayout.WEST);
     }
 
     @Override
     public void show() {
-
+        menu.setSize(800,600);
+        ground_panel.setSize(600,500);
+        menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        menu.setVisible(true);
     }
 
     @Override
     public void hide() {
-
+        menu.setVisible(false);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        if(e.getSource().equals(exit)){
+            System.exit(0);
+        }
+        else if (e.getSource().equals(back)){
+            hide();
+            parent.show();
+            menu.dispose();
+        }
     }
 }

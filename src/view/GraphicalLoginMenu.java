@@ -76,21 +76,36 @@ public class GraphicalLoginMenu extends GraphicalMenu{
     }
     public static void showLevelInformation(){
         String s;
-        switch (Manager.getLevel()){
+        switch (1){
             case 1:
-                s = "you must collect:\n1 chicken egg\n";
+                s = "Initial Coin: 100 unit\n" +
+                        "TASK:\n1. get 115 unit money\n2. product 1 egg\n3. own 1 chicken" +
+                        "\nTurn limit is 20\n" +
+                        "your prize if you win in specified turn : 50";
             break;
             case 2:
-                s = "you must do ";
+                s = "Initial Coin 450\n" +
+                        "TASK:\n1. product 1 cloth\n2. product 1 feather\n3. own 1 turkey" +
+                        "\nTurn limit is 20\n" +
+                        "your prize if you win in specified turn : 50";
                 break;
             case 3:
-                s = "";
+                s = "Initial Coin 100\n" +
+                        "TASK:\n1. get 400 unit money\n2. defend your asset against lion" +
+                        "\nTurn limit is 12\n" +
+                        "your prize if you win in specified turn : 50";
                 break;
             case 4:
-                s = "";//todo
+                s = "Initial Coin 200\n" +
+                        "TASK:\n1. defend your asset against different types of animals" +
+                        "\nTurn limit is 1000\n" +
+                        "your prize if you win in specified turn : 50";
                 break;
             case 5:
-                s = "";
+                s = "Initial Coin 3800\n" +
+                        "TASK:\n1. product 1 ice cream\n2. product 1 packet milk" +
+                        "\nTurn limit is 1000\n" +
+                        "your prize if you win in specified turn : 50";
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + Manager.getLevel());
@@ -104,8 +119,8 @@ public class GraphicalLoginMenu extends GraphicalMenu{
         menu.setSize(290,400);
         menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         menu.setVisible(true);
-        mainPanel = new JPanel();
-        menu.add(mainPanel,BorderLayout.CENTER);
+//        mainPanel = new JPanel();
+//        menu.add(mainPanel,BorderLayout.CENTER);
         mainPanel.setSize(260,300);
         mainPanel.setVisible(true);
 
@@ -122,6 +137,8 @@ public class GraphicalLoginMenu extends GraphicalMenu{
             System.exit(0);
         }
         else if(e.getSource().equals(buttonLogin)){
+            GraphicalGameMenu graphicalGameMenu = new GraphicalGameMenu(this);
+            graphicalGameMenu.show();
             String username,password;
             User user;
             username = textUsername.getText();
@@ -137,6 +154,7 @@ public class GraphicalLoginMenu extends GraphicalMenu{
                     Log.log(Log.LOG, user.userName + " signed in");
                     LevelManager levelManager = new LevelManager(Manager.getLevel(),Manager.getCoins());
                     hide();
+                    showLevelInformation();
                     // input command
                     LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, new Scanner(System.in));
                     int k = levelInputProcessor.run();
@@ -169,7 +187,7 @@ public class GraphicalLoginMenu extends GraphicalMenu{
                 Manager.setPlayer(user);
                 Log.log(Log.LOG, user.userName + " signed in");
                 hide();
-                // TODO for joptionpane based on last levet
+                showLevelInformation();
                 LevelManager levelManager = new LevelManager(Manager.getLevel(),Manager.getCoins());
                 LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, new Scanner(System.in));
                 int k = levelInputProcessor.run();

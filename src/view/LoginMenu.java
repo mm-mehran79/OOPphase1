@@ -30,21 +30,29 @@ public class LoginMenu extends Menu{
     public void execute(){
         Manager.setPlayer(user);
         Log.log(Log.LOG, user.userName + " signed in");
+        int n;
         while (true){
-            System.out.println("please enter valid level. Max = "+Manager.getLevel());
-            int n = Integer.parseInt(scanner.nextLine());
-            if(n<=Manager.getLevel() && n > 0){
-                LevelManager levelManager = new LevelManager(n,Manager.getCoins());
-                LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, scanner);
-                int k = levelInputProcessor.run();
-                if (k >= 0){
-                    if( n != user.getLastLevel())
-                        user.setLastLevel(user.getLastLevel() - 1);
-                    user.giveReward(k);
-                    User.saveUser(user);
+            while (true){
+                System.out.println("please enter valid level. Max = "+Manager.getLevel());
+                n = Integer.parseInt(scanner.nextLine());
+                if(n<=Manager.getLevel() && n > 0){
+                    LevelManager levelManager = new LevelManager(n,Manager.getCoins());
+                    LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, scanner);
+                    int k = levelInputProcessor.run();
+                    if (k >= 0){
+                        if( n != user.getLastLevel())
+                            user.setLastLevel(user.getLastLevel() - 1);
+                        user.giveReward(k);
+                        User.saveUser(user);
+                        System.out.println("congratulation!!! You passed the level ");
+                    }
+                    break;
                 }
-                break;
             }
+            System.out.println("do you want to continue?...\n1. Yes\n2. No");
+            n = Integer.parseInt(scanner.nextLine());
+            if(n!=1)
+                parentMenu.show();
         }
 
     }
