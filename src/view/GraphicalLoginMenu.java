@@ -76,7 +76,7 @@ public class GraphicalLoginMenu extends GraphicalMenu{
     }
     public static void showLevelInformation(){
         String s;
-        switch (1){
+        switch (Manager.getLevel()){
             case 1:
                 s = "Initial Coin: 100 unit\n" +
                         "TASK:\n1. get 115 unit money\n2. product 1 egg\n3. own 1 chicken" +
@@ -137,8 +137,8 @@ public class GraphicalLoginMenu extends GraphicalMenu{
             System.exit(0);
         }
         else if(e.getSource().equals(buttonLogin)){
-            GraphicalGameMenu graphicalGameMenu = new GraphicalGameMenu(this);
-            graphicalGameMenu.show();
+//            GraphicalGameMenu graphicalGameMenu = new GraphicalGameMenu(this);
+//            graphicalGameMenu.show();
             String username,password;
             User user;
             username = textUsername.getText();
@@ -161,8 +161,8 @@ public class GraphicalLoginMenu extends GraphicalMenu{
                     if (k >= 0){
                         user.giveReward(k);
                         User.saveUser(user);
+                        JOptionPane.showMessageDialog(new JFrame(),"you have completed this level","Level Completed",JOptionPane.INFORMATION_MESSAGE,buttonLogin.getIcon());
                     }
-                    //todo run next menu
                 }
             }
             else {
@@ -194,9 +194,9 @@ public class GraphicalLoginMenu extends GraphicalMenu{
                 if (k >= 0){
                     user.giveReward(k);
                     User.saveUser(user);
+                    JOptionPane.showMessageDialog(new JFrame(),"you have completed this level","Level Completed",JOptionPane.INFORMATION_MESSAGE,buttonLogin.getIcon());
                 }
             }
-            //todo
         }
     }
 }
