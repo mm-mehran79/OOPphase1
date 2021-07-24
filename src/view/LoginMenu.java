@@ -53,6 +53,7 @@ public class LoginMenu extends Menu{
             n = Integer.parseInt(scanner.nextLine());
             if(n!=1)
                 parentMenu.show();
+            break;
         }
 
     }
