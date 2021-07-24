@@ -81,6 +81,7 @@ public class User {
                 }
                 FileWriter fileWriter = new FileWriter(usersFile,false);
                 fileWriter.write(stringBuilder.toString());
+                fileWriter.flush();
                 fileWriter.close();
                 tempWriter.close();
                 Log.log(Log.INFO,"users file updated successfully");
