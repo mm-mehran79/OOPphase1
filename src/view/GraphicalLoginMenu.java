@@ -8,7 +8,6 @@ import model.User;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.util.Scanner;
 
 public class GraphicalLoginMenu extends GraphicalMenu{
     private JLabel labelUsername;
@@ -137,8 +136,8 @@ public class GraphicalLoginMenu extends GraphicalMenu{
             System.exit(0);
         }
         else if(e.getSource().equals(buttonLogin)){
-//            GraphicalGameMenu graphicalGameMenu = new GraphicalGameMenu(this);
-//            graphicalGameMenu.show();
+            GraphicalGameMenu graphicalGameMenu = new GraphicalGameMenu(this);
+            graphicalGameMenu.show();
             String username,password;
             User user;
             username = textUsername.getText();
@@ -156,7 +155,7 @@ public class GraphicalLoginMenu extends GraphicalMenu{
                     hide();
                     showLevelInformation();
                     // input command
-                    LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, new Scanner(System.in));
+                    LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, Menu.scanner);
                     int k = levelInputProcessor.run();
                     if (k >= 0){
                         user.giveReward(k);
@@ -182,6 +181,7 @@ public class GraphicalLoginMenu extends GraphicalMenu{
             }
             else {
                 user = new User(username,password);
+                User.saveUser(user);
                 JOptionPane.showMessageDialog(new JFrame(),"wellcome "+username+"\nPlay 1st level...","wellcome!!",JOptionPane.INFORMATION_MESSAGE,buttonLogin.getIcon());
                 textUsername.setText("");fieldPassword.setText("");
                 Manager.setPlayer(user);
@@ -189,7 +189,7 @@ public class GraphicalLoginMenu extends GraphicalMenu{
                 hide();
                 showLevelInformation();
                 LevelManager levelManager = new LevelManager(Manager.getLevel(),Manager.getCoins());
-                LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, new Scanner(System.in));
+                LevelInputProcessor levelInputProcessor = new LevelInputProcessor(levelManager, Menu.scanner);
                 int k = levelInputProcessor.run();
                 if (k >= 0){
                     user.giveReward(k);

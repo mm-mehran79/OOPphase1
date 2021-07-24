@@ -10,6 +10,9 @@ public class GraphicalGameMenu extends GraphicalMenu{
     JPanel instruction_panel, ground_panel;
     JTable gameMap;
     int selectedRow,selectedCol;
+    JButton turnB,buyB,buildB,pickupB,wellB,plantB,workB,cageB,truckLoadB,truckUnloadB,truckGoB;
+    JComboBox buyType,buildType,truckProduct;
+    JTextField turnCycleTF;
 
     public GraphicalGameMenu(GraphicalMenu parentMenu) {
         super("Game", parentMenu);
@@ -18,6 +21,7 @@ public class GraphicalGameMenu extends GraphicalMenu{
         gameMap = new JTable(6,6);
         gameMap.setRowHeight(50);
 //        gameMap.setPreferredSize(new Dimension(50,50));
+
         gameMap.setCellSelectionEnabled(true);
         ListSelectionModel select= gameMap.getSelectionModel();
         select.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -29,6 +33,9 @@ public class GraphicalGameMenu extends GraphicalMenu{
         });
         ground_panel.add(gameMap,BorderLayout.CENTER);
         menu.add(ground_panel,BorderLayout.WEST);
+
+        String[] buyTypes = {"cat","dog","buffalo","turkey","chicken"};
+        String[] buildTypes = {"flour","cloth","packetmilk"};
     }
 
     @Override

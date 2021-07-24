@@ -16,6 +16,17 @@ import java.util.Scanner;
 
 
 public class Main {
+    public static void phase1main(String[] args){
+        Log.log(Log.INFO,"Game Main Run");
+        Manager manager = new Manager();
+        Scanner sc = new Scanner(System.in);
+        initialization();
+        Menu.scanner = sc;
+        InitialMenu initialMenu =new InitialMenu();
+        initialMenu.show();
+        initialMenu.execute();
+
+    }
     public static void main(String[] args){
         Log.log(Log.INFO, "Game Main Run");
         Manager manager = new Manager();

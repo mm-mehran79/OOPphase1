@@ -60,23 +60,29 @@ public class User {
         if(available(user.userName)){
             try {
                 File tempFile = new File("tempUsers.txt");
+                tempFile.delete();
+                tempFile = new File("tempUsers.txt");
                 FileWriter tempWriter =new FileWriter(tempFile,true);
                 tempWriter.flush();
                 Scanner userScanner = new Scanner(usersFile);
-                String s;
+                String s;StringBuilder stringBuilder = new StringBuilder("");
                 while (userScanner.hasNextLine()){
                     s = userScanner.nextLine();
                     if(s.split("#")[0].equalsIgnoreCase(user.userName)){
+                        stringBuilder.append(user.userName+"#"+user.password+"#"+
+                                user.coins+"#"+ user.lastLevel+"\n");
                         tempWriter.write(user.userName+"#"+user.password+"#");
                         tempWriter.write(user.coins+"#"+ user.lastLevel+"\n");
                     }
-                    else
+                    else{
                         tempWriter.write(s+"\n");
+                        stringBuilder.append(s + "\n");
+                    }
                 }
+                FileWriter fileWriter = new FileWriter(usersFile,false);
+                fileWriter.write(stringBuilder.toString());
+                fileWriter.close();
                 tempWriter.close();
-                usersFile.delete();
-                tempFile.renameTo(usersFile);
-                usersFile = tempFile;
                 Log.log(Log.INFO,"users file updated successfully");
             }
             catch (IOException e){
